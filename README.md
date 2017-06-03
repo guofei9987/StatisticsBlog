@@ -1,2 +1,2 @@
 # StatisticsBlog
-StatisticsBlog,see<a href='www.guofei.site'></a>
+StatisticsBlog,see<a href='http://www.guofei.site/StatisticsBlog/'>the demo</a>
