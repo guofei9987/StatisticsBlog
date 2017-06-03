@@ -1,0 +1,316 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../pca.htm">
+<link rel=File-List href=filelist.xml>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+x\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-char-type:none;
+	display:none;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(1);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../pca.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link=blue vlink=purple>
+
+<table border=0 cellpadding=0 cellspacing=0 width=684 style='border-collapse:
+ collapse;table-layout:fixed;width:513pt'>
+ <col width=108 style='mso-width-source:userset;mso-width-alt:3456;width:81pt'>
+ <col width=72 span=8 style='width:54pt'>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 width=108 style='height:13.5pt;width:81pt' align=left
+  valign=top><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+   o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+   stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_s2049" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:81pt;margin-top:13.5pt;width:123pt;height:44.25pt;z-index:1'
+   filled="t" stroked="t">
+   <v:imagedata src="image011.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:SizeWithCells/>
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:1;margin-left:107px;margin-top:17px;width:166px;
+  height:61px'><img width=166 height=61 src=image012.png v:shapes="_x0000_s2049"></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td height=18 width=108 style='height:13.5pt;width:81pt'>定义距离（点）</td>
+   </tr>
+  </table>
+  </span></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+ </tr>
+ <tr height=68 style='mso-height-source:userset;height:51.0pt'>
+  <td height=68 style='height:51.0pt'>minkowshi距离</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 style='height:13.5pt'>欧氏距离</td>
+  <td>m=2</td>
+  <td colspan=7 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=36 style='height:27.0pt;mso-xlrowspan:2'>
+  <td height=36 colspan=9 style='height:27.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=52 style='mso-height-source:userset;height:39.0pt'>
+  <td height=52 colspan=2 style='height:39.0pt;mso-ignore:colspan'>定义距离（类）</td>
+  <td colspan=7 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=52 style='mso-height-source:userset;height:39.0pt'>
+  <td height=52 style='height:39.0pt'>名称</td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=46 style='mso-height-source:userset;height:35.1pt'>
+  <td rowspan=5 height=118 class=xl66 style='height:89.1pt'>平均联结</td>
+  <td colspan=2 height=46 width=144 style='mso-ignore:colspan-rowspan;
+  height:35.1pt;width:108pt'><!--[if gte vml 1]><v:shape id="_x0000_s2050"
+   type="#_x0000_t75" alt="" style='position:absolute;margin-left:3pt;
+   margin-top:1.5pt;width:87pt;height:27.75pt;z-index:2' filled="t" stroked="t">
+   <v:imagedata src="image013.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:SizeWithCells/>
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=3 height=1></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=118 height=39 src=image014.png v:shapes="_x0000_s2050"></td>
+    <td width=23></td>
+   </tr>
+   <tr>
+    <td height=6></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:108.0pt;height:34.5pt'></span><![endif]--></td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 style='height:13.5pt'></td>
+  <td colspan=6 style='mso-ignore:colspan'>其中x是第一类，y是第二类。距离是两两点之间的平均距离</td>
+  <td></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td rowspan=3 height=54 class=xl66 style='height:40.5pt'>特点</td>
+  <td colspan=2 style='mso-ignore:colspan'>倾向于把大的类分开</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 colspan=4 style='height:13.5pt;mso-ignore:colspan'>所有的类倾向于具有同样的直径<span
+  style='mso-spacerun:yes'> </span></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 colspan=2 style='height:13.5pt;mso-ignore:colspan'>对异常值敏感</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=30 style='mso-height-source:userset;height:23.1pt'>
+  <td rowspan=3 height=66 class=xl66 style='height:50.1pt'>重心法</td>
+  <td height=30 width=72 style='height:23.1pt;width:54pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_s2051" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:3.75pt;margin-top:3.75pt;width:39.75pt;height:17.25pt;z-index:3'
+   filled="t" stroked="t">
+   <v:imagedata src="image015.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:SizeWithCells/>
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=4 height=4></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=55 height=25 src=image016.png v:shapes="_x0000_s2051"></td>
+    <td width=13></td>
+   </tr>
+   <tr>
+    <td height=1></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:54.0pt;height:22.5pt'></span><![endif]--></td>
+  <td colspan=7 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td rowspan=2 height=36 class=xl66 style='height:27.0pt'>特点</td>
+  <td colspan=2 style='mso-ignore:colspan'>对异常值不敏感</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 colspan=7 style='height:13.5pt;mso-ignore:colspan'>群间的距离没有单调递增的趋势，在树状聚类图上可能
+  出现图形逆转</td>
+ </tr>
+ <tr height=49 style='mso-height-source:userset;height:36.95pt'>
+  <td height=49 style='height:36.95pt'>Ward最小方差法</td>
+  <td colspan=5 height=49 width=360 style='mso-ignore:colspan-rowspan;
+  height:36.95pt;width:270pt'><!--[if gte vml 1]><v:shape id="_x0000_s2052"
+   type="#_x0000_t75" alt="" style='position:absolute;margin-left:2.25pt;
+   margin-top:2.25pt;width:240.75pt;height:30.75pt;z-index:4' filled="t"
+   stroked="t">
+   <v:imagedata src="image017.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:SizeWithCells/>
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=2 height=2></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=323 height=43 src=image018.png v:shapes="_x0000_s2052"></td>
+    <td width=35></td>
+   </tr>
+   <tr>
+    <td height=4></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:270.0pt;height:36.75pt'></span><![endif]--></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 style='height:13.5pt'></td>
+  <td>特点</td>
+  <td colspan=4 style='mso-ignore:colspan'>较少受到异常值的影响，适用范围广</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=52 style='mso-height-source:userset;height:39.0pt'>
+  <td height=52 style='height:39.0pt'>Ward' Method</td>
+  <td colspan=2 height=52 width=144 style='mso-ignore:colspan-rowspan;
+  height:39.0pt;width:108pt'><!--[if gte vml 1]><v:shape id="_x0000_s2053"
+   type="#_x0000_t75" alt="" style='position:absolute;margin-left:2.25pt;
+   margin-top:.75pt;width:102pt;height:36pt;z-index:5' filled="t" stroked="t">
+   <v:imagedata src="image019.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:SizeWithCells/>
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=2 height=0></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=138 height=50 src=image020.png v:shapes="_x0000_s2053"></td>
+    <td width=4></td>
+   </tr>
+   <tr>
+    <td height=2></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:108.0pt;height:39.0pt'></span><![endif]--></td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 style='height:13.5pt'></td>
+  <td>特点</td>
+  <td colspan=2 style='mso-ignore:colspan'>可以用来画聚类树</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=108 style='width:81pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>
