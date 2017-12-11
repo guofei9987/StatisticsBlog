@@ -14311,6 +14311,35 @@ CUEIIUTC/wfzoLQxXdhYVQAAAABJRU5ErkJggg==
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-ElasticNet">5. ElasticNet<a class="anchor-link" href="#5.-ElasticNet">&#182;</a></h2><p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html">官网</a><br>
+$\alpha \rho \mid\mid \vec w\mid\mid+\dfrac{\alpha (1-\rho)}{2}\mid \mid \vec w \mid \mid^2$<br>
+$\alpha\geq 0, 1\geq \rho \geq 0$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">ElasticNet</span><span class="c1">#还有ElasticNetCV</span>
+<span class="n">regr</span><span class="o">=</span><span class="n">ElasticNet</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">l1_ratio</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precompute</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">copy_X</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span>
+                <span class="n">warm_start</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;cyclic&#39;</span><span class="p">)</span>
+<span class="c1"># alpha:alpha</span>
+<span class="c1"># l1_ratio:rho值</span>
+<span class="c1"># fit_intercept:是否拟合intercept</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
     </div>
   </div>
 </body>
