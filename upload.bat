@@ -1,3 +1,8 @@
+cd origin_files
+jupyter nbconvert *.ipynb
+move *.html ..
+cd ..
+
 git add -A
 git commit -m "AutoUpload"
 echo ok

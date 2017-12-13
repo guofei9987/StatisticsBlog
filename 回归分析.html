@@ -11775,7 +11775,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#32447;&#24615;&#22238;&#24402;&#27169;&#22411;&#19982;&#35786;&#26029;">&#32447;&#24615;&#22238;&#24402;&#27169;&#22411;&#19982;&#35786;&#26029;<a class="anchor-link" href="#&#32447;&#24615;&#22238;&#24402;&#27169;&#22411;&#19982;&#35786;&#26029;">&#182;</a></h1><p>数据源：<a href="http://archive.ics.uci.edu/ml/datasets/Auto+MPG">http://archive.ics.uci.edu/ml/datasets/Auto+MPG</a></p>
+<h1 id="&#32447;&#24615;&#22238;&#24402;&#27169;&#22411;&#19982;&#35786;&#26029;">&#32447;&#24615;&#22238;&#24402;&#27169;&#22411;&#19982;&#35786;&#26029;<a class="anchor-link" href="#&#32447;&#24615;&#22238;&#24402;&#27169;&#22411;&#19982;&#35786;&#26029;">&#182;</a></h1><p><a href="回归分析.html">大图</a>, <a href="origin_files/回归分析.ipynb">下载</a><br>
+数据源：<a href="http://archive.ics.uci.edu/ml/datasets/Auto+MPG">http://archive.ics.uci.edu/ml/datasets/Auto+MPG</a></p>
 <h2 id="Attribute-Information:">Attribute Information:<a class="anchor-link" href="#Attribute-Information:">&#182;</a></h2><ol>
 <li>mpg: continuous </li>
 <li>cylinders: multi-valued discrete </li>
@@ -12619,10 +12620,10 @@ dtype: float64</pre>
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   718.7</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Wed, 22 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>1.66e-90</td>
+  <th>Date:</th>             <td>Thu, 30 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>1.66e-90</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>10:01:09</td>     <th>  Log-Likelihood:    </th> <td> -1156.4</td>
+  <th>Time:</th>                 <td>11:29:32</td>     <th>  Log-Likelihood:    </th> <td> -1156.4</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   392</td>      <th>  AIC:               </th> <td>   2317.</td>
@@ -13088,10 +13089,10 @@ Eg9b2MlPAAAAAElFTkSuQmCC
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   234.2</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Wed, 22 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>6.18e-102</td>
+  <th>Date:</th>             <td>Thu, 30 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>6.18e-102</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>10:01:10</td>     <th>  Log-Likelihood:    </th> <td> -1120.1</td> 
+  <th>Time:</th>                 <td>11:29:32</td>     <th>  Log-Likelihood:    </th> <td> -1120.1</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   392</td>      <th>  AIC:               </th> <td>   2250.</td> 
@@ -13497,8 +13498,9 @@ ESj4hBCSESj4hBCSESj4hBCSEf4/lhHmppjwPt0AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;mpg_ln&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;displacement_ln&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;displacement&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;mpg_ln&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
+<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;displacement_ln&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;displacement&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -13511,8 +13513,8 @@ ESj4hBCSESj4hBCSESj4hBCSEf4/lhHmppjwPt0AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ana2</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg_ln ~ displacement&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">displacement</span><span class="p">,</span><span class="n">ana2</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ana2</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg_ln ~ displacement&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">displacement</span><span class="p">,</span><span class="n">ana2</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -13761,8 +13763,8 @@ wzASiIm/YRhGAvn/YSe3iTlQmzYAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ana3</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg_ln ~ displacement_ln&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">displacement_ln</span><span class="p">,</span><span class="n">ana2</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ana3</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg_ln ~ displacement_ln&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">displacement_ln</span><span class="p">,</span><span class="n">ana2</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -14057,8 +14059,8 @@ GEYOMfE3DMPIISb+hmEYOcTE3zAMI4f8fzjkcGYHJ89PAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;resid&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">ana3</span><span class="o">.</span><span class="n">resid</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;resid_t&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;resid&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;resid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;resid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;resid&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">ana3</span><span class="o">.</span><span class="n">resid</span>
+<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;resid_t&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;resid&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;resid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;resid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -14080,7 +14082,7 @@ GEYOMfE3DMPIISb+hmEYOcTE3zAMI4f8fzjkcGYHJ89PAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;resid_t&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span><span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;resid_t&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14212,246 +14214,6 @@ GEYOMfE3DMPIISb+hmEYOcTE3zAMI4f8fzjkcGYHJ89PAAAAAElFTkSuQmCC
       <td>-0.636687</td>
       <td>-3.670342</td>
     </tr>
-    <tr>
-      <th>76</th>
-      <td>18.0</td>
-      <td>4</td>
-      <td>121.0</td>
-      <td>112.0</td>
-      <td>2933.0</td>
-      <td>14.5</td>
-      <td>72</td>
-      <td>2</td>
-      <td>volvo 145e (sw)</td>
-      <td>2.890372</td>
-      <td>4.795791</td>
-      <td>-0.390274</td>
-      <td>-2.249830</td>
-    </tr>
-    <tr>
-      <th>108</th>
-      <td>20.0</td>
-      <td>4</td>
-      <td>97.0</td>
-      <td>88.0</td>
-      <td>2279.0</td>
-      <td>19.0</td>
-      <td>73</td>
-      <td>3</td>
-      <td>toyota carina</td>
-      <td>2.995732</td>
-      <td>4.574711</td>
-      <td>-0.406292</td>
-      <td>-2.342172</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>18.0</td>
-      <td>3</td>
-      <td>70.0</td>
-      <td>90.0</td>
-      <td>2124.0</td>
-      <td>13.5</td>
-      <td>73</td>
-      <td>3</td>
-      <td>maxda rx3</td>
-      <td>2.890372</td>
-      <td>4.248495</td>
-      <td>-0.690754</td>
-      <td>-3.982026</td>
-    </tr>
-    <tr>
-      <th>243</th>
-      <td>21.5</td>
-      <td>3</td>
-      <td>80.0</td>
-      <td>110.0</td>
-      <td>2720.0</td>
-      <td>13.5</td>
-      <td>77</td>
-      <td>3</td>
-      <td>mazda rx-4</td>
-      <td>3.068053</td>
-      <td>4.382027</td>
-      <td>-0.439761</td>
-      <td>-2.535110</td>
-    </tr>
-    <tr>
-      <th>298</th>
-      <td>23.0</td>
-      <td>8</td>
-      <td>350.0</td>
-      <td>125.0</td>
-      <td>3900.0</td>
-      <td>17.4</td>
-      <td>79</td>
-      <td>1</td>
-      <td>cadillac eldorado</td>
-      <td>3.135494</td>
-      <td>5.857933</td>
-      <td>0.437995</td>
-      <td>2.524933</td>
-    </tr>
-    <tr>
-      <th>308</th>
-      <td>33.5</td>
-      <td>4</td>
-      <td>151.0</td>
-      <td>90.0</td>
-      <td>2556.0</td>
-      <td>13.2</td>
-      <td>79</td>
-      <td>1</td>
-      <td>pontiac phoenix</td>
-      <td>3.511545</td>
-      <td>5.017280</td>
-      <td>0.352504</td>
-      <td>2.032097</td>
-    </tr>
-    <tr>
-      <th>322</th>
-      <td>46.6</td>
-      <td>4</td>
-      <td>86.0</td>
-      <td>65.0</td>
-      <td>2110.0</td>
-      <td>17.9</td>
-      <td>80</td>
-      <td>3</td>
-      <td>mazda glc</td>
-      <td>3.841601</td>
-      <td>4.454347</td>
-      <td>0.373493</td>
-      <td>2.153095</td>
-    </tr>
-    <tr>
-      <th>325</th>
-      <td>44.3</td>
-      <td>4</td>
-      <td>90.0</td>
-      <td>48.0</td>
-      <td>2085.0</td>
-      <td>21.7</td>
-      <td>80</td>
-      <td>2</td>
-      <td>vw rabbit c (diesel)</td>
-      <td>3.790985</td>
-      <td>4.499810</td>
-      <td>0.347837</td>
-      <td>2.005196</td>
-    </tr>
-    <tr>
-      <th>329</th>
-      <td>44.6</td>
-      <td>4</td>
-      <td>91.0</td>
-      <td>67.0</td>
-      <td>1850.0</td>
-      <td>13.8</td>
-      <td>80</td>
-      <td>3</td>
-      <td>honda civic 1500 gl</td>
-      <td>3.797734</td>
-      <td>4.510860</td>
-      <td>0.360653</td>
-      <td>2.079076</td>
-    </tr>
-    <tr>
-      <th>333</th>
-      <td>32.7</td>
-      <td>6</td>
-      <td>168.0</td>
-      <td>132.0</td>
-      <td>2910.0</td>
-      <td>11.4</td>
-      <td>80</td>
-      <td>3</td>
-      <td>datsun 280-zx</td>
-      <td>3.487375</td>
-      <td>5.123964</td>
-      <td>0.386906</td>
-      <td>2.230418</td>
-    </tr>
-    <tr>
-      <th>334</th>
-      <td>23.7</td>
-      <td>3</td>
-      <td>70.0</td>
-      <td>100.0</td>
-      <td>2420.0</td>
-      <td>12.5</td>
-      <td>80</td>
-      <td>3</td>
-      <td>mazda rx-7 gs</td>
-      <td>3.165475</td>
-      <td>4.248495</td>
-      <td>-0.415651</td>
-      <td>-2.396124</td>
-    </tr>
-    <tr>
-      <th>364</th>
-      <td>26.6</td>
-      <td>8</td>
-      <td>350.0</td>
-      <td>105.0</td>
-      <td>3725.0</td>
-      <td>19.0</td>
-      <td>81</td>
-      <td>1</td>
-      <td>oldsmobile cutlass ls</td>
-      <td>3.280911</td>
-      <td>5.857933</td>
-      <td>0.583412</td>
-      <td>3.363226</td>
-    </tr>
-    <tr>
-      <th>387</th>
-      <td>38.0</td>
-      <td>6</td>
-      <td>262.0</td>
-      <td>85.0</td>
-      <td>3015.0</td>
-      <td>17.0</td>
-      <td>82</td>
-      <td>1</td>
-      <td>oldsmobile cutlass ciera (diesel)</td>
-      <td>3.637586</td>
-      <td>5.568345</td>
-      <td>0.781095</td>
-      <td>4.502817</td>
-    </tr>
-    <tr>
-      <th>391</th>
-      <td>36.0</td>
-      <td>4</td>
-      <td>135.0</td>
-      <td>84.0</td>
-      <td>2370.0</td>
-      <td>13.0</td>
-      <td>82</td>
-      <td>1</td>
-      <td>dodge charger 2.2</td>
-      <td>3.583519</td>
-      <td>4.905275</td>
-      <td>0.362984</td>
-      <td>2.092509</td>
-    </tr>
-    <tr>
-      <th>394</th>
-      <td>44.0</td>
-      <td>4</td>
-      <td>97.0</td>
-      <td>52.0</td>
-      <td>2130.0</td>
-      <td>24.6</td>
-      <td>82</td>
-      <td>2</td>
-      <td>vw pickup</td>
-      <td>3.784190</td>
-      <td>4.574711</td>
-      <td>0.382165</td>
-      <td>2.203088</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -14477,7 +14239,7 @@ GEYOMfE3DMPIISb+hmEYOcTE3zAMI4f8fzjkcGYHJ89PAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;resid_t&#39;</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;resid_t&#39;</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">ana4</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg_ln ~ displacement_ln&#39;</span><span class="p">,</span> <span class="n">df2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">displacement_ln</span><span class="p">,</span><span class="n">ana4</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
@@ -14928,10 +14690,10 @@ hmEYETHxNwzDKCEm/oZhGCXExN8wDKOEmPgbhmGUEBN/wzCMEmLibxiGUUJM/A3DMErI/wfRUrTP
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   711.4</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Wed, 22 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>4.94e-186</td>
+  <th>Date:</th>             <td>Thu, 30 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>4.94e-186</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>10:01:13</td>     <th>  Log-Likelihood:    </th> <td>  329.83</td> 
+  <th>Time:</th>                 <td>11:29:36</td>     <th>  Log-Likelihood:    </th> <td>  329.83</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   372</td>      <th>  AIC:               </th> <td>  -647.7</td> 
@@ -15160,8 +14922,7 @@ model_year 	 1.16893644239
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># df2[&#39;d_w_ratio&#39;] = df2[&#39;displacement&#39;] / df2[&#39;weight&#39;]</span>
-<span class="n">ana6</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg_ln ~ d_w_ratio + horsepower_ln + acceleration + model_year&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">df2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ana6</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg_ln ~ d_w_ratio + horsepower_ln + acceleration + model_year&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">df2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 <span class="n">ana6</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
@@ -15192,10 +14953,10 @@ model_year 	 1.16893644239
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   637.3</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Wed, 22 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>1.08e-163</td>
+  <th>Date:</th>             <td>Thu, 30 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>1.08e-163</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>10:01:13</td>     <th>  Log-Likelihood:    </th> <td>  274.15</td> 
+  <th>Time:</th>                 <td>11:29:36</td>     <th>  Log-Likelihood:    </th> <td>  274.15</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   372</td>      <th>  AIC:               </th> <td>  -538.3</td> 
@@ -15330,10 +15091,10 @@ final formula is mpg_ln ~ cylinders + model_year + d_w_ratio + acceleration
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   698.1</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Wed, 22 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>1.12e-184</td>
+  <th>Date:</th>             <td>Thu, 30 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>1.12e-184</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>10:01:13</td>     <th>  Log-Likelihood:    </th> <td>  326.65</td> 
+  <th>Time:</th>                 <td>11:29:36</td>     <th>  Log-Likelihood:    </th> <td>  326.65</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   372</td>      <th>  AIC:               </th> <td>  -641.3</td> 
@@ -15451,10 +15212,10 @@ C:\Users\guofei\Anaconda3\lib\site-packages\scipy\stats\_distn_infrastructure.py
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   357.9</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Wed, 22 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>1.41e-180</td>
+  <th>Date:</th>             <td>Thu, 30 Nov 2017</td> <th>  Prob (F-statistic):</th> <td>1.41e-180</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>10:01:13</td>     <th>  Log-Likelihood:    </th> <td>  333.18</td> 
+  <th>Time:</th>                 <td>11:29:36</td>     <th>  Log-Likelihood:    </th> <td>  333.18</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   372</td>      <th>  AIC:               </th> <td>  -644.4</td> 
@@ -15545,31 +15306,23 @@ C:\Users\guofei\Anaconda3\lib\site-packages\scipy\stats\_distn_infrastructure.py
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#21017;&#31639;&#27861;">&#27491;&#21017;&#31639;&#27861;<a class="anchor-link" href="#&#27491;&#21017;&#31639;&#27861;">&#182;</a></h2><h3 id="&#23725;&#22238;&#24402;">&#23725;&#22238;&#24402;<a class="anchor-link" href="#&#23725;&#22238;&#24402;">&#182;</a></h3>
+<h2 id="&#27491;&#21017;&#31639;&#27861;">&#27491;&#21017;&#31639;&#27861;<a class="anchor-link" href="#&#27491;&#21017;&#31639;&#27861;">&#182;</a></h2><p>ols.fit_regularized()</p>
+<ul>
+<li>L1_wt=0: 使用岭回归</li>
+<li>L1_wt=1使用lasso</li>
+</ul>
+<h3 id="&#23725;&#22238;&#24402;">&#23725;&#22238;&#24402;<a class="anchor-link" href="#&#23725;&#22238;&#24402;">&#182;</a></h3>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lmr</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg_ln ~ displacement+ horsepower+ weight+model_year &#39;</span><span class="p">,</span>
-          <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit_regularized</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">L1_wt</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">lmr</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># L1_wt参数为0则使用岭回归，为1使用lasso</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lmr</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg ~ displacement+ horsepower+ weight+model_year &#39;</span><span class="p">,</span>
+          <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit_regularized</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">L1_wt</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">lmr</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -15581,16 +15334,16 @@ C:\Users\guofei\Anaconda3\lib\site-packages\scipy\stats\_distn_infrastructure.py
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="LASSO&#31639;&#27861;">LASSO&#31639;&#27861;<a class="anchor-link" href="#LASSO&#31639;&#27861;">&#182;</a></h3>
+<h3 id="LASSO">LASSO<a class="anchor-link" href="#LASSO">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lmrl</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg_ln ~ displacement+ horsepower+ weight+model_year &#39;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lmrl</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg ~ displacement+ horsepower+ weight+model_year &#39;</span><span class="p">,</span>
           <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit_regularized</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">L1_wt</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">lmrl</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
@@ -15610,17 +15363,726 @@ C:\Users\guofei\Anaconda3\lib\site-packages\scipy\stats\_distn_infrastructure.py
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">RidgeCV</span>
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">exp2</span><span class="p">[[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;high_avg_ratio&#39;</span><span class="p">,</span> <span class="s1">&#39;dist_home_val_ln&#39;</span><span class="p">,</span> <span class="s1">&#39;dist_avg_income_ln&#39;</span><span class="p">]]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">exp2</span><span class="p">[[</span><span class="s1">&#39;avg_exp_ln&#39;</span><span class="p">,]]</span>
-<span class="n">alphas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-
+<span class="n">X</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[[</span><span class="s1">&#39;displacement&#39;</span><span class="p">,</span> <span class="s1">&#39;horsepower&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">,</span> <span class="s1">&#39;model_year&#39;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[[</span><span class="s1">&#39;mpg_ln&#39;</span><span class="p">]]</span>
+<span class="c1"># alphas = np.logspace(-3, 1, 20, base=10)</span>
+<span class="n">alphas</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
 <span class="n">rcv</span> <span class="o">=</span> <span class="n">RidgeCV</span><span class="p">(</span><span class="n">alphas</span><span class="o">=</span><span class="n">alphas</span><span class="p">,</span> <span class="n">store_cv_values</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Search the min MSE by CV</span>
 <span class="n">rcv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[84]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>RidgeCV(alphas=array([   0.1    ,    0.60201, ...,   99.49799,  100.     ]),
+    cv=None, fit_intercept=True, gcv_mode=None, normalize=False,
+    scoring=None, store_cv_values=True)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The best alpha is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rcv</span><span class="o">.</span><span class="n">alpha_</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The r-square is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rcv</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)))</span> <span class="c1"># Default score is rsquared</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The best alpha is 27.208542713567844
+The r-square is 0.8866376616239121
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rcv</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[87]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 2.74232119],
+       [ 2.67233213],
+       [ 2.75356433],
+       [ 2.76461684],
+       [ 2.76062173]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv_values</span> <span class="o">=</span> <span class="n">rcv</span><span class="o">.</span><span class="n">cv_values_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">cv_mean</span> <span class="o">=</span> <span class="n">cv_values</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cv_std</span> <span class="o">=</span> <span class="n">cv_values</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ub</span> <span class="o">=</span> <span class="n">cv_mean</span> <span class="o">+</span> <span class="mf">0.0001</span><span class="o">*</span><span class="n">cv_std</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="n">cv_mean</span> <span class="o">-</span> <span class="mf">0.0001</span><span class="o">*</span><span class="n">cv_std</span>
+
+<span class="c1"># plt.semilogx(alphas, cv_mean, label=&#39;mean_score&#39;)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">alphas</span><span class="p">,</span> <span class="n">cv_mean</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;mean_score&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">alphas</span><span class="p">,</span> <span class="n">lb</span><span class="p">,</span> <span class="n">ub</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">alpha$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;mean squared errors&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rcv</span><span class="o">.</span><span class="n">coef_</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[-0.00073724,  0.00017618, -0.00023434,  0.02564373]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">Ridge</span>
+
+<span class="n">ridge</span> <span class="o">=</span> <span class="n">Ridge</span><span class="p">()</span>
+
+<span class="n">coefs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">:</span>
+    <span class="n">ridge</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">ridge</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">coefs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ridge</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">coefs</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[102]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[array([[-0.00073604,  0.00017814, -0.00023448,  0.02570758]]),
+ array([[-0.0007361 ,  0.00017804, -0.00023447,  0.02570434]]),
+ array([[-0.00073616,  0.00017794, -0.00023446,  0.02570109]]),
+ array([[-0.00073622,  0.00017784, -0.00023446,  0.02569785]]),
+ array([[-0.00073628,  0.00017775, -0.00023445,  0.0256946 ]]),
+ array([[-0.00073634,  0.00017765, -0.00023444,  0.02569136]]),
+ array([[-0.0007364 ,  0.00017755, -0.00023443,  0.02568812]]),
+ array([[-0.00073647,  0.00017745, -0.00023443,  0.02568488]]),
+ array([[-0.00073653,  0.00017735, -0.00023442,  0.02568164]]),
+ array([[-0.00073659,  0.00017725, -0.00023441,  0.0256784 ]]),
+ array([[-0.00073665,  0.00017715, -0.00023441,  0.02567517]]),
+ array([[-0.00073671,  0.00017705, -0.0002344 ,  0.02567193]]),
+ array([[-0.00073677,  0.00017695, -0.00023439,  0.02566869]]),
+ array([[-0.00073683,  0.00017685, -0.00023439,  0.02566546]]),
+ array([[-0.00073689,  0.00017675, -0.00023438,  0.02566222]]),
+ array([[-0.00073695,  0.00017665, -0.00023437,  0.02565899]]),
+ array([[-0.00073701,  0.00017655, -0.00023437,  0.02565576]]),
+ array([[-0.00073707,  0.00017645, -0.00023436,  0.02565252]]),
+ array([[-0.00073713,  0.00017635, -0.00023435,  0.02564929]]),
+ array([[-0.00073719,  0.00017625, -0.00023435,  0.02564606]]),
+ array([[-0.00073725,  0.00017615, -0.00023434,  0.02564283]]),
+ array([[-0.00073731,  0.00017605, -0.00023433,  0.0256396 ]]),
+ array([[-0.00073737,  0.00017596, -0.00023433,  0.02563637]]),
+ array([[-0.00073743,  0.00017586, -0.00023432,  0.02563315]]),
+ array([[-0.00073749,  0.00017576, -0.00023431,  0.02562992]]),
+ array([[-0.00073755,  0.00017566, -0.00023431,  0.0256267 ]]),
+ array([[-0.00073761,  0.00017556, -0.0002343 ,  0.02562347]]),
+ array([[-0.00073768,  0.00017546, -0.00023429,  0.02562025]]),
+ array([[-0.00073774,  0.00017536, -0.00023429,  0.02561702]]),
+ array([[-0.0007378 ,  0.00017526, -0.00023428,  0.0256138 ]]),
+ array([[-0.00073786,  0.00017516, -0.00023427,  0.02561058]]),
+ array([[-0.00073792,  0.00017506, -0.00023427,  0.02560736]]),
+ array([[-0.00073798,  0.00017496, -0.00023426,  0.02560414]]),
+ array([[-0.00073804,  0.00017487, -0.00023425,  0.02560092]]),
+ array([[-0.0007381 ,  0.00017477, -0.00023425,  0.0255977 ]]),
+ array([[-0.00073816,  0.00017467, -0.00023424,  0.02559448]]),
+ array([[-0.00073822,  0.00017457, -0.00023423,  0.02559127]]),
+ array([[-0.00073828,  0.00017447, -0.00023423,  0.02558805]]),
+ array([[-0.00073834,  0.00017437, -0.00023422,  0.02558484]]),
+ array([[-0.0007384 ,  0.00017427, -0.00023421,  0.02558162]]),
+ array([[-0.00073846,  0.00017417, -0.00023421,  0.02557841]]),
+ array([[-0.00073852,  0.00017407, -0.0002342 ,  0.0255752 ]]),
+ array([[-0.00073858,  0.00017398, -0.00023419,  0.02557198]]),
+ array([[-0.00073864,  0.00017388, -0.00023418,  0.02556877]]),
+ array([[-0.0007387 ,  0.00017378, -0.00023418,  0.02556556]]),
+ array([[-0.00073876,  0.00017368, -0.00023417,  0.02556235]]),
+ array([[-0.00073882,  0.00017358, -0.00023416,  0.02555914]]),
+ array([[-0.00073888,  0.00017348, -0.00023416,  0.02555594]]),
+ array([[-0.00073894,  0.00017338, -0.00023415,  0.02555273]]),
+ array([[-0.000739  ,  0.00017329, -0.00023414,  0.02554952]]),
+ array([[-0.00073906,  0.00017319, -0.00023414,  0.02554632]]),
+ array([[-0.00073912,  0.00017309, -0.00023413,  0.02554311]]),
+ array([[-0.00073918,  0.00017299, -0.00023412,  0.02553991]]),
+ array([[-0.00073924,  0.00017289, -0.00023412,  0.02553671]]),
+ array([[-0.0007393 ,  0.00017279, -0.00023411,  0.0255335 ]]),
+ array([[-0.00073936,  0.0001727 , -0.0002341 ,  0.0255303 ]]),
+ array([[-0.00073942,  0.0001726 , -0.0002341 ,  0.0255271 ]]),
+ array([[-0.00073948,  0.0001725 , -0.00023409,  0.0255239 ]]),
+ array([[-0.00073954,  0.0001724 , -0.00023408,  0.0255207 ]]),
+ array([[-0.0007396 ,  0.0001723 , -0.00023408,  0.02551751]]),
+ array([[-0.00073966,  0.0001722 , -0.00023407,  0.02551431]]),
+ array([[-0.00073972,  0.00017211, -0.00023406,  0.02551111]]),
+ array([[-0.00073978,  0.00017201, -0.00023406,  0.02550792]]),
+ array([[-0.00073984,  0.00017191, -0.00023405,  0.02550472]]),
+ array([[-0.0007399 ,  0.00017181, -0.00023404,  0.02550153]]),
+ array([[-0.00073996,  0.00017171, -0.00023404,  0.02549833]]),
+ array([[-0.00074002,  0.00017161, -0.00023403,  0.02549514]]),
+ array([[-0.00074008,  0.00017152, -0.00023402,  0.02549195]]),
+ array([[-0.00074014,  0.00017142, -0.00023402,  0.02548876]]),
+ array([[-0.0007402 ,  0.00017132, -0.00023401,  0.02548557]]),
+ array([[-0.00074026,  0.00017122, -0.000234  ,  0.02548238]]),
+ array([[-0.00074031,  0.00017112, -0.000234  ,  0.02547919]]),
+ array([[-0.00074037,  0.00017103, -0.00023399,  0.025476  ]]),
+ array([[-0.00074043,  0.00017093, -0.00023398,  0.02547282]]),
+ array([[-0.00074049,  0.00017083, -0.00023398,  0.02546963]]),
+ array([[-0.00074055,  0.00017073, -0.00023397,  0.02546644]]),
+ array([[-0.00074061,  0.00017063, -0.00023396,  0.02546326]]),
+ array([[-0.00074067,  0.00017054, -0.00023396,  0.02546008]]),
+ array([[-0.00074073,  0.00017044, -0.00023395,  0.02545689]]),
+ array([[-0.00074079,  0.00017034, -0.00023394,  0.02545371]]),
+ array([[-0.00074085,  0.00017024, -0.00023394,  0.02545053]]),
+ array([[-0.00074091,  0.00017015, -0.00023393,  0.02544735]]),
+ array([[-0.00074097,  0.00017005, -0.00023392,  0.02544417]]),
+ array([[-0.00074103,  0.00016995, -0.00023392,  0.02544099]]),
+ array([[-0.00074109,  0.00016985, -0.00023391,  0.02543781]]),
+ array([[-0.00074115,  0.00016976, -0.0002339 ,  0.02543464]]),
+ array([[-0.00074121,  0.00016966, -0.0002339 ,  0.02543146]]),
+ array([[-0.00074127,  0.00016956, -0.00023389,  0.02542828]]),
+ array([[-0.00074133,  0.00016946, -0.00023388,  0.02542511]]),
+ array([[-0.00074139,  0.00016936, -0.00023388,  0.02542193]]),
+ array([[-0.00074145,  0.00016927, -0.00023387,  0.02541876]]),
+ array([[-0.0007415 ,  0.00016917, -0.00023386,  0.02541559]]),
+ array([[-0.00074156,  0.00016907, -0.00023386,  0.02541242]]),
+ array([[-0.00074162,  0.00016897, -0.00023385,  0.02540924]]),
+ array([[-0.00074168,  0.00016888, -0.00023384,  0.02540607]]),
+ array([[-0.00074174,  0.00016878, -0.00023384,  0.02540291]]),
+ array([[-0.0007418 ,  0.00016868, -0.00023383,  0.02539974]]),
+ array([[-0.00074186,  0.00016859, -0.00023382,  0.02539657]]),
+ array([[-0.00074192,  0.00016849, -0.00023382,  0.0253934 ]]),
+ array([[-0.00074198,  0.00016839, -0.00023381,  0.02539024]]),
+ array([[-0.00074204,  0.00016829, -0.0002338 ,  0.02538707]]),
+ array([[-0.0007421 ,  0.0001682 , -0.0002338 ,  0.02538391]]),
+ array([[-0.00074216,  0.0001681 , -0.00023379,  0.02538074]]),
+ array([[-0.00074222,  0.000168  , -0.00023378,  0.02537758]]),
+ array([[-0.00074228,  0.0001679 , -0.00023378,  0.02537442]]),
+ array([[-0.00074233,  0.00016781, -0.00023377,  0.02537125]]),
+ array([[-0.00074239,  0.00016771, -0.00023376,  0.02536809]]),
+ array([[-0.00074245,  0.00016761, -0.00023376,  0.02536493]]),
+ array([[-0.00074251,  0.00016752, -0.00023375,  0.02536177]]),
+ array([[-0.00074257,  0.00016742, -0.00023374,  0.02535862]]),
+ array([[-0.00074263,  0.00016732, -0.00023374,  0.02535546]]),
+ array([[-0.00074269,  0.00016722, -0.00023373,  0.0253523 ]]),
+ array([[-0.00074275,  0.00016713, -0.00023373,  0.02534915]]),
+ array([[-0.00074281,  0.00016703, -0.00023372,  0.02534599]]),
+ array([[-0.00074287,  0.00016693, -0.00023371,  0.02534284]]),
+ array([[-0.00074293,  0.00016684, -0.00023371,  0.02533968]]),
+ array([[-0.00074298,  0.00016674, -0.0002337 ,  0.02533653]]),
+ array([[-0.00074304,  0.00016664, -0.00023369,  0.02533338]]),
+ array([[-0.0007431 ,  0.00016655, -0.00023369,  0.02533023]]),
+ array([[-0.00074316,  0.00016645, -0.00023368,  0.02532708]]),
+ array([[-0.00074322,  0.00016635, -0.00023367,  0.02532393]]),
+ array([[-0.00074328,  0.00016626, -0.00023367,  0.02532078]]),
+ array([[-0.00074334,  0.00016616, -0.00023366,  0.02531763]]),
+ array([[-0.0007434 ,  0.00016606, -0.00023365,  0.02531448]]),
+ array([[-0.00074346,  0.00016597, -0.00023365,  0.02531133]]),
+ array([[-0.00074351,  0.00016587, -0.00023364,  0.02530819]]),
+ array([[-0.00074357,  0.00016577, -0.00023363,  0.02530504]]),
+ array([[-0.00074363,  0.00016568, -0.00023363,  0.0253019 ]]),
+ array([[-0.00074369,  0.00016558, -0.00023362,  0.02529876]]),
+ array([[-0.00074375,  0.00016548, -0.00023361,  0.02529561]]),
+ array([[-0.00074381,  0.00016539, -0.00023361,  0.02529247]]),
+ array([[-0.00074387,  0.00016529, -0.0002336 ,  0.02528933]]),
+ array([[-0.00074393,  0.00016519, -0.00023359,  0.02528619]]),
+ array([[-0.00074398,  0.0001651 , -0.00023359,  0.02528305]]),
+ array([[-0.00074404,  0.000165  , -0.00023358,  0.02527991]]),
+ array([[-0.0007441 ,  0.0001649 , -0.00023357,  0.02527677]]),
+ array([[-0.00074416,  0.00016481, -0.00023357,  0.02527364]]),
+ array([[-0.00074422,  0.00016471, -0.00023356,  0.0252705 ]]),
+ array([[-0.00074428,  0.00016462, -0.00023355,  0.02526736]]),
+ array([[-0.00074434,  0.00016452, -0.00023355,  0.02526423]]),
+ array([[-0.0007444 ,  0.00016442, -0.00023354,  0.0252611 ]]),
+ array([[-0.00074445,  0.00016433, -0.00023353,  0.02525796]]),
+ array([[-0.00074451,  0.00016423, -0.00023353,  0.02525483]]),
+ array([[-0.00074457,  0.00016413, -0.00023352,  0.0252517 ]]),
+ array([[-0.00074463,  0.00016404, -0.00023351,  0.02524857]]),
+ array([[-0.00074469,  0.00016394, -0.00023351,  0.02524544]]),
+ array([[-0.00074475,  0.00016385, -0.0002335 ,  0.02524231]]),
+ array([[-0.00074481,  0.00016375, -0.0002335 ,  0.02523918]]),
+ array([[-0.00074486,  0.00016365, -0.00023349,  0.02523605]]),
+ array([[-0.00074492,  0.00016356, -0.00023348,  0.02523292]]),
+ array([[-0.00074498,  0.00016346, -0.00023348,  0.0252298 ]]),
+ array([[-0.00074504,  0.00016336, -0.00023347,  0.02522667]]),
+ array([[-0.0007451 ,  0.00016327, -0.00023346,  0.02522355]]),
+ array([[-0.00074516,  0.00016317, -0.00023346,  0.02522042]]),
+ array([[-0.00074521,  0.00016308, -0.00023345,  0.0252173 ]]),
+ array([[-0.00074527,  0.00016298, -0.00023344,  0.02521418]]),
+ array([[-0.00074533,  0.00016289, -0.00023344,  0.02521106]]),
+ array([[-0.00074539,  0.00016279, -0.00023343,  0.02520794]]),
+ array([[-0.00074545,  0.00016269, -0.00023342,  0.02520481]]),
+ array([[-0.00074551,  0.0001626 , -0.00023342,  0.0252017 ]]),
+ array([[-0.00074556,  0.0001625 , -0.00023341,  0.02519858]]),
+ array([[-0.00074562,  0.00016241, -0.0002334 ,  0.02519546]]),
+ array([[-0.00074568,  0.00016231, -0.0002334 ,  0.02519234]]),
+ array([[-0.00074574,  0.00016221, -0.00023339,  0.02518923]]),
+ array([[-0.0007458 ,  0.00016212, -0.00023338,  0.02518611]]),
+ array([[-0.00074586,  0.00016202, -0.00023338,  0.025183  ]]),
+ array([[-0.00074591,  0.00016193, -0.00023337,  0.02517988]]),
+ array([[-0.00074597,  0.00016183, -0.00023336,  0.02517677]]),
+ array([[-0.00074603,  0.00016174, -0.00023336,  0.02517366]]),
+ array([[-0.00074609,  0.00016164, -0.00023335,  0.02517054]]),
+ array([[-0.00074615,  0.00016154, -0.00023334,  0.02516743]]),
+ array([[-0.00074621,  0.00016145, -0.00023334,  0.02516432]]),
+ array([[-0.00074626,  0.00016135, -0.00023333,  0.02516121]]),
+ array([[-0.00074632,  0.00016126, -0.00023333,  0.02515811]]),
+ array([[-0.00074638,  0.00016116, -0.00023332,  0.025155  ]]),
+ array([[-0.00074644,  0.00016107, -0.00023331,  0.02515189]]),
+ array([[-0.0007465 ,  0.00016097, -0.00023331,  0.02514878]]),
+ array([[-0.00074655,  0.00016088, -0.0002333 ,  0.02514568]]),
+ array([[-0.00074661,  0.00016078, -0.00023329,  0.02514257]]),
+ array([[-0.00074667,  0.00016069, -0.00023329,  0.02513947]]),
+ array([[-0.00074673,  0.00016059, -0.00023328,  0.02513637]]),
+ array([[-0.00074679,  0.0001605 , -0.00023327,  0.02513327]]),
+ array([[-0.00074684,  0.0001604 , -0.00023327,  0.02513016]]),
+ array([[-0.0007469 ,  0.0001603 , -0.00023326,  0.02512706]]),
+ array([[-0.00074696,  0.00016021, -0.00023325,  0.02512396]]),
+ array([[-0.00074702,  0.00016011, -0.00023325,  0.02512086]]),
+ array([[-0.00074708,  0.00016002, -0.00023324,  0.02511776]]),
+ array([[-0.00074713,  0.00015992, -0.00023323,  0.02511467]]),
+ array([[-0.00074719,  0.00015983, -0.00023323,  0.02511157]]),
+ array([[-0.00074725,  0.00015973, -0.00023322,  0.02510847]]),
+ array([[-0.00074731,  0.00015964, -0.00023322,  0.02510538]]),
+ array([[-0.00074737,  0.00015954, -0.00023321,  0.02510228]]),
+ array([[-0.00074742,  0.00015945, -0.0002332 ,  0.02509919]]),
+ array([[-0.00074748,  0.00015935, -0.0002332 ,  0.0250961 ]]),
+ array([[-0.00074754,  0.00015926, -0.00023319,  0.025093  ]]),
+ array([[-0.0007476 ,  0.00015916, -0.00023318,  0.02508991]]),
+ array([[-0.00074766,  0.00015907, -0.00023318,  0.02508682]]),
+ array([[-0.00074771,  0.00015897, -0.00023317,  0.02508373]]),
+ array([[-0.00074777,  0.00015888, -0.00023316,  0.02508064]]),
+ array([[-0.00074783,  0.00015878, -0.00023316,  0.02507755]])]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">alphas</span><span class="p">,</span> <span class="n">coefs</span><span class="p">)</span>
+<span class="c1"># ax.set_xscale(&#39;log&#39;)</span>
+<span class="c1"># plt.xlabel(&#39;alpha&#39;)</span>
+<span class="c1"># plt.ylabel(&#39;weights&#39;)</span>
+<span class="c1"># plt.title(&#39;Ridge coefficients as a function of the regularization&#39;)</span>
+<span class="c1"># plt.axis(&#39;tight&#39;)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -15639,69 +16101,130 @@ C:\Users\guofei\Anaconda3\lib\site-packages\scipy\stats\_distn_infrastructure.py
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-36-1a88b8e5aec0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-fg">      1</span> <span class="ansi-green-intense-fg ansi-bold">from</span> sklearn<span class="ansi-yellow-intense-fg ansi-bold">.</span>linear_model <span class="ansi-green-intense-fg ansi-bold">import</span> RidgeCV
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-101-14f51c0c51e7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-fg">      1</span> ax <span class="ansi-yellow-intense-fg ansi-bold">=</span> plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>gca<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
 <span class="ansi-green-fg">      2</span> 
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>X <span class="ansi-yellow-intense-fg ansi-bold">=</span> exp2<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;Age&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;high_avg_ratio&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;dist_home_val_ln&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;dist_avg_income_ln&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">      4</span> y <span class="ansi-yellow-intense-fg ansi-bold">=</span> exp2<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;avg_exp_ln&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">      5</span> alphas <span class="ansi-yellow-intense-fg ansi-bold">=</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>logspace<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">-</span><span class="ansi-cyan-intense-fg ansi-bold">3</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">20</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> base<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">10</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>ax<span class="ansi-yellow-intense-fg ansi-bold">.</span>plot<span class="ansi-yellow-intense-fg ansi-bold">(</span>alphas<span class="ansi-yellow-intense-fg ansi-bold">,</span> coefs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      4</span> <span class="ansi-red-intense-fg ansi-bold"># ax.set_xscale(&#39;log&#39;)</span>
+<span class="ansi-green-fg">      5</span> <span class="ansi-red-intense-fg ansi-bold"># plt.xlabel(&#39;alpha&#39;)</span>
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;exp2&#39; is not defined</pre>
+<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\lib\site-packages\matplotlib\__init__.py</span> in <span class="ansi-cyan-fg">inner</span><span class="ansi-blue-intense-fg ansi-bold">(ax, *args, **kwargs)</span>
+<span class="ansi-green-fg">   1896</span>                     warnings.warn(msg % (label_namer, func.__name__),
+<span class="ansi-green-fg">   1897</span>                                   RuntimeWarning, stacklevel=2)
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1898</span><span class="ansi-yellow-intense-fg ansi-bold">             </span><span class="ansi-green-intense-fg ansi-bold">return</span> func<span class="ansi-yellow-intense-fg ansi-bold">(</span>ax<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">*</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">   1899</span>         pre_doc <span class="ansi-yellow-intense-fg ansi-bold">=</span> inner<span class="ansi-yellow-intense-fg ansi-bold">.</span>__doc__
+<span class="ansi-green-fg">   1900</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> pre_doc <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\lib\site-packages\matplotlib\axes\_axes.py</span> in <span class="ansi-cyan-fg">plot</span><span class="ansi-blue-intense-fg ansi-bold">(self, *args, **kwargs)</span>
+<span class="ansi-green-fg">   1404</span>         kwargs <span class="ansi-yellow-intense-fg ansi-bold">=</span> cbook<span class="ansi-yellow-intense-fg ansi-bold">.</span>normalize_kwargs<span class="ansi-yellow-intense-fg ansi-bold">(</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">,</span> _alias_map<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">   1405</span> 
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1406</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">for</span> line <span class="ansi-green-intense-fg ansi-bold">in</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_get_lines<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">   1407</span>             self<span class="ansi-yellow-intense-fg ansi-bold">.</span>add_line<span class="ansi-yellow-intense-fg ansi-bold">(</span>line<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">   1408</span>             lines<span class="ansi-yellow-intense-fg ansi-bold">.</span>append<span class="ansi-yellow-intense-fg ansi-bold">(</span>line<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\lib\site-packages\matplotlib\axes\_base.py</span> in <span class="ansi-cyan-fg">_grab_next_args</span><span class="ansi-blue-intense-fg ansi-bold">(self, *args, **kwargs)</span>
+<span class="ansi-green-fg">    405</span>                 <span class="ansi-green-intense-fg ansi-bold">return</span>
+<span class="ansi-green-fg">    406</span>             <span class="ansi-green-intense-fg ansi-bold">if</span> len<span class="ansi-yellow-intense-fg ansi-bold">(</span>remaining<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">&lt;=</span> <span class="ansi-cyan-intense-fg ansi-bold">3</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 407</span><span class="ansi-yellow-intense-fg ansi-bold">                 </span><span class="ansi-green-intense-fg ansi-bold">for</span> seg <span class="ansi-green-intense-fg ansi-bold">in</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_plot_args<span class="ansi-yellow-intense-fg ansi-bold">(</span>remaining<span class="ansi-yellow-intense-fg ansi-bold">,</span> kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    408</span>                     <span class="ansi-green-intense-fg ansi-bold">yield</span> seg
+<span class="ansi-green-fg">    409</span>                 <span class="ansi-green-intense-fg ansi-bold">return</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\lib\site-packages\matplotlib\axes\_base.py</span> in <span class="ansi-cyan-fg">_plot_args</span><span class="ansi-blue-intense-fg ansi-bold">(self, tup, kwargs)</span>
+<span class="ansi-green-fg">    383</span>             x<span class="ansi-yellow-intense-fg ansi-bold">,</span> y <span class="ansi-yellow-intense-fg ansi-bold">=</span> index_of<span class="ansi-yellow-intense-fg ansi-bold">(</span>tup<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">-</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    384</span> 
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 385</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>x<span class="ansi-yellow-intense-fg ansi-bold">,</span> y <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_xy_from_xy<span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">,</span> y<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    386</span> 
+<span class="ansi-green-fg">    387</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>command <span class="ansi-yellow-intense-fg ansi-bold">==</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;plot&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\lib\site-packages\matplotlib\axes\_base.py</span> in <span class="ansi-cyan-fg">_xy_from_xy</span><span class="ansi-blue-intense-fg ansi-bold">(self, x, y)</span>
+<span class="ansi-green-fg">    245</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> x<span class="ansi-yellow-intense-fg ansi-bold">.</span>ndim <span class="ansi-yellow-intense-fg ansi-bold">&gt;</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span> <span class="ansi-green-intense-fg ansi-bold">or</span> y<span class="ansi-yellow-intense-fg ansi-bold">.</span>ndim <span class="ansi-yellow-intense-fg ansi-bold">&gt;</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    246</span>             raise ValueError(&#34;x and y can be no greater than 2-D, but have &#34;
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 247</span><span class="ansi-yellow-intense-fg ansi-bold">                              &#34;shapes {} and {}&#34;.format(x.shape, y.shape))
+</span><span class="ansi-green-fg">    248</span> 
+<span class="ansi-green-fg">    249</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> x<span class="ansi-yellow-intense-fg ansi-bold">.</span>ndim <span class="ansi-yellow-intense-fg ansi-bold">==</span> <span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: x and y can be no greater than 2-D, but have shapes (200,) and (200, 1, 4)</pre>
 </div>
 </div>
 
-</div>
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXwAAAD8CAYAAAB0IB+mAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAADYBJREFUeJzt3HGI33d9x/Hny8ROprWO5QRJou1YuhrKoO7oOoRZ0Y20
+fyT/FEmguEppwK0OZhE6HCr1rylDELJptolT0Fr9Qw+J5A9X6RAjudJZmpTALTpzROhZu/5TtGZ7
+74/fT++4XHLf3v3uLt77+YDA7/v7fX6/e+fD3TO/fH/3+6WqkCRtf6/a6gEkSZvD4EtSEwZfkpow
++JLUhMGXpCYMviQ1sWrwk3wuyXNJnrnC7Uny6SRzSZ5O8rbJjylJWq8hz/A/Dxy4yu13AfvGf44C
+/7T+sSRJk7Zq8KvqCeBnV1lyCPhCjZwC3pDkTZMaUJI0GTsn8Bi7gQtLjufH1/1k+cIkRxn9L4DX
+vva1f3TLLbdM4MtLUh9PPvnkT6tqai33nUTws8J1K35eQ1UdB44DTE9P1+zs7AS+vCT1keS/13rf
+SfyWzjywd8nxHuDiBB5XkjRBkwj+DPDe8W/r3AG8WFWXnc6RJG2tVU/pJPkycCewK8k88FHg1QBV
+9RngBHA3MAe8BLxvo4aVJK3dqsGvqiOr3F7AX01sIknShvCdtpLUhMGXpCYMviQ1YfAlqQmDL0lN
+GHxJasLgS1ITBl+SmjD4ktSEwZekJgy+JDVh8CWpCYMvSU0YfElqwuBLUhMGX5KaMPiS1ITBl6Qm
+DL4kNWHwJakJgy9JTRh8SWrC4EtSEwZfkpow+JLUhMGXpCYMviQ1YfAlqQmDL0lNGHxJasLgS1IT
+Bl+SmjD4ktSEwZekJgy+JDUxKPhJDiQ5l2QuycMr3P7mJI8neSrJ00nunvyokqT1WDX4SXYAx4C7
+gP3AkST7ly37O+CxqroNOAz846QHlSStz5Bn+LcDc1V1vqpeBh4FDi1bU8Drx5dvAC5ObkRJ0iQM
+Cf5u4MKS4/nxdUt9DLg3yTxwAvjASg+U5GiS2SSzCwsLaxhXkrRWQ4KfFa6rZcdHgM9X1R7gbuCL
+SS577Ko6XlXTVTU9NTX1yqeVJK3ZkODPA3uXHO/h8lM29wOPAVTV94DXALsmMaAkaTKGBP80sC/J
+TUmuY/Si7MyyNT8G3gWQ5K2Mgu85G0m6hqwa/Kq6BDwInASeZfTbOGeSPJLk4HjZQ8ADSX4AfBm4
+r6qWn/aRJG2hnUMWVdUJRi/GLr3uI0sunwXePtnRJEmT5DttJakJgy9JTRh8SWrC4EtSEwZfkpow
++JLUhMGXpCYMviQ1YfAlqQmDL0lNGHxJasLgS1ITBl+SmjD4ktSEwZekJgy+JDVh8CWpCYMvSU0Y
+fElqwuBLUhMGX5KaMPiS1ITBl6QmDL4kNWHwJakJgy9JTRh8SWrC4EtSEwZfkpow+JLUhMGXpCYM
+viQ1YfAlqQmDL0lNDAp+kgNJziWZS/LwFda8J8nZJGeSfGmyY0qS1mvnaguS7ACOAX8GzAOnk8xU
+1dkla/YBfwu8vapeSPLGjRpYkrQ2Q57h3w7MVdX5qnoZeBQ4tGzNA8CxqnoBoKqem+yYkqT1GhL8
+3cCFJcfz4+uWuhm4Ocl3k5xKcmClB0pyNMlsktmFhYW1TSxJWpMhwc8K19Wy453APuBO4AjwL0ne
+cNmdqo5X1XRVTU9NTb3SWSVJ6zAk+PPA3iXHe4CLK6z5RlX9sqp+CJxj9A+AJOkaMST4p4F9SW5K
+ch1wGJhZtubrwDsBkuxidIrn/CQHlSStz6rBr6pLwIPASeBZ4LGqOpPkkSQHx8tOAs8nOQs8Dnyo
+qp7fqKElSa9cqpafjt8c09PTNTs7uyVfW5J+UyV5sqqm13Jf32krSU0YfElqwuBLUhMGX5KaMPiS
+1ITBl6QmDL4kNWHwJakJgy9JTRh8SWrC4EtSEwZfkpow+JLUhMGXpCYMviQ1YfAlqQmDL0lNGHxJ
+asLgS1ITBl+SmjD4ktSEwZekJgy+JDVh8CWpCYMvSU0YfElqwuBLUhMGX5KaMPiS1ITBl6QmDL4k
+NWHwJakJgy9JTRh8SWrC4EtSE4OCn+RAknNJ5pI8fJV19ySpJNOTG1GSNAmrBj/JDuAYcBewHziS
+ZP8K664H/hr4/qSHlCSt35Bn+LcDc1V1vqpeBh4FDq2w7uPAJ4CfT3A+SdKEDAn+buDCkuP58XW/
+luQ2YG9VffNqD5TkaJLZJLMLCwuveFhJ0toNCX5WuK5+fWPyKuBTwEOrPVBVHa+q6aqanpqaGj6l
+JGndhgR/Hti75HgPcHHJ8fXArcB3kvwIuAOY8YVbSbq2DAn+aWBfkpuSXAccBmZ+dWNVvVhVu6rq
+xqq6ETgFHKyq2Q2ZWJK0JqsGv6ouAQ8CJ4Fngceq6kySR5Ic3OgBJUmTsXPIoqo6AZxYdt1HrrD2
+zvWPJUmaNN9pK0lNGHxJasLgS1ITBl+SmjD4ktSEwZekJgy+JDVh8CWpCYMvSU0YfElqwuBLUhMG
+X5KaMPiS1ITBl6QmDL4kNWHwJakJgy9JTRh8SWrC4EtSEwZfkpow+JLUhMGXpCYMviQ1YfAlqQmD
+L0lNGHxJasLgS1ITBl+SmjD4ktSEwZekJgy+JDVh8CWpCYMvSU0YfElqYlDwkxxIci7JXJKHV7j9
+g0nOJnk6ybeTvGXyo0qS1mPV4CfZARwD7gL2A0eS7F+27Clguqr+EPga8IlJDypJWp8hz/BvB+aq
+6nxVvQw8ChxauqCqHq+ql8aHp4A9kx1TkrReQ4K/G7iw5Hh+fN2V3A98a6UbkhxNMptkdmFhYfiU
+kqR1GxL8rHBdrbgwuReYBj650u1VdbyqpqtqempqaviUkqR12zlgzTywd8nxHuDi8kVJ3g18GHhH
+Vf1iMuNJkiZlyDP808C+JDcluQ44DMwsXZDkNuCzwMGqem7yY0qS1mvV4FfVJeBB4CTwLPBYVZ1J
+8kiSg+NlnwReB3w1yX8mmbnCw0mStsiQUzpU1QngxLLrPrLk8rsnPJckacJ8p60kNWHwJakJgy9J
+TRh8SWrC4EtSEwZfkpow+JLUhMGXpCYMviQ1YfAlqQmDL0lNGHxJasLgS1ITBl+SmjD4ktSEwZek
+Jgy+JDVh8CWpCYMvSU0YfElqwuBLUhMGX5KaMPiS1ITBl6QmDL4kNWHwJakJgy9JTRh8SWrC4EtS
+EwZfkpow+JLUhMGXpCYMviQ1YfAlqQmDL0lNDAp+kgNJziWZS/LwCrf/VpKvjG//fpIbJz2oJGl9
+Vg1+kh3AMeAuYD9wJMn+ZcvuB16oqt8HPgX8/aQHlSStz5Bn+LcDc1V1vqpeBh4FDi1bcwj4t/Hl
+rwHvSpLJjSlJWq+dA9bsBi4sOZ4H/vhKa6rqUpIXgd8Ffrp0UZKjwNHx4S+SPLOWobehXSzbq8bc
+i0XuxSL3YtEfrPWOQ4K/0jP1WsMaquo4cBwgyWxVTQ/4+tuee7HIvVjkXixyLxYlmV3rfYec0pkH
+9i453gNcvNKaJDuBG4CfrXUoSdLkDQn+aWBfkpuSXAccBmaWrZkB/mJ8+R7g36vqsmf4kqSts+op
+nfE5+QeBk8AO4HNVdSbJI8BsVc0A/wp8Mckco2f2hwd87ePrmHu7cS8WuReL3ItF7sWiNe9FfCIu
+ST34TltJasLgS1ITGx58P5Zh0YC9+GCSs0meTvLtJG/Zijk3w2p7sWTdPUkqybb9lbwhe5HkPePv
+jTNJvrTZM26WAT8jb07yeJKnxj8nd2/FnBstyeeSPHel9ypl5NPjfXo6ydsGPXBVbdgfRi/y/hfw
+e8B1wA+A/cvW/CXwmfHlw8BXNnKmrfozcC/eCfz2+PL7O+/FeN31wBPAKWB6q+fewu+LfcBTwO+M
+j9+41XNv4V4cB94/vrwf+NFWz71Be/GnwNuAZ65w+93Atxi9B+oO4PtDHnejn+H7sQyLVt2Lqnq8
+ql4aH55i9J6H7WjI9wXAx4FPAD/fzOE22ZC9eAA4VlUvAFTVc5s842YZshcFvH58+QYuf0/QtlBV
+T3D19zIdAr5QI6eANyR502qPu9HBX+ljGXZfaU1VXQJ+9bEM282QvVjqfkb/gm9Hq+5FktuAvVX1
+zc0cbAsM+b64Gbg5yXeTnEpyYNOm21xD9uJjwL1J5oETwAc2Z7RrzivtCTDsoxXWY2Ify7ANDP57
+JrkXmAbesaETbZ2r7kWSVzH61NX7NmugLTTk+2Ino9M6dzL6X99/JLm1qv5ng2fbbEP24gjw+ar6
+hyR/wuj9P7dW1f9t/HjXlDV1c6Of4fuxDIuG7AVJ3g18GDhYVb/YpNk222p7cT1wK/CdJD9idI5y
+Zpu+cDv0Z+QbVfXLqvohcI7RPwDbzZC9uB94DKCqvge8htEHq3UzqCfLbXTw/ViGRavuxfg0xmcZ
+xX67nqeFVfaiql6sql1VdWNV3cjo9YyDVbXmD426hg35Gfk6oxf0SbKL0Sme85s65eYYshc/Bt4F
+kOStjIK/sKlTXhtmgPeOf1vnDuDFqvrJanfa0FM6tXEfy/AbZ+BefBJ4HfDV8evWP66qg1s29AYZ
+uBctDNyLk8CfJzkL/C/woap6fuum3hgD9+Ih4J+T/A2jUxj3bccniEm+zOgU3q7x6xUfBV4NUFWf
+YfT6xd3AHPAS8L5Bj7sN90qStALfaStJTRh8SWrC4EtSEwZfkpow+JLUhMGXpCYMviQ18f+GmWq6
+NWLIwgAAAABJRU5ErkJggg==
+"
+>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The best alpha is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rcv</span><span class="o">.</span><span class="n">alpha_</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The r-square is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rcv</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)))</span> <span class="c1"># Default score is rsquared</span>
-</pre></div>
 
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rcv</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv_values</span> <span class="o">=</span> <span class="n">rcv</span><span class="o">.</span><span class="n">cv_values_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
-<span class="n">cv_mean</span> <span class="o">=</span> <span class="n">cv_values</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">cv_std</span> <span class="o">=</span> <span class="n">cv_values</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">ub</span> <span class="o">=</span> <span class="n">cv_mean</span> <span class="o">+</span> <span class="n">cv_std</span>
-<span class="n">lb</span> <span class="o">=</span> <span class="n">cv_mean</span> <span class="o">-</span> <span class="n">cv_std</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">alphas</span><span class="p">,</span> <span class="n">cv_mean</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;mean_score&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">alphas</span><span class="p">,</span> <span class="n">lb</span><span class="p">,</span> <span class="n">ub</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">alpha$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;mean squared errors&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
