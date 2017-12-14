@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>TF2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>TF_CNN</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11777,29 +11777,13 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-</pre></div>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">tensorflow.examples.tutorials.mnist</span> <span class="k">import</span> <span class="n">input_data</span>
 
-</div>
-</div>
-</div>
+<span class="n">mnist</span><span class="o">=</span><span class="n">input_data</span><span class="o">.</span><span class="n">read_data_sets</span><span class="p">(</span><span class="s1">&#39;../../haha&#39;</span><span class="p">)</span>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#28608;&#27963;&#20989;&#25968;">&#28608;&#27963;&#20989;&#25968;<a class="anchor-link" href="#&#28608;&#27963;&#20989;&#25968;">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">sigmoid</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">tanh</span>
+<span class="n">sess</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11812,290 +11796,51 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[1]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;function tensorflow.python.ops.math_ops.tanh&gt;</pre>
-</div>
-
-</div>
-
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Extracting ../../haha\train-images-idx3-ubyte.gz
+Extracting ../../haha\train-labels-idx1-ubyte.gz
+Extracting ../../haha\t10k-images-idx3-ubyte.gz
+Extracting ../../haha\t10k-labels-idx1-ubyte.gz
+</pre>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w1</span><span class="p">)</span><span class="o">+</span><span class="n">biases1</span><span class="p">)</span>
-<span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">w2</span><span class="p">)</span><span class="o">+</span><span class="n">biases2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keep_prob</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="c1">#训练时小于1，预测时等于1，所以还是用placeholder</span>
-<span class="n">hidden1_drop</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">hidden1</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="CNN&#30456;&#20851;">CNN&#30456;&#20851;<a class="anchor-link" href="#CNN&#30456;&#20851;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">kernel</span><span class="p">,</span><span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">padding</span><span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span>
-<span class="c1">#strides[0,1]数表示卷积核的尺寸，</span>
-<span class="c1">#stride[2]表示channel数量，灰度图片是1，RGB图是3</span>
-<span class="c1">#stride[3]表示卷积核的数量</span>
-<span class="c1">#padding=&#39;SAME&#39;表示边界加上padding，使得卷积的输入和输出保持同样的尺寸</span>
-
-<span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">max_pool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">ksize</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">padding</span><span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span><span class="c1">#横竖步长为2，</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">lrn</span><span class="p">(</span><span class="n">pool1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">bias</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.001</span><span class="o">/</span><span class="mf">9.0</span><span class="p">,</span><span class="n">beta</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
-<span class="c1">#LRN模仿生物的侧抑制机制，对局部神经元创建竞争环境，使其中响应大的值相对更大，并抑制其它反馈小的神经元。从而增强泛化能力</span>
-<span class="c1">#可以用于Pooling之后，也可以用于conv之后、Pooling之前</span>
-<span class="c1">#适用于ReLu这种没有上界的激活函数，不适合Sigmoid这种有固定边界，或者能抑制过大值得激活函数</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#25439;&#22833;&#20989;&#25968;">&#25439;&#22833;&#20989;&#25968;<a class="anchor-link" href="#&#25439;&#22833;&#20989;&#25968;">&#182;</a></h1><h4 id="1.&#20132;&#21449;&#29109;">1.&#20132;&#21449;&#29109;<a class="anchor-link" href="#1.&#20132;&#21449;&#29109;">&#182;</a></h4><p>$H(p,q)=-\sum p(x)\log q(x)$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cross_entropy</span><span class="o">=-</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">y_</span><span class="o">*</span><span class="n">tf</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">clip_by_value</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="mf">1e-10</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)))</span>
-<span class="c1"># y_代表正确结果，y代表预测结果</span>
-<span class="c1"># tf.clip_by_value可以把张量中的数值限制在某个范围内,这里为了防止log0报错</span>
-<span class="c1"># reduce_mean:大概是求均值？</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TensorFlow对softmax+crossentropy进行了封装</span>
-<span class="n">cross_entropy</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax_cross_entropy_with_logits</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">y_</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.MSE">2.MSE<a class="anchor-link" href="#2.MSE">&#182;</a></h4><p>$MSE(y,y')=\dfrac{\sum (y-y')^2}{n}$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mse</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">y_</span><span class="o">-</span><span class="n">y</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.&#33258;&#23450;&#20041;">3.&#33258;&#23450;&#20041;<a class="anchor-link" href="#3.&#33258;&#23450;&#20041;">&#182;</a></h4><p>例如，预测销量时，多预测一个损失1元，少预测1个损失10元。<br>
-$Loss(y,y')=\sum f(y_i,y_i')$,
-$f(x,y)=\left\{\begin{array}{ccc}a(x-y)&amp;x&gt;y\\
-b(y-x)&amp;x\leq y\end{array}\right.$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">greater</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">),(</span><span class="n">v1</span><span class="o">-</span><span class="n">v2</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">,(</span><span class="n">v2</span><span class="o">-</span><span class="n">v1</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#23398;&#20064;&#29575;">&#23398;&#20064;&#29575;<a class="anchor-link" href="#&#23398;&#20064;&#29575;">&#182;</a></h1><p>decayed_learning_rate=learning_rate * decay_rate ** (global_step/decay_steps)</p>
-
-<pre><code>tf.train.exponential_decay# 指数下降法减小学习率
-learning_rate=tf.train.exponential_decay(0.01,global_step=10000,decay_steps=100,decay_rate=0.96,staircase=True)</code></pre>
-<p>staircase=True时，(global_step/decay_steps)会转化成整数，导致学习率阶梯下降</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="n">TRAINING_STEPS</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">global_step</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">LEARNING_RATE</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">exponential_decay</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">global_step</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.96</span><span class="p">,</span> <span class="n">staircase</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">train_op</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">LEARNING_RATE</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">global_step</span><span class="o">=</span><span class="n">global_step</span><span class="p">)</span>
-
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">TRAINING_STEPS</span><span class="p">):</span>
-        <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">train_op</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">LEARNING_RATE_value</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">LEARNING_RATE</span><span class="p">)</span>
-            <span class="n">x_value</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-            <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;After </span><span class="si">%s</span><span class="s2"> iteration(s): x</span><span class="si">%s</span><span class="s2"> is </span><span class="si">%f</span><span class="s2">, learning rate is </span><span class="si">%f</span><span class="s2">.&quot;</span><span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">x_value</span><span class="p">,</span> <span class="n">LEARNING_RATE_value</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="mi">784</span><span class="p">))</span>
+<span class="n">y_</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">x_image</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="p">,[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="c1">#-1表示样本数量不固定，1代表颜色通道数</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>After 1 iteration(s): x1 is 4.000000, learning rate is 0.096000.
-After 11 iteration(s): x11 is 0.690561, learning rate is 0.063824.
-After 21 iteration(s): x21 is 0.222583, learning rate is 0.042432.
-After 31 iteration(s): x31 is 0.106405, learning rate is 0.028210.
-After 41 iteration(s): x41 is 0.065548, learning rate is 0.018755.
-After 51 iteration(s): x51 is 0.047625, learning rate is 0.012469.
-After 61 iteration(s): x61 is 0.038558, learning rate is 0.008290.
-After 71 iteration(s): x71 is 0.033523, learning rate is 0.005511.
-After 81 iteration(s): x81 is 0.030553, learning rate is 0.003664.
-After 91 iteration(s): x91 is 0.028727, learning rate is 0.002436.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#36807;&#25311;&#21512;">&#36807;&#25311;&#21512;<a class="anchor-link" href="#&#36807;&#25311;&#21512;">&#182;</a></h1><p>cost Function加上L1 正则化或L2正则化<br>
-其中L1正则化可以将某些参数变成0，从而使参数系数。<br>
-L2不会使参数系数<br>
-(原因参见lasso和ridge regression)</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">y_</span><span class="o">-</span><span class="n">y</span><span class="p">))</span><span class="o">+</span><span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">l2_regularizer</span><span class="p">(</span><span class="n">alpha</span><span class="p">)(</span><span class="n">w</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#28369;&#21160;&#24179;&#22343;">&#28369;&#21160;&#24179;&#22343;<a class="anchor-link" href="#&#28369;&#21160;&#24179;&#22343;">&#182;</a></h1><h4 id="1.-&#23450;&#20041;&#21464;&#37327;&#21450;&#28369;&#21160;&#24179;&#22343;&#31867;">1. &#23450;&#20041;&#21464;&#37327;&#21450;&#28369;&#21160;&#24179;&#22343;&#31867;<a class="anchor-link" href="#1.-&#23450;&#20041;&#21464;&#37327;&#21450;&#28369;&#21160;&#24179;&#22343;&#31867;">&#182;</a></h4>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="n">v1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
-<span class="n">step</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">trainable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">ema</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">ExponentialMovingAverage</span><span class="p">(</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
-<span class="n">maintain_averages_op</span> <span class="o">=</span> <span class="n">ema</span><span class="o">.</span><span class="n">apply</span><span class="p">([</span><span class="n">v1</span><span class="p">])</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tf.nn.conv2d(x,kernel,strides=[1,1,1,1],padding=&#39;SAME&#39;)</span>
+<span class="c1"># #kernel[0,1]数表示卷积核的尺寸，</span>
+<span class="c1"># #kernel[2]表示channel数量，灰度图片是1，RGB图是3</span>
+<span class="c1"># #kernel[3]表示卷积核的数量</span>
+<span class="c1"># #padding=&#39;SAME&#39;表示边界加上padding，使得卷积的输入和输出保持同样的尺寸</span>
+<span class="c1"># #padding=&#39;VALID&#39;表示取样不超过边框</span>
+
+
+<span class="c1"># tf.nn.max_pool(x,ksize=[1,3,3,1],strides=[1,2,2,1],padding=&#39;SAME&#39;)#池化尺寸3*3，横竖步长为2*2，padding=&#39;VALID&#39;表示取样不超过边框，padding=&#39;SAME&#39;表示加边框</span>
 </pre></div>
 
 </div>
@@ -12103,42 +11848,81 @@ L2不会使参数系数<br>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.-&#26597;&#30475;&#19981;&#21516;&#36845;&#20195;&#20013;&#21464;&#37327;&#21462;&#20540;&#30340;&#21464;&#21270;&#12290;">2. &#26597;&#30475;&#19981;&#21516;&#36845;&#20195;&#20013;&#21464;&#37327;&#21462;&#20540;&#30340;&#21464;&#21270;&#12290;<a class="anchor-link" href="#2.-&#26597;&#30475;&#19981;&#21516;&#36845;&#20195;&#20013;&#21464;&#37327;&#21462;&#20540;&#30340;&#21464;&#21270;&#12290;">&#182;</a></h4><p>$\min (decay,\dfrac{1+num_{updates}}{10+num_{updates}})$
-一般情况下，decay设定为一个非常接近1的数</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w_conv1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">32</span><span class="p">),</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">b_conv1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="mf">0.1</span><span class="p">],</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">32</span><span class="p">)))</span>
+
+<span class="n">h_conv1_1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">x_image</span><span class="p">,</span><span class="n">w_conv1</span><span class="p">,</span><span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">padding</span><span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span>
+<span class="n">h_conv1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">h_conv1_1</span><span class="o">+</span><span class="n">b_conv1</span><span class="p">)</span>
+<span class="n">h_pool1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">max_pool</span><span class="p">(</span><span class="n">h_conv1</span><span class="p">,</span><span class="n">ksize</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">padding</span><span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span>
+
+
+
+<span class="n">w_conv2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">64</span><span class="p">),</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">b_conv2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="mf">0.1</span><span class="p">],</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">64</span><span class="p">)))</span>
+
+<span class="n">h_conv2_1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">h_pool1</span><span class="p">,</span><span class="n">w_conv2</span><span class="p">,</span><span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">padding</span><span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span>
+<span class="n">h_conv2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">h_conv2_1</span><span class="o">+</span><span class="n">b_conv2</span><span class="p">)</span>
+<span class="n">h_pool2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">max_pool</span><span class="p">(</span><span class="n">h_conv2</span><span class="p">,</span><span class="n">ksize</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">padding</span><span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#全连接层</span>
+<span class="n">w_fc1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="o">*</span><span class="mi">7</span><span class="o">*</span><span class="mi">64</span><span class="p">,</span><span class="mi">1024</span><span class="p">),</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">b_fc1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="mf">0.1</span><span class="p">],</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1024</span><span class="p">)))</span>
+<span class="n">h_pool2_flat</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">h_pool2</span><span class="p">,[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="o">*</span><span class="mi">7</span><span class="o">*</span><span class="mi">64</span><span class="p">])</span><span class="c1">#压平</span>
+<span class="n">h_fc</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">h_pool2_flat</span><span class="p">,</span><span class="n">w_fc1</span><span class="p">)</span><span class="o">+</span><span class="n">b_fc1</span><span class="p">)</span>
+
+<span class="c1"># dropout</span>
+<span class="n">keep_prob</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="n">h_fc1_drop</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">h_fc</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">)</span>
+
+
+<span class="c1">#最后一层：softmax</span>
+<span class="n">w_fc2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">b_fc2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="mf">0.1</span><span class="p">],</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
+<span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">h_fc1_drop</span><span class="p">,</span><span class="n">w_fc2</span><span class="p">)</span><span class="o">+</span><span class="n">b_fc2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 定义cross_entropy</span>
+<span class="n">cross_entropy</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="o">-</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">y_</span><span class="o">*</span><span class="n">tf</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="n">reduction_indices</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">train_step</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
+<span class="n">STEPS</span><span class="o">=</span><span class="mi">5000</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">STEPS</span><span class="p">):</span>
+    <span class="n">batch_xs</span><span class="p">,</span><span class="n">batch_ys</span><span class="o">=</span><span class="n">mnist</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">next_batch</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">batch_ys1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">batch_ys</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">10</span><span class="p">))</span><span class="c1">#数据格式恶心了</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">batch_ys</span><span class="p">):</span>
+        <span class="n">batch_ys1</span><span class="p">[</span><span class="n">index</span><span class="p">,</span><span class="n">value</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">train_step</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">batch_xs</span><span class="p">,</span><span class="n">y_</span><span class="p">:</span><span class="n">batch_ys1</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">:</span><span class="mf">0.75232</span><span class="p">})</span><span class="c1">#keep_prob</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">1000</span>==0:
+        <span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">batch_xs</span><span class="p">,</span><span class="n">y_</span><span class="p">:</span><span class="n">batch_ys1</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">:</span><span class="mf">0.75232</span><span class="p">}))</span>
     
-    <span class="c1"># 初始化</span>
-    <span class="n">init_op</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
-    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">init_op</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">ema</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">v1</span><span class="p">)]))</span>
-    
-    <span class="c1"># 更新变量v1的取值</span>
-    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">maintain_averages_op</span><span class="p">)</span><span class="c1">#decay=0.1</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">ema</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">v1</span><span class="p">)]))</span> <span class="c1">#0.1*0+0.9*5=4.5</span>
-    
-    <span class="c1"># 更新step和v1的取值</span>
-    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="mi">10000</span><span class="p">))</span>  
-    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">maintain_averages_op</span><span class="p">)</span><span class="c1">#decay=0.99</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">ema</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">v1</span><span class="p">)])</span> <span class="p">)</span>      
-    
-    <span class="c1"># 更新一次v1的滑动平均值</span>
-    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">maintain_averages_op</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">ema</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">v1</span><span class="p">)]))</span> 
 </pre></div>
 
 </div>
@@ -12155,10 +11939,11 @@ L2不会使参数系数<br>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[0.0, 0.0]
-[5.0, 4.5]
-[10.0, 4.5549998]
-[10.0, 4.6094499]
+<pre>8.06211
+0.636463
+0.262271
+0.446968
+0.278826
 </pre>
 </div>
 </div>
@@ -12167,82 +11952,45 @@ L2不会使参数系数<br>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#27491;&#21017;&#21270;">&#27491;&#21017;&#21270;<a class="anchor-link" href="#&#27491;&#21017;&#21270;">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>加入collection</li>
-</ul>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight_loss</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">l2_loss</span><span class="p">(</span><span class="n">var</span><span class="p">),</span><span class="n">wl</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;weight_loss&#39;</span><span class="p">)</span><span class="c1">#wl是L2_loss的系数</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">add_to_collection</span><span class="p">(</span><span class="s1">&#39;losses&#39;</span><span class="p">,</span><span class="n">weight_loss</span><span class="p">)</span><span class="c1">#加入一个collection</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_test_predict</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">mnist</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">images</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+<span class="kn">import</span> <span class="nn">sklearn.metrics</span> <span class="k">as</span> <span class="nn">metrics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">mnist</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">labels</span><span class="p">,</span><span class="n">y_test_predict</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)))</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>正则化的和</li>
-</ul>
+<div class="output_wrapper">
+<div class="output">
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">add_n</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span><span class="s1">&#39;losses&#39;</span><span class="p">),</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;total_loss&#39;</span><span class="p">)</span>
-</pre></div>
 
-</div>
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>test
+ [[ 966    0    2    0    0    0    8    1    3    0]
+ [   0 1122    3    2    0    0    4    0    4    0]
+ [   8    2  962    6   10    2    7   13   21    1]
+ [   1    1   12  964    0    8    1    7    8    8]
+ [   0    1    1    0  946    0   13    1    5   15]
+ [   7    1    2    7    0  858    7    2    4    4]
+ [  10    3    2    0    7   14  921    0    1    0]
+ [   1    8   24    4    1    1    0  966    2   21]
+ [   5    2    6    9    5    4    4    9  915   15]
+ [  10    4    2   14   13    3    1   12    9  941]]
+</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>把entropy也加入'losses'使代码简洁一些</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">add_to_collection</span><span class="p">(</span><span class="s1">&#39;losses&#39;</span><span class="p">,</span><span class="n">cross_entropy</span><span class="p">)</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">add_n</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span><span class="s1">&#39;losses&#39;</span><span class="p">),</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;total_loss&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 

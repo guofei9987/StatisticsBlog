@@ -11786,13 +11786,58 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="n">hello</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="s1">&#39;hello!&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hello</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="s1">&#39;hello!&#39;</span><span class="p">)</span>
 <span class="n">sess</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span><span class="c1">#创建一个session</span>
 <span class="n">hey</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span><span class="c1">#使用session来运行</span>
 <span class="c1"># sess.close()#关闭session，释放资源</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">slimim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;module &#39;tensorflow.contrib.slim&#39; from &#39;C:\\Users\\guofei\\Anaconda3\\lib\\site-packages\\tensorflow\\contrib\\slim\\__init__.py&#39;&gt;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -11935,7 +11980,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -11957,7 +12002,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">config</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">ConfigProto</span><span class="p">(</span><span class="n">allow_soft_placement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># 优先使用GPU，GPU不支持的时候换成CPU，而不是报错</span>
@@ -11971,7 +12016,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sess1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">InteractiveSession</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
@@ -11993,7 +12038,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a=tf.matmul(x,w1)#矩阵乘法</span>
@@ -12006,7 +12051,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -12024,7 +12069,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span> <span class="c1">#正态分布</span>
@@ -12049,7 +12094,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -12074,7 +12119,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">biases</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">3</span><span class="p">]))</span>
@@ -12100,7 +12145,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w2</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
@@ -12118,25 +12163,25 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.0146725 , -0.01635125,  0.04498549, ..., -0.08755898,
-         0.18695503,  0.08425835],
-       [-0.17774236,  0.17321549, -0.04793813, ...,  0.24831538,
-         0.17418024,  0.12786189],
-       [ 0.01775506,  0.072007  ,  0.05958458, ...,  0.1910471 ,
-         0.10692566,  0.25722879],
+<pre>array([[  1.40550081e-02,   3.56171094e-02,   8.82129595e-02, ...,
+         -9.59602743e-02,  -2.08483525e-02,   8.82780626e-02],
+       [ -3.08074057e-04,  -6.06677905e-02,   5.50433137e-02, ...,
+          1.12989634e-01,   3.39948237e-02,   7.19436184e-02],
+       [ -3.74090523e-02,   3.51328403e-02,   1.85388178e-01, ...,
+         -7.59455636e-02,   1.36960939e-01,   1.39769107e-01],
        ..., 
-       [-0.01484126, -0.06105198, -0.00371964, ..., -0.01382964,
-         0.15019251,  0.01939502],
-       [-0.00563166,  0.13065287,  0.17171642, ..., -0.02934854,
-         0.01903608,  0.09856674],
-       [-0.17432944,  0.0522357 , -0.0521534 , ...,  0.13465658,
-        -0.08157296, -0.0702959 ]], dtype=float32)</pre>
+       [ -6.68679848e-02,   1.59125775e-04,  -1.43939406e-01, ...,
+         -6.22220933e-02,   3.61499526e-02,  -1.48586512e-01],
+       [  4.02176231e-02,  -8.69320333e-02,   4.66071218e-02, ...,
+          9.19466093e-02,   1.90996770e-02,  -7.27092624e-02],
+       [ -1.10123560e-01,   1.02122873e-01,   6.27010167e-02, ...,
+          1.09118499e-01,   1.31105542e-01,   1.89743191e-03]], dtype=float32)</pre>
 </div>
 
 </div>
@@ -12158,7 +12203,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">w4</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">initialized_value</span><span class="p">())</span>
@@ -12177,25 +12222,25 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[22]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.10635487, -0.10713379,  0.05419004, ...,  0.04316486,
-        -0.06955445, -0.01315271],
-       [ 0.0207519 ,  0.09035016, -0.07340461, ...,  0.12121008,
-         0.03519265, -0.00858499],
-       [-0.0608892 , -0.07099085,  0.06276519, ..., -0.01360776,
-        -0.09032469,  0.00791927],
+<pre>array([[ 0.01311258, -0.15321772, -0.03100876, ...,  0.01576635,
+        -0.17011122,  0.00778334],
+       [-0.00632112, -0.0805592 , -0.13366885, ...,  0.05962479,
+         0.00965144,  0.04564803],
+       [ 0.16788766, -0.06252999,  0.1152531 , ..., -0.13965486,
+        -0.0107923 ,  0.16111413],
        ..., 
-       [ 0.07995607, -0.07077914, -0.10500553, ..., -0.04095972,
-         0.10824137, -0.08218385],
-       [-0.12486154, -0.07803642,  0.07337739, ...,  0.05695054,
-         0.09509261, -0.01585101],
-       [-0.08684835, -0.03203673, -0.04070302, ...,  0.12899335,
-        -0.04166428,  0.0677882 ]], dtype=float32)</pre>
+       [-0.0633782 ,  0.06003167, -0.04054847, ..., -0.05182007,
+         0.05266857, -0.05856436],
+       [-0.04858895,  0.00196341,  0.02902997, ...,  0.07324979,
+        -0.11008207, -0.06104498],
+       [ 0.02623019,  0.08211529,  0.14126727, ..., -0.06122007,
+         0.00826732, -0.01249944]], dtype=float32)</pre>
 </div>
 
 </div>
@@ -12214,7 +12259,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -12244,7 +12289,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -12270,7 +12315,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -12300,7 +12345,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -12421,7 +12466,7 @@ div#notebook {
 <span class="n">w2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;weight2&#39;</span><span class="p">)</span>
 <span class="n">b2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;bias2&#39;</span><span class="p">)</span>
 <span class="n">x</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
-<span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="n">y_</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12446,7 +12491,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w1</span><span class="p">)</span><span class="o">+</span><span class="n">b1</span><span class="p">)</span>
-<span class="n">y_hat</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">w2</span><span class="p">)</span><span class="o">+</span><span class="n">b2</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">w2</span><span class="p">)</span><span class="o">+</span><span class="n">b2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12470,7 +12515,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cross_entropy</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="o">-</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">tf</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y_hat</span><span class="p">),</span><span class="n">reduction_indices</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cross_entropy</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="o">-</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">y_</span><span class="o">*</span><span class="n">tf</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="n">reduction_indices</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 <span class="n">train_step</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">)</span>
 </pre></div>
 
@@ -12501,9 +12546,9 @@ div#notebook {
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">STEPS</span><span class="p">):</span>
     <span class="n">start</span><span class="o">=</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">batch_size</span><span class="p">)</span><span class="o">%</span><span class="k">batch_size</span>
     <span class="n">end</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">start</span><span class="o">+</span><span class="n">batch_size</span><span class="p">,</span><span class="n">dataset_size</span><span class="p">)</span>
-    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">train_step</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">X</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">],</span><span class="n">y</span><span class="p">:</span><span class="n">Y</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]})</span>
+    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">train_step</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">X</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">],</span><span class="n">y_</span><span class="p">:</span><span class="n">Y</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]})</span>
     <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">5000</span>==0:
-        <span class="n">total_cross_entropy</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">Y</span><span class="p">})</span>
+        <span class="n">total_cross_entropy</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">X</span><span class="p">,</span><span class="n">y_</span><span class="p">:</span><span class="n">Y</span><span class="p">})</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s1">&#39;training step,cross entropy is&#39;</span><span class="p">,</span><span class="n">total_cross_entropy</span><span class="p">)</span>
 </pre></div>
 
@@ -12521,16 +12566,16 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0 training step,cross entropy is 2.11469
-5000 training step,cross entropy is 0.861995
-10000 training step,cross entropy is 0.6651
-15000 training step,cross entropy is 0.528154
-20000 training step,cross entropy is 0.436675
-25000 training step,cross entropy is 0.371314
-30000 training step,cross entropy is 0.322101
-35000 training step,cross entropy is 0.283936
-40000 training step,cross entropy is 0.253818
-45000 training step,cross entropy is 0.229742
+<pre>0 training step,cross entropy is 1.7206
+5000 training step,cross entropy is 0.744731
+10000 training step,cross entropy is 0.577951
+15000 training step,cross entropy is 0.49825
+20000 training step,cross entropy is 0.435902
+25000 training step,cross entropy is 0.380805
+30000 training step,cross entropy is 0.33211
+35000 training step,cross entropy is 0.291082
+40000 training step,cross entropy is 0.257882
+45000 training step,cross entropy is 0.231364
 </pre>
 </div>
 </div>
@@ -12555,9 +12600,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train_predict</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y_hat</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">train_data</span><span class="p">})</span>
-<span class="n">y_test_predict</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y_hat</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">test_data</span><span class="p">})</span>
-<span class="n">sess</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train_predict</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">train_data</span><span class="p">})</span>
+<span class="n">y_test_predict</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">test_data</span><span class="p">})</span>
+<span class="c1"># sess.close()</span>
 </pre></div>
 
 </div>
@@ -12578,7 +12623,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn.metrics</span> <span class="k">as</span> <span class="nn">metrics</span>
@@ -12601,10 +12646,10 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>train [[39  0  0]
- [ 0 35  3]
+ [ 0 34  4]
  [ 0  0 43]]
 test [[11  0  0]
- [ 0  8  4]
+ [ 0 10  2]
  [ 0  0  7]]
 </pre>
 </div>
@@ -12616,14 +12661,12 @@ test [[11  0  0]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">GLOBAL_VARIABLES</span> <span class="c1">#所有变量</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">TRAINABLE_VARIABLES</span> <span class="c1">#所有可训练变量</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">SUMMARIES</span> <span class="c1">#日志相关张量</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">QUEUE_RUNNERS</span> <span class="c1">#处理输入的QueueRunner</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">MOVING_AVERAGE_VARIABLES</span> <span class="c1">#所有计算了移动平均值的变量</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">correct_prediction</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span><span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y_</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">accuracy</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">correct_prediction</span><span class="p">,</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">train_data</span><span class="p">,</span><span class="n">y_</span><span class="p">:</span><span class="n">train_target</span><span class="p">})</span>
 </pre></div>
 
 </div>
@@ -12636,17 +12679,34 @@ test [[11  0  0]
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;moving_average_variables&#39;</pre>
+<pre>0.96666664</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">GLOBAL_VARIABLES</span> <span class="c1">#所有变量</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">TRAINABLE_VARIABLES</span> <span class="c1">#所有可训练变量</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">SUMMARIES</span> <span class="c1">#日志相关张量</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">QUEUE_RUNNERS</span> <span class="c1">#处理输入的QueueRunner</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">MOVING_AVERAGE_VARIABLES</span> <span class="c1">#所有计算了移动平均值的变量</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -12661,7 +12721,7 @@ test [[11  0  0]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span><span class="o">.</span><span class="n">as_default</span><span class="p">():</span>
@@ -12675,7 +12735,7 @@ test [[11  0  0]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -12693,7 +12753,7 @@ test [[11  0  0]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DropOut</span>
@@ -12708,28 +12768,27 @@ test [[11  0  0]
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="slim">slim<a class="anchor-link" href="#slim">&#182;</a></h1><p>很有用的东西，可以不用设置中间变量，给函数赋值</p>
 
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-18-5ad41b83699e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-fg">      4</span> 
-<span class="ansi-green-fg">      5</span> keep_prob<span class="ansi-yellow-intense-fg ansi-bold">=</span>tf<span class="ansi-yellow-intense-fg ansi-bold">.</span>placeholder<span class="ansi-yellow-intense-fg ansi-bold">(</span>tf<span class="ansi-yellow-intense-fg ansi-bold">.</span>float32<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 6</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>h_fc1_drop<span class="ansi-yellow-intense-fg ansi-bold">=</span>tf<span class="ansi-yellow-intense-fg ansi-bold">.</span>nn<span class="ansi-yellow-intense-fg ansi-bold">.</span>dropout<span class="ansi-yellow-intense-fg ansi-bold">(</span>h_fc1<span class="ansi-yellow-intense-fg ansi-bold">,</span>keep_prob<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;h_fc1&#39; is not defined</pre>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">slim</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">slim</span>
+<span class="k">with</span> <span class="n">slim</span><span class="o">.</span><span class="n">arg_scope</span><span class="p">([</span><span class="n">slim</span><span class="o">.</span><span class="n">conv2d</span><span class="p">,</span><span class="n">slim</span><span class="o">.</span><span class="n">fully_connected</span><span class="p">],</span><span class="n">weights_regularizer</span><span class="o">=</span><span class="n">slim</span><span class="o">.</span><span class="n">l2_regularizer</span><span class="p">(</span><span class="n">weights_decay</span><span class="p">)):</span>
+    <span class="k">pass</span>
+</pre></div>
 
+</div>
 </div>
 </div>
 
