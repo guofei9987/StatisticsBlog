@@ -12085,24 +12085,12 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>混淆矩阵</li>
-</ul>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn.metrics</span> <span class="k">as</span> <span class="nn">metrics</span>
-<span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">test_target</span><span class="p">,</span> <span class="n">test_predict</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;CYT&#39;</span><span class="p">,</span><span class="s1">&#39;NUC&#39;</span><span class="p">])</span><span class="c1">#label可以控制显示哪些标签</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">test_data</span><span class="p">,</span> <span class="n">test_target</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12121,6 +12109,51 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
+<pre>0.64245810055865926</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>混淆矩阵</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn.metrics</span> <span class="k">as</span> <span class="nn">metrics</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">test_target</span><span class="p">,</span> <span class="n">test_predict</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;CYT&#39;</span><span class="p">,</span><span class="s1">&#39;NUC&#39;</span><span class="p">])</span><span class="c1">#label可以控制显示哪些标签</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
 <pre>array([[75, 25],
        [39, 40]], dtype=int64)</pre>
 </div>
@@ -12131,9 +12164,24 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>accuracy_score: metrics.accuracy_score(test_target, test_predict)</li>
+<li>precision_score:metrics.precision_score(test_target, test_predict)</li>
+<li>recall_score:metrics.recall_score(test_target, test_predict)</li>
+<li>metrics.f1_score(test_target, test_predict)</li>
+<li>metrics.fbeta_score(test_target, test_predict)</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">classification_report</span><span class="p">(</span><span class="n">test_target</span><span class="p">,</span> <span class="n">test_predict</span><span class="p">))</span>
@@ -12168,38 +12216,16 @@ avg / total       0.64      0.64      0.64       179
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">test_data</span><span class="p">,</span> <span class="n">test_target</span><span class="p">)</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>P-R曲线 metrics.precision_recall_curve(y_true, y_predict_proba)</li>
+</ul>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.64245810055865926</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12244,7 +12270,7 @@ avg / total       0.64      0.64      0.64       179
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x1671629a438&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x28973798710&gt;</pre>
 </div>
 
 </div>
@@ -12524,6 +12550,33 @@ iEgGUnIXEclASu4iIhlIyV1EJAMpuYuIZKD/B0/x2igC4K1iAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>AUC:metrics.roc_auc_score(y_true, y_predict_proba),返回AUC值</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22238;&#24402;&#27169;&#22411;&#30340;&#35780;&#20215;&#25351;&#26631;">&#22238;&#24402;&#27169;&#22411;&#30340;&#35780;&#20215;&#25351;&#26631;<a class="anchor-link" href="#&#22238;&#24402;&#27169;&#22411;&#30340;&#35780;&#20215;&#25351;&#26631;">&#182;</a></h2><ul>
+<li>误差绝对值的平均值 metrics.mean_absolute_error(y_true,y_pred)</li>
+<li>误差平方的绝对值（MSE） metrics.mean_squared_error(y_true,y_pred)</li>
+</ul>
+<h2 id="&#32508;&#21512;&#35780;&#20215;&#25351;&#26631;&#65288;&#22270;&#65289;">&#32508;&#21512;&#35780;&#20215;&#25351;&#26631;&#65288;&#22270;&#65289;<a class="anchor-link" href="#&#32508;&#21512;&#35780;&#20215;&#25351;&#26631;&#65288;&#22270;&#65289;">&#182;</a></h2><ol>
+<li>验证曲线 validation_curve,参数不同时，各个评价指标的曲线</li>
+<li>学习曲线 learning_curve, 数据集大小不同时，各个评价指标的曲线</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Kfold">Kfold<a class="anchor-link" href="#Kfold">&#182;</a></h2>
 </div>
 </div>
@@ -12788,8 +12841,8 @@ TRAIN: [0 1 2 3 4 5] TEST: [ 6  7  8  9 10 11]
            metric_params=None, n_jobs=1, n_neighbors=5, p=2,
            weights=&#39;uniform&#39;),
        fit_params=None, iid=True, n_jobs=1,
-       param_grid=&lt;sklearn.model_selection._search.ParameterGrid object at 0x000001671614FB00&gt;,
-       pre_dispatch=&#39;2*n_jobs&#39;, refit=True, return_train_score=True,
+       param_grid=&lt;sklearn.model_selection._search.ParameterGrid object at 0x000002896D0E1B38&gt;,
+       pre_dispatch=&#39;2*n_jobs&#39;, refit=True, return_train_score=&#39;warn&#39;,
        scoring=None, verbose=0)</pre>
 </div>
 
@@ -12845,16 +12898,35 @@ TRAIN: [0 1 2 3 4 5] TEST: [ 6  7  8  9 10 11]
 
 <div class="output_area">
 
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\guofei\Anaconda3\lib\site-packages\sklearn\utils\deprecation.py:122: FutureWarning: You are accessing a training score (&#39;mean_train_score&#39;), which will not be available by default any more in 0.21. If you need training scores, please set return_train_score=True
+  warnings.warn(*warn_args, **warn_kwargs)
+C:\Users\guofei\Anaconda3\lib\site-packages\sklearn\utils\deprecation.py:122: FutureWarning: You are accessing a training score (&#39;split0_train_score&#39;), which will not be available by default any more in 0.21. If you need training scores, please set return_train_score=True
+  warnings.warn(*warn_args, **warn_kwargs)
+C:\Users\guofei\Anaconda3\lib\site-packages\sklearn\utils\deprecation.py:122: FutureWarning: You are accessing a training score (&#39;split1_train_score&#39;), which will not be available by default any more in 0.21. If you need training scores, please set return_train_score=True
+  warnings.warn(*warn_args, **warn_kwargs)
+C:\Users\guofei\Anaconda3\lib\site-packages\sklearn\utils\deprecation.py:122: FutureWarning: You are accessing a training score (&#39;split2_train_score&#39;), which will not be available by default any more in 0.21. If you need training scores, please set return_train_score=True
+  warnings.warn(*warn_args, **warn_kwargs)
+C:\Users\guofei\Anaconda3\lib\site-packages\sklearn\utils\deprecation.py:122: FutureWarning: You are accessing a training score (&#39;std_train_score&#39;), which will not be available by default any more in 0.21. If you need training scores, please set return_train_score=True
+  warnings.warn(*warn_args, **warn_kwargs)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
 <div class="prompt output_prompt">Out[18]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;mean_fit_time&#39;: array([ 0.00217239,  0.00162236,  0.00067139,  0.00101693,  0.00130669,
-         0.00033418]),
- &#39;mean_score_time&#39;: array([ 0.00517066,  0.00246819,  0.00166758,  0.002045  ,  0.00238601,
-         0.00066821]),
+<pre>{&#39;mean_fit_time&#39;: array([ 0.00100533,  0.00133387,  0.00099834,  0.00117183,  0.        ,
+         0.00533628]),
+ &#39;mean_score_time&#39;: array([ 0.00166512,  0.00233865,  0.00602444,  0.00095495,  0.        ,  0.        ]),
  &#39;mean_test_score&#39;: array([ 0.59607293,  0.60729313,  0.61290323,  0.6171108 ,  0.61430575,
          0.62131837]),
  &#39;mean_train_score&#39;: array([ 0.73844906,  0.74054696,  0.71669615,  0.72231166,  0.7054843 ,
@@ -12881,10 +12953,9 @@ TRAIN: [0 1 2 3 4 5] TEST: [ 6  7  8  9 10 11]
          0.6371308 ]),
  &#39;split2_train_score&#39;: array([ 0.71008403,  0.72058824,  0.70798319,  0.70588235,  0.68487395,
          0.68907563]),
- &#39;std_fit_time&#39;: array([ 0.00119525,  0.00058986,  0.00047475,  0.00077997,  0.00043316,
-         0.00047261]),
- &#39;std_score_time&#39;: array([ 0.00130339,  0.00051713,  0.00125509,  0.00144815,  0.00104327,
-         0.00094499]),
+ &#39;std_fit_time&#39;: array([  1.03766115e-05,   4.59976705e-04,   1.49227092e-05,
+          1.03752678e-03,   0.00000000e+00,   7.54664611e-03]),
+ &#39;std_score_time&#39;: array([ 0.0004774 ,  0.00047185,  0.00499159,  0.0013505 ,  0.        ,  0.        ]),
  &#39;std_test_score&#39;: array([ 0.02680188,  0.01658726,  0.00560338,  0.01185083,  0.01029532,
          0.01518435]),
  &#39;std_train_score&#39;: array([ 0.02007551,  0.01534181,  0.00751166,  0.01672555,  0.01467474,
@@ -12929,6 +13000,30 @@ TRAIN: [0 1 2 3 4 5] TEST: [ 6  7  8  9 10 11]
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="RandomizedSearchCV">RandomizedSearchCV<a class="anchor-link" href="#RandomizedSearchCV">&#182;</a></h2><p>GridSearchCV 只能处理离散的参数，遇到连续值就无能为力了
+RandomizedSearchCV可以处理连续的参数</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">model_selection</span>
+<span class="n">model_selection</span><span class="o">.</span><span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
