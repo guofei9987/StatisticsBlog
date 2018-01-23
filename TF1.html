@@ -11795,7 +11795,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hello</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="s1">&#39;hello!&#39;</span><span class="p">)</span>
@@ -11809,50 +11809,17 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">slimim</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;module &#39;tensorflow.contrib.slim&#39; from &#39;C:\\Users\\guofei\\Anaconda3\\lib\\site-packages\\tensorflow\\contrib\\slim\\__init__.py&#39;&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Session">Session<a class="anchor-link" href="#Session">&#182;</a></h1>
+<h1 id="Session">Session<a class="anchor-link" href="#Session">&#182;</a></h1><h2 id="1.-&#29992;&#27861;1">1. &#29992;&#27861;1<a class="anchor-link" href="#1.-&#29992;&#27861;1">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="mf">10.1</span><span class="p">,</span><span class="mf">2.0</span><span class="p">],</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
@@ -11870,7 +11837,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -11885,9 +11852,17 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-&#29992;&#27861;2">2. &#29992;&#27861;2<a class="anchor-link" href="#2.-&#29992;&#27861;2">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
@@ -11902,7 +11877,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sess</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
@@ -11936,7 +11911,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#等价于：</span>
@@ -11954,7 +11929,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -11973,14 +11948,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="InteractiveSession">InteractiveSession<a class="anchor-link" href="#InteractiveSession">&#182;</a></h2><p>注册为默认Session，以后的运算会默认在这个session中运行</p>
+<h2 id="3.-InteractiveSession">3. InteractiveSession<a class="anchor-link" href="#3.-InteractiveSession">&#182;</a></h2><p>注册为默认Session，以后的运算会默认在这个session中运行</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -11996,13 +11971,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="ConfigProto">ConfigProto<a class="anchor-link" href="#ConfigProto">&#182;</a></h2>
+<h1 id="ConfigProto">ConfigProto<a class="anchor-link" href="#ConfigProto">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">config</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">ConfigProto</span><span class="p">(</span><span class="n">allow_soft_placement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># 优先使用GPU，GPU不支持的时候换成CPU，而不是报错</span>
@@ -12016,7 +11991,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sess1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">InteractiveSession</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
@@ -12032,44 +12007,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#21464;&#37327;">&#21464;&#37327;<a class="anchor-link" href="#&#21464;&#37327;">&#182;</a></h1>
+<h1 id="&#19977;&#31181;&#21464;&#37327;">&#19977;&#31181;&#21464;&#37327;<a class="anchor-link" href="#&#19977;&#31181;&#21464;&#37327;">&#182;</a></h1><p>constant,Variable，placeholder</p>
+<h2 id="constant">constant<a class="anchor-link" href="#constant">&#182;</a></h2>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a=tf.matmul(x,w1)#矩阵乘法</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="c1"># 参数初始化</span>
-<span class="c1"># 均值0，方差1的正态随机数：</span>
-<span class="n">weights</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;weights&#39;</span><span class="p">)</span>
-<span class="c1">#正态随机数除以神经元的个数</span>
-<span class="n">weights</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">([</span><span class="mi">500</span><span class="p">,</span><span class="mi">25</span><span class="p">],</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">500</span><span class="p">)),</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;weights&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span> <span class="c1">#正态分布</span>
@@ -12094,7 +12039,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -12113,18 +12058,21 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#35774;&#23450;&#21021;&#22987;&#20540;">&#35774;&#23450;&#21021;&#22987;&#20540;<a class="anchor-link" href="#&#35774;&#23450;&#21021;&#22987;&#20540;">&#182;</a></h3>
+<h2 id="Variable">Variable<a class="anchor-link" href="#Variable">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">biases</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">3</span><span class="p">]))</span>
-<span class="n">w2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">initialized_value</span><span class="p">())</span>
-<span class="n">w3</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">weights</span><span class="o">.</span><span class="n">initialized_value</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="c1"># 参数初始化</span>
+<span class="c1"># 均值0，方差1的正态随机数：</span>
+<span class="n">weights</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;weights&#39;</span><span class="p">)</span>
+<span class="c1">#正态随机数除以神经元的个数</span>
+<span class="n">weights</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">([</span><span class="mi">500</span><span class="p">,</span><span class="mi">25</span><span class="p">],</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">500</span><span class="p">)),</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;weights&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12136,8 +12084,70 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>tf.Variable定义的tensor，一定要initial之后才可以参与sess.run()</strong> （constant和placeholder不需要）</p>
+<h3 id="initial">initial<a class="anchor-link" href="#initial">&#182;</a></h3><ul>
+<li>可以用w.initializer初始化单个Variable</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">biases</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">3</span><span class="p">]))</span>
+<span class="n">w2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">initialized_value</span><span class="p">())</span>
+<span class="n">w3</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">weights</span><span class="o">.</span><span class="n">initialized_value</span><span class="p">())</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w2</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w3</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w2</span><span class="o">+</span><span class="n">w3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0.13126138,  0.15415739, -0.00412025, ...,  0.20249385,
+        -0.05035926, -0.00037837],
+       [-0.13051626, -0.01251422,  0.0986587 , ..., -0.12137637,
+         0.08170439,  0.04693044],
+       [-0.02501756, -0.03296302, -0.06223773, ...,  0.0664258 ,
+        -0.12619743,  0.07351165],
+       ..., 
+       [-0.00830263, -0.04572757, -0.12637705, ..., -0.00819175,
+         0.05800455, -0.00903173],
+       [ 0.05933888,  0.00148346, -0.16907503, ...,  0.05918168,
+        -0.03567037,  0.07854413],
+       [-0.04065916, -0.03985535,  0.04417895, ...,  0.04017632,
+         0.09296409,  0.08995249]], dtype=float32)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>tf.Variable定义的tensor，一定要sess.run(w2.initializer)之后才可以参与运算</li>
+<li>也可以用global_variables_initializer()初始化所有变量</li>
 </ul>
 
 </div>
@@ -12148,9 +12158,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w2</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
-<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w3</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
-<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w2</span><span class="o">+</span><span class="n">w3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w4</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">initialized_value</span><span class="p">())</span>
+<span class="n">w5</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">initialized_value</span><span class="p">())</span>
+<span class="n">init</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w4</span><span class="o">+</span><span class="n">w5</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12169,19 +12181,19 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[  1.40550081e-02,   3.56171094e-02,   8.82129595e-02, ...,
-         -9.59602743e-02,  -2.08483525e-02,   8.82780626e-02],
-       [ -3.08074057e-04,  -6.06677905e-02,   5.50433137e-02, ...,
-          1.12989634e-01,   3.39948237e-02,   7.19436184e-02],
-       [ -3.74090523e-02,   3.51328403e-02,   1.85388178e-01, ...,
-         -7.59455636e-02,   1.36960939e-01,   1.39769107e-01],
+<pre>array([[-0.00205631, -0.00970563, -0.01022588, ..., -0.09414919,
+         0.08239126, -0.08883838],
+       [-0.06780629,  0.02070411,  0.13301378, ...,  0.05601959,
+        -0.05969951, -0.09755178],
+       [-0.15150891,  0.04355581,  0.12243671, ..., -0.05022895,
+        -0.0415826 ,  0.00454292],
        ..., 
-       [ -6.68679848e-02,   1.59125775e-04,  -1.43939406e-01, ...,
-         -6.22220933e-02,   3.61499526e-02,  -1.48586512e-01],
-       [  4.02176231e-02,  -8.69320333e-02,   4.66071218e-02, ...,
-          9.19466093e-02,   1.90996770e-02,  -7.27092624e-02],
-       [ -1.10123560e-01,   1.02122873e-01,   6.27010167e-02, ...,
-          1.09118499e-01,   1.31105542e-01,   1.89743191e-03]], dtype=float32)</pre>
+       [ 0.15762523, -0.00304227, -0.01680966, ..., -0.03776013,
+         0.07798047, -0.02501288],
+       [ 0.02197371,  0.04468084,  0.00901349, ..., -0.09289805,
+        -0.13657753, -0.02570865],
+       [ 0.0277605 ,  0.09742073, -0.07047919, ...,  0.05783664,
+        -0.14611217,  0.13138409]], dtype=float32)</pre>
 </div>
 
 </div>
@@ -12195,7 +12207,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>也可以用global_variables_initializer()初始化所有变量</li>
+<li>global_variables_initializer的另一种写法</li>
 </ul>
 
 </div>
@@ -12228,19 +12240,19 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.01311258, -0.15321772, -0.03100876, ...,  0.01576635,
-        -0.17011122,  0.00778334],
-       [-0.00632112, -0.0805592 , -0.13366885, ...,  0.05962479,
-         0.00965144,  0.04564803],
-       [ 0.16788766, -0.06252999,  0.1152531 , ..., -0.13965486,
-        -0.0107923 ,  0.16111413],
+<pre>array([[-0.00205631, -0.00970563, -0.01022588, ..., -0.09414919,
+         0.08239126, -0.08883838],
+       [-0.06780629,  0.02070411,  0.13301378, ...,  0.05601959,
+        -0.05969951, -0.09755178],
+       [-0.15150891,  0.04355581,  0.12243671, ..., -0.05022895,
+        -0.0415826 ,  0.00454292],
        ..., 
-       [-0.0633782 ,  0.06003167, -0.04054847, ..., -0.05182007,
-         0.05266857, -0.05856436],
-       [-0.04858895,  0.00196341,  0.02902997, ...,  0.07324979,
-        -0.11008207, -0.06104498],
-       [ 0.02623019,  0.08211529,  0.14126727, ..., -0.06122007,
-         0.00826732, -0.01249944]], dtype=float32)</pre>
+       [ 0.15762523, -0.00304227, -0.01680966, ..., -0.03776013,
+         0.07798047, -0.02501288],
+       [ 0.02197371,  0.04468084,  0.00901349, ..., -0.09289805,
+        -0.13657753, -0.02570865],
+       [ 0.0277605 ,  0.09742073, -0.07047919, ...,  0.05783664,
+        -0.14611217,  0.13138409]], dtype=float32)</pre>
 </div>
 
 </div>
@@ -12253,7 +12265,57 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#19968;&#20010;&#20449;&#21495;&#20256;&#25773;&#30340;&#20363;&#23376;">&#19968;&#20010;&#20449;&#21495;&#20256;&#25773;&#30340;&#20363;&#23376;<a class="anchor-link" href="#&#19968;&#20010;&#20449;&#21495;&#20256;&#25773;&#30340;&#20363;&#23376;">&#182;</a></h1>
+<p>有关Variable用于迭代的例子</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">state</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;counter&#39;</span><span class="p">)</span>
+<span class="n">one</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">new_value</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="n">one</span><span class="p">)</span>
+<span class="n">update</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="n">new_value</span><span class="p">)</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">state</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="placeholder&#21344;&#20301;">placeholder&#21344;&#20301;<a class="anchor-link" href="#placeholder&#21344;&#20301;">&#182;</a></h2><p>定义一个位置，这个位置的数据在运行时才指定</p>
+
 </div>
 </div>
 </div>
@@ -12262,21 +12324,14 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="n">w1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">w2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">norm</span>
+<span class="n">rv</span><span class="o">=</span><span class="n">norm</span><span class="p">()</span>
 
-<span class="c1"># 输入信号</span>
-<span class="n">x</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([[</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.9</span><span class="p">]])</span>
-
-<span class="c1">#矩阵积</span>
-<span class="n">a</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w1</span><span class="p">)</span>
-<span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">w2</span><span class="p">)</span>
-
-<span class="n">sess</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
-<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w1</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span><span class="c1">#初始化</span>
-<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w2</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
-<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="n">m</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span> 
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">rv</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">))})</span>
 </pre></div>
 
 </div>
@@ -12295,7 +12350,9 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 3.95757794]], dtype=float32)</pre>
+<pre>array([[ 1.37753165,  1.93793106],
+       [-4.26847744, -3.17184687],
+       [-2.28297544, -5.22129202]], dtype=float32)</pre>
 </div>
 
 </div>
@@ -12308,7 +12365,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="placeholder&#21344;&#20301;">placeholder&#21344;&#20301;<a class="anchor-link" href="#placeholder&#21344;&#20301;">&#182;</a></h2><p>定义一个位置，这个位置的数据在运行时才指定，可以节省常量。</p>
+<h1 id="&#36816;&#31639;&#31526;">&#36816;&#31639;&#31526;<a class="anchor-link" href="#&#36816;&#31639;&#31526;">&#182;</a></h1><h3 id="&#26631;&#37327;&#36816;&#31639;">&#26631;&#37327;&#36816;&#31639;<a class="anchor-link" href="#&#26631;&#37327;&#36816;&#31639;">&#182;</a></h3><p>Add,Sub,Mul,Div,Exp,Log,Greater,Less,Equal</p>
+<h3 id="&#21521;&#37327;&#36816;&#31639;">&#21521;&#37327;&#36816;&#31639;<a class="anchor-link" href="#&#21521;&#37327;&#36816;&#31639;">&#182;</a></h3><p>Concat, Slice, Split,Constant,Rank,Shape,Shuffle</p>
+<h3 id="&#30697;&#38453;&#36816;&#31639;">&#30697;&#38453;&#36816;&#31639;<a class="anchor-link" href="#&#30697;&#38453;&#36816;&#31639;">&#182;</a></h3><p>MatMul, MatrixInvers,MatrixDeterminant</p>
+<h3 id="&#24102;&#29366;&#24577;&#36816;&#31639;">&#24102;&#29366;&#24577;&#36816;&#31639;<a class="anchor-link" href="#&#24102;&#29366;&#24577;&#36816;&#31639;">&#182;</a></h3><p>Variable，Assign，AssignAdd</p>
+<h3 id="&#31070;&#32463;&#32593;&#32476;&#32452;&#20214;">&#31070;&#32463;&#32593;&#32476;&#32452;&#20214;<a class="anchor-link" href="#&#31070;&#32463;&#32593;&#32476;&#32452;&#20214;">&#182;</a></h3><p>SoftMax，Sigmoid，ReLU，Convolution2D，MaxPooling</p>
+<h3 id="&#20445;&#23384;">&#20445;&#23384;<a class="anchor-link" href="#&#20445;&#23384;">&#182;</a></h3><p>Save，Restore</p>
+<h3 id="&#38431;&#21015;&#21644;&#21516;&#27493;&#36816;&#31639;">&#38431;&#21015;&#21644;&#21516;&#27493;&#36816;&#31639;<a class="anchor-link" href="#&#38431;&#21015;&#21644;&#21516;&#27493;&#36816;&#31639;">&#182;</a></h3><p>Enqueue，Deq
+ueue，MutexAcquire，MuterRelease</p>
+<h3 id="&#25511;&#21046;&#27969;">&#25511;&#21046;&#27969;<a class="anchor-link" href="#&#25511;&#21046;&#27969;">&#182;</a></h3><p>Merge，Switch，Enter，Leave，NextIteration</p>
 
 </div>
 </div>
@@ -12318,21 +12383,25 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="n">w1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">w2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">norm</span>
+<span class="n">rv</span><span class="o">=</span><span class="n">norm</span><span class="p">()</span>
+</pre></div>
 
-<span class="c1"># 输入信号</span>
-<span class="n">x</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
+</div>
+</div>
+</div>
 
-<span class="c1">#矩阵积</span>
-<span class="n">a</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w1</span><span class="p">)</span>
-<span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">w2</span><span class="p">)</span>
-
-<span class="n">sess</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
-<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w1</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span><span class="c1">#初始化</span>
-<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">w2</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
-<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:[[</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.9</span><span class="p">]]})</span>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="n">w1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+<span class="n">a</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w1</span><span class="p">)</span><span class="c1">#矩阵乘法</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span> 
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">rv</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">))})</span>
 </pre></div>
 
 </div>
@@ -12345,17 +12414,217 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 3.95757794]], dtype=float32)</pre>
+<pre>array([[-2.19992566,  5.92884064],
+       [ 1.90302885, -3.24410677],
+       [ 0.22342104,  0.45572847]], dtype=float32)</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tf.add(a,b)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tf.reduce_sum(...,reduction_indices=[1])#累积求和</span>
+<span class="c1"># tf.reduce_mean(tf.reduce_sum(...)) </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#28608;&#27963;&#20989;&#25968;">&#28608;&#27963;&#20989;&#25968;<a class="anchor-link" href="#&#28608;&#27963;&#20989;&#25968;">&#182;</a></h1><p><a href="https://www.tensorflow.org/versions/r0.12/api_docs/python/nn/activation_functions_">官网点这里</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">sigmoid</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">tanh</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;function tensorflow.python.ops.math_ops.tanh&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a=tf.nn.relu(tf.matmul(x,w1)+biases1)</span>
+<span class="c1"># y=tf.nn.relu(tf.matmul(a,w2)+biases2)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.-dropout">1. dropout<a class="anchor-link" href="#1.-dropout">&#182;</a></h3><p>可以减轻overfitting</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keep_prob</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="c1">#训练时小于1，预测时等于1，所以使用placeholder</span>
+<span class="n">hidden1_drop</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">hidden1</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-25-f9a6d17462dc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-fg">      1</span> keep_prob<span class="ansi-yellow-intense-fg ansi-bold">=</span>tf<span class="ansi-yellow-intense-fg ansi-bold">.</span>placeholder<span class="ansi-yellow-intense-fg ansi-bold">(</span>tf<span class="ansi-yellow-intense-fg ansi-bold">.</span>float32<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-red-intense-fg ansi-bold">#训练时小于1，预测时等于1，所以还是用placeholder</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>hidden1_drop<span class="ansi-yellow-intense-fg ansi-bold">=</span>tf<span class="ansi-yellow-intense-fg ansi-bold">.</span>nn<span class="ansi-yellow-intense-fg ansi-bold">.</span>dropout<span class="ansi-yellow-intense-fg ansi-bold">(</span>hidden1<span class="ansi-yellow-intense-fg ansi-bold">,</span>keep_prob<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;hidden1&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-CNN&#30456;&#20851;">2. CNN&#30456;&#20851;<a class="anchor-link" href="#2.-CNN&#30456;&#20851;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">kernel</span><span class="p">,</span><span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">padding</span><span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span>
+<span class="c1">#strides[0,1]数表示卷积核的尺寸，</span>
+<span class="c1">#stride[2]表示channel数量，灰度图片是1，RGB图是3</span>
+<span class="c1">#stride[3]表示卷积核的数量</span>
+<span class="c1">#padding=&#39;SAME&#39;表示边界加上padding，使得卷积的输入和输出保持同样的尺寸</span>
+
+<span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">max_pool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">ksize</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">padding</span><span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span><span class="c1">#横竖步长为2，</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">lrn</span><span class="p">(</span><span class="n">pool1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">bias</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.001</span><span class="o">/</span><span class="mf">9.0</span><span class="p">,</span><span class="n">beta</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="c1">#LRN模仿生物的侧抑制机制，对局部神经元创建竞争环境，使其中响应大的值相对更大，并抑制其它反馈小的神经元。从而增强泛化能力</span>
+<span class="c1">#可以用于Pooling之后，也可以用于conv之后、Pooling之前</span>
+<span class="c1">#适用于ReLu这种没有上界的激活函数，不适合Sigmoid这种有固定边界，或者能抑制过大值得激活函数</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>batch归一化</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">h1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">fully_connected</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">activation_fn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn&#39;</span><span class="p">)</span>
+<span class="n">h2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span><span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">is_training</span><span class="o">=</span><span class="n">phase</span><span class="p">,</span><span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -12540,7 +12809,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span><span class="c1">#全部初始化</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span><span class="c1">#全部初始化, 千万别忘了！</span>
 
 <span class="n">STEPS</span><span class="o">=</span><span class="mi">50000</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">STEPS</span><span class="p">):</span>
