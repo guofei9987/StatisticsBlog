@@ -11817,7 +11817,7 @@ Extracting ../../haha\t10k-labels-idx1-ubyte.gz
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">in_units</span><span class="o">=</span><span class="mi">784</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">in_units</span><span class="o">=</span><span class="mi">784</span><span class="c1">#28*28</span>
 <span class="n">h1_units</span><span class="o">=</span><span class="mi">300</span>
 <span class="n">w1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">in_units</span><span class="p">,</span><span class="n">h1_units</span><span class="p">),</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
 <span class="n">b1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">h1_units</span><span class="p">]))</span>
