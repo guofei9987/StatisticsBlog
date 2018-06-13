@@ -3,7 +3,6 @@ jupyter nbconvert *.ipynb
 move *.html ..
 cd ..
 
-cd origin_files
 jupyter nbconvert *.ipynb
 move *.html ..
 cd ..
