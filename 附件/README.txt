@@ -7,4 +7,5 @@ jupyter原文见于<a href='http://www.guofei.site/StatisticsBlog/%E7%BB%9F%E8%AE%A1
 http://www.guofei.site/StatisticsBlog/HypothesisTesting.htm
 
 
-![描述时序](https://raw.githubusercontent.com/guofei9987/StatisticsBlog/master/%E9%99%84%E4%BB%B6/%E6%8F%8F%E8%BF%B0%E6%97%B6%E5%BA%8F.png)
+
+![BubbleSort](https://github.com/guofei9987/StatisticsBlog/blob/master/附件/sort/BubbleSort.gif?raw=true)
