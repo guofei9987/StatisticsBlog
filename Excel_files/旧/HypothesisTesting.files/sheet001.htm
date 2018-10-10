@@ -1,0 +1,1107 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../HypothesisTesting.htm">
+<link rel=File-List href=filelist.xml>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+x\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>HypothesisTesting</title>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-char-type:none;
+	display:none;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(0);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../HypothesisTesting.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link=blue vlink="#954F72">
+
+<table border=0 cellpadding=0 cellspacing=0 width=1786 style='border-collapse:
+ collapse;table-layout:fixed;width:1342pt'>
+ <col class=xl67 width=109 style='mso-width-source:userset;mso-width-alt:3488;
+ width:82pt'>
+ <col width=149 span=2 style='mso-width-source:userset;mso-width-alt:4768;
+ width:112pt'>
+ <col width=110 style='mso-width-source:userset;mso-width-alt:3520;width:83pt'>
+ <col width=241 style='mso-width-source:userset;mso-width-alt:7712;width:181pt'>
+ <col width=128 style='mso-width-source:userset;mso-width-alt:4096;width:96pt'>
+ <col width=143 style='mso-width-source:userset;mso-width-alt:4576;width:107pt'>
+ <col width=253 style='mso-width-source:userset;mso-width-alt:8096;width:190pt'>
+ <col width=118 style='mso-width-source:userset;mso-width-alt:3776;width:89pt'>
+ <col width=72 style='width:54pt'>
+ <col width=98 style='mso-width-source:userset;mso-width-alt:3136;width:74pt'>
+ <col width=72 span=3 style='width:54pt'>
+ <tr class=xl66 height=19 style='height:14.25pt'>
+  <td height=19 class=xl68 width=109 style='height:14.25pt;width:82pt'>检验对象</td>
+  <td class=xl68 width=149 style='border-left:none;width:112pt'>条件</td>
+  <td class=xl68 width=149 style='border-left:none;width:112pt'>Ｈ０</td>
+  <td class=xl68 width=110 style='border-left:none;width:83pt'>检验名字</td>
+  <td class=xl68 width=241 style='border-left:none;width:181pt'>构建随机变量</td>
+  <td class=xl68 width=128 style='border-left:none;width:96pt'>服从分布</td>
+  <td class=xl68 width=143 style='border-left:none;width:107pt'>代码</td>
+  <td class=xl68 width=253 style='border-left:none;width:190pt'>原理</td>
+  <td class=xl66 width=118 style='width:89pt'></td>
+  <td class=xl66 width=72 style='width:54pt'></td>
+  <td class=xl66 width=98 style='width:74pt'></td>
+  <td class=xl66 width=72 style='width:54pt'></td>
+  <td class=xl66 width=72 style='width:54pt'></td>
+  <td class=xl66 width=72 style='width:54pt'></td>
+ </tr>
+ <tr height=36 style='mso-height-source:userset;height:27.0pt'>
+  <td rowspan=19 height=693 class=xl82 width=109 style='border-bottom:.5pt solid black;
+  height:520.75pt;border-top:none;width:82pt'>均值</td>
+  <td rowspan=3 class=xl69 width=149 style='border-bottom:.5pt solid black;
+  border-top:none;width:112pt'>方差已知</td>
+  <td class=xl70 width=149 style='border-top:none;border-left:none;width:112pt'>u&lt;=u0</td>
+  <td rowspan=3 class=xl90 width=110 style='border-bottom:.5pt solid black;
+  border-top:none;width:83pt'>z检验</td>
+  <td rowspan=3 height=74 width=241 style='border-bottom:.5pt solid black;
+  height:55.5pt;width:181pt' align=left valign=top><!--[if gte vml 1]><v:shapetype
+   id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+   path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:6pt;margin-top:3pt;width:82.5pt;height:51pt;z-index:1' filled="t">
+   <v:imagedata src="image001.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:1;margin-left:8px;margin-top:4px;width:110px;
+  height:68px'><img width=110 height=68 src=image002.png v:shapes="_x0000_s1025"></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td rowspan=3 height=74 class=xl69 width=241 style='border-bottom:.5pt solid black;
+    height:55.5pt;border-top:none;width:181pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td rowspan=3 class=xl69 width=128 style='border-bottom:.5pt solid black;
+  border-top:none;width:96pt'>N(0,1)</td>
+  <td rowspan=3 class=xl69 width=143 style='border-bottom:.5pt solid black;
+  border-top:none;width:107pt'>[h,p,ci,zval]=ztest(X,m,sigma,alpha,tail)</td>
+  <td rowspan=3 class=xl69 width=253 style='border-bottom:.5pt solid black;
+  border-top:none;width:190pt'>m是待检验均值，tail=-1左侧检验，tail=1右侧检验，tail=0双侧检验</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl70 width=149 style='height:14.25pt;border-top:none;
+  border-left:none;width:112pt'>u&gt;=u0</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl70 width=149 style='height:14.25pt;border-top:none;
+  border-left:none;width:112pt'>u==u0</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=3 height=57 class=xl70 width=149 style='height:42.75pt;
+  border-top:none;width:112pt'>方差未知</td>
+  <td class=xl70 width=149 style='border-top:none;border-left:none;width:112pt'>u&lt;=u0</td>
+  <td rowspan=3 class=xl71 width=110 style='border-top:none;width:83pt'>t检验</td>
+  <td rowspan=3 height=57 width=241 style='border-bottom:.5pt solid black;
+  height:42.75pt;width:181pt' align=left valign=top><!--[if gte vml 1]><v:shape
+   id="_x0000_s1026" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:7.5pt;margin-top:5.25pt;width:75.75pt;height:34.5pt;z-index:2'
+   filled="t">
+   <v:imagedata src="image003.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:2;margin-left:10px;margin-top:7px;width:101px;
+  height:46px'><img width=101 height=46 src=image004.png v:shapes="_x0000_s1026"></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td rowspan=3 height=57 class=xl69 width=241 style='border-bottom:.5pt solid black;
+    height:42.75pt;border-top:none;width:181pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td rowspan=3 class=xl69 width=128 style='border-bottom:.5pt solid black;
+  border-top:none;width:96pt'>t(n-1)</td>
+  <td rowspan=3 class=xl70 width=143 style='border-top:none;width:107pt'>ttest</td>
+  <td rowspan=3 class=xl72 width=253 style='border-top:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl70 width=149 style='height:14.25pt;border-top:none;
+  border-left:none;width:112pt'>u&gt;=u0</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl70 width=149 style='height:14.25pt;border-top:none;
+  border-left:none;width:112pt'>u==u0</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=3 height=66 class=xl69 width=149 style='border-bottom:.5pt solid black;
+  height:49.5pt;border-top:none;width:112pt'>两独立样本，方差已知</td>
+  <td class=xl70 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td rowspan=3 class=xl90 width=110 style='border-bottom:.5pt solid black;
+  border-top:none;width:83pt'>z检验</td>
+  <td rowspan=3 height=66 width=241 style='height:49.5pt;width:181pt'
+  align=left valign=top><!--[if gte vml 1]><v:shape id="_x0000_s1027" type="#_x0000_t75"
+   alt="" style='position:absolute;margin-left:4.5pt;margin-top:3pt;width:90pt;
+   height:45pt;z-index:3' filled="t">
+   <v:imagedata src="image005.emz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>Pict</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:3;margin-left:6px;margin-top:4px;width:120px;
+  height:60px'><img width=120 height=60 src=image006.png v:shapes="_x0000_s1027"></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td rowspan=3 height=66 class=xl85 width=241 style='height:49.5pt;
+    width:181pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td rowspan=3 class=xl85 width=128 style='width:96pt'>N(0,1)</td>
+  <td rowspan=3 class=xl69 width=143 style='border-bottom:.5pt solid black;
+  border-top:none;width:107pt'>　</td>
+  <td class=xl73 width=253 style='border-top:none;border-left:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl70 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl73 width=253 style='border-left:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl70 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl73 width=253 style='border-left:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=44 style='mso-height-source:userset;height:33.0pt'>
+  <td rowspan=3 height=161 class=xl69 width=149 style='border-bottom:.5pt solid black;
+  height:120.95pt;border-top:none;width:112pt'>两独立样本，方差未知</td>
+  <td class=xl74 width=149 style='border-top:none;border-left:none;width:112pt'>u1-u2&lt;=delta</td>
+  <td rowspan=3 class=xl90 width=110 style='border-bottom:.5pt solid black;
+  border-top:none;width:83pt'>t检验</td>
+  <td rowspan=3 height=161 width=241 style='border-bottom:.5pt solid black;
+  height:120.95pt;width:181pt' align=left valign=top><!--[if gte vml 1]><v:shape
+   id="_x0000_s1028" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:.75pt;margin-top:2.25pt;width:115.5pt;height:33.75pt;z-index:4'
+   filled="t">
+   <v:imagedata src="image007.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><v:shape id="_x0000_s1029" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:10.5pt;margin-top:57pt;width:104.25pt;height:55.5pt;z-index:5'
+   filled="t">
+   <v:imagedata src="image008.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:4;margin-left:1px;margin-top:3px;width:154px;
+  height:147px'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=0 height=0></td>
+    <td width=13></td>
+    <td width=139></td>
+    <td width=2></td>
+   </tr>
+   <tr>
+    <td height=45></td>
+    <td colspan=3 align=left valign=top><img width=154 height=45
+    src=image009.png v:shapes="_x0000_s1028"></td>
+   </tr>
+   <tr>
+    <td height=28></td>
+   </tr>
+   <tr>
+    <td height=74></td>
+    <td></td>
+    <td align=left valign=top><img width=139 height=74 src=image010.png v:shapes="_x0000_s1029"></td>
+   </tr>
+  </table>
+  </span><![endif]><span style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td rowspan=3 height=161 class=xl69 width=241 style='border-bottom:.5pt solid black;
+    height:120.95pt;width:181pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td rowspan=3 height=161 width=128 style='border-bottom:.5pt solid black;
+  height:120.95pt;width:96pt' align=left valign=top><!--[if gte vml 1]><v:shape
+   id="_x0000_s1030" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:8.25pt;margin-top:7.5pt;width:68.25pt;height:17.25pt;z-index:6'
+   filled="t">
+   <v:imagedata src="image011.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><v:shape id="_x0000_s1031" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:3.75pt;margin-top:43.5pt;width:90pt;height:65.25pt;z-index:7'
+   filled="t">
+   <v:imagedata src="image012.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:6;margin-left:5px;margin-top:10px;width:120px;
+  height:135px'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=0 height=0></td>
+    <td width=6></td>
+    <td width=91></td>
+    <td width=23></td>
+   </tr>
+   <tr>
+    <td height=23></td>
+    <td></td>
+    <td align=left valign=top><img width=91 height=23 src=image013.png v:shapes="_x0000_s1030"></td>
+   </tr>
+   <tr>
+    <td height=25></td>
+   </tr>
+   <tr>
+    <td height=87></td>
+    <td colspan=3 align=left valign=top><img width=120 height=87
+    src=image014.png v:shapes="_x0000_s1031"></td>
+   </tr>
+  </table>
+  </span><![endif]><span style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td rowspan=3 height=161 class=xl69 width=128 style='border-bottom:.5pt solid black;
+    height:120.95pt;width:96pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td rowspan=3 class=xl69 width=143 style='border-bottom:.5pt solid black;
+  border-top:none;width:107pt'>[h,p,ci,stats]=ttest2(x1,x2,alpha,tail,vartype)</td>
+  <td rowspan=3 class=xl69 width=253 style='border-bottom:.5pt solid black;
+  width:190pt'>vartype='equal'方差相等，vartype='unequal'方差不相等</td>
+  <td colspan=3 style='mso-ignore:colspan'>两个统计量分别代表方差相同、方差不同</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=52 style='mso-height-source:userset;height:39.0pt'>
+  <td height=52 class=xl74 width=149 style='height:39.0pt;border-top:none;
+  border-left:none;width:112pt'>u1-u2&gt;=delta</td>
+  <td>检验正态性</td>
+  <td>→</td>
+  <td>方差齐次检验</td>
+  <td>→</td>
+  <td>ttest2</td>
+  <td></td>
+ </tr>
+ <tr height=65 style='mso-height-source:userset;height:48.95pt'>
+  <td height=65 class=xl74 width=149 style='height:48.95pt;border-top:none;
+  border-left:none;width:112pt'>u1-u2==delta</td>
+  <td>ks，sw</td>
+  <td></td>
+  <td>F检验</td>
+  <td></td>
+  <td colspan=2 style='mso-ignore:colspan'>自由度可能是小数</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=3 height=121 class=xl70 width=149 style='height:90.95pt;
+  border-top:none;width:112pt'>两配对样本</td>
+  <td class=xl70 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td rowspan=3 class=xl71 width=110 style='border-top:none;width:83pt'>t检验</td>
+  <td rowspan=3 height=121 width=241 style='border-bottom:.5pt solid black;
+  height:90.95pt;width:181pt' align=left valign=top><!--[if gte vml 1]><v:shape
+   id="_x0000_s1032" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:8.25pt;margin-top:2.25pt;width:81.75pt;height:81.75pt;z-index:8'
+   filled="t">
+   <v:imagedata src="image015.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><v:shape id="_x0000_s1042" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:7.5pt;margin-top:2.25pt;width:82.5pt;height:81.75pt;z-index:17'
+   filled="t">
+   <v:imagedata src="image015.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:8;margin-left:10px;margin-top:3px;width:110px;
+  height:109px'><img width=110 height=109 src=image016.png v:shapes="_x0000_s1032 _x0000_s1042"></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td rowspan=3 height=121 class=xl87 width=241 style='border-bottom:.5pt solid black;
+    height:90.95pt;border-top:none;width:181pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td rowspan=3 class=xl70 width=143 style='border-top:none;width:107pt'>ttest(X-Y)<br>
+    ttest(X-Y,0)<br>
+    ttest(X,Y)</td>
+  <td rowspan=3 class=xl72 width=253 style='border-top:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl70 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=77 style='mso-height-source:userset;height:57.95pt'>
+  <td height=77 class=xl70 width=149 style='height:57.95pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=54 style='mso-height-source:userset;height:40.5pt'>
+  <td rowspan=3 height=122 class=xl69 width=149 style='border-bottom:.5pt solid black;
+  height:92.1pt;border-top:none;width:112pt'>三个以上样本，单因素</td>
+  <td rowspan=3 class=xl69 width=149 style='border-bottom:.5pt solid black;
+  border-top:none;width:112pt'>u1=u2=...=un</td>
+  <td rowspan=3 class=xl90 width=110 style='border-bottom:.5pt solid black;
+  border-top:none;width:83pt'>单因素方差分析</td>
+  <td rowspan=3 height=122 width=241 style='border-bottom:.5pt solid black;
+  height:92.1pt;width:181pt' align=left valign=top><!--[if gte vml 1]><v:shape
+   id="_x0000_s1036" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:5.25pt;margin-top:6pt;width:270pt;height:76.5pt;z-index:12'
+   filled="t">
+   <v:imagedata src="image017.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:12;margin-left:7px;margin-top:8px;width:360px;
+  height:102px'><img width=360 height=102 src=image018.png v:shapes="_x0000_s1036"></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td rowspan=3 height=122 class=xl87 width=241 style='border-bottom:.5pt solid black;
+    height:92.1pt;border-top:none;width:181pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td rowspan=3 class=xl87 width=128 style='border-bottom:.5pt solid black;
+  border-top:none;width:96pt'>F</td>
+  <td rowspan=2 class=xl69 width=143 style='border-bottom:.5pt solid black;
+  border-top:none;width:107pt'>[p,table,stats]=anova1(X,group,'off')<span
+  style='mso-spacerun:yes'>           </span></td>
+  <td class=xl72 width=253 style='border-top:none;border-left:none;width:190pt'>group可以是矩阵或元胞，表示X的组名称，长度与X的列数相同<span
+  style='mso-spacerun:yes'> </span></td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl80 style='height:16.5pt'>off'表示不显示图表</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=46 style='mso-height-source:userset;height:35.1pt'>
+  <td height=46 class=xl75 width=143 style='height:35.1pt;border-top:none;
+  border-left:none;width:107pt'>multcompare(stats)</td>
+  <td class=xl72 width=253 style='border-left:none;width:190pt'>组间比较</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=92 style='mso-height-source:userset;height:69.0pt'>
+  <td height=92 class=xl70 width=149 style='height:69.0pt;border-top:none;
+  border-left:none;width:112pt'>三个以上样本，双因素</td>
+  <td width=149 style='width:112pt' align=left valign=top><!--[if gte vml 1]><v:shape
+   id="_x0000_s1035" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:6.75pt;margin-top:68.25pt;width:45pt;height:19.5pt;z-index:11'
+   filled="t">
+   <v:imagedata src="image019.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><v:shape id="_x0000_s1037" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:1.5pt;margin-top:1.5pt;width:108pt;height:54.75pt;z-index:13'
+   filled="t">
+   <v:imagedata src="image020.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:11;margin-left:2px;margin-top:2px;width:144px;
+  height:115px'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=0 height=0></td>
+    <td width=7></td>
+    <td width=60></td>
+    <td width=77></td>
+   </tr>
+   <tr>
+    <td height=73></td>
+    <td colspan=3 align=left valign=top><img width=144 height=73
+    src=image021.png v:shapes="_x0000_s1037"></td>
+   </tr>
+   <tr>
+    <td height=16></td>
+   </tr>
+   <tr>
+    <td height=26></td>
+    <td></td>
+    <td align=left valign=top><img width=60 height=26 src=image022.png v:shapes="_x0000_s1035"></td>
+   </tr>
+  </table>
+  </span><![endif]><span style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td height=92 class=xl70 width=149 style='height:69.0pt;border-top:none;
+    border-left:none;width:112pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td class=xl71 width=110 style='border-top:none;border-left:none;width:83pt'>双因素方差分析</td>
+  <td height=92 class=xl72 width=241 style='height:69.0pt;border-top:none;
+  border-left:none;width:181pt'><!--[if gte vml 1]><v:shape id="_x0000_s1038"
+   type="#_x0000_t75" alt="" style='position:absolute;margin-left:4.5pt;
+   margin-top:15pt;width:108.75pt;height:30pt;z-index:14' filled="t">
+   <v:imagedata src="image023.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=6 height=20></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=145 height=40 src=image024.png v:shapes="_x0000_s1038"></td>
+    <td width=90></td>
+   </tr>
+   <tr>
+    <td height=32></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:180.75pt;height:69.0pt'></span><![endif]--></td>
+  <td class=xl76 width=128 style='border-top:none;border-left:none;width:96pt'><a
+  href="sheet002.htm#RANGE!A1"><span style='color:purple'>ANOVA2!A1</span></a></td>
+  <td class=xl70 width=143 style='border-top:none;border-left:none;width:107pt'>anova2<span
+  style='mso-spacerun:yes'>   </span>multcompare</td>
+  <td class=xl72 width=253 style='border-top:none;border-left:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=9 height=183 class=xl82 width=109 style='border-bottom:.5pt solid black;
+  height:137.25pt;border-top:none;width:82pt'>方差</td>
+  <td rowspan=3 class=xl70 width=149 style='border-top:none;width:112pt'>单正态</td>
+  <td class=xl74 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td rowspan=3 class=xl71 width=110 style='border-top:none;width:83pt'>卡方检验</td>
+  <td rowspan=3 height=57 width=241 style='border-bottom:.5pt solid black;
+  height:42.75pt;width:181pt' align=left valign=top><!--[if gte vml 1]><v:shape
+   id="_x0000_s1033" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:4.5pt;margin-top:3pt;width:52.5pt;height:23.25pt;z-index:9'
+   filled="t">
+   <v:imagedata src="image025.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:SizeWithCells/>
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><v:shape id="_x0000_s1043" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:3.75pt;margin-top:2.25pt;width:52.5pt;height:24pt;z-index:18'
+   filled="t">
+   <v:imagedata src="image025.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:9;margin-left:5px;margin-top:3px;width:71px;
+  height:32px'><img width=71 height=32 src=image026.png v:shapes="_x0000_s1033 _x0000_s1043"></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td rowspan=3 height=57 class=xl69 width=241 style='border-bottom:.5pt solid black;
+    height:42.75pt;border-top:none;width:181pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td class=xl70 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td rowspan=3 class=xl70 width=143 style='border-top:none;width:107pt'>[h,p,ci,stats]=vartest(X,m,alpha,tail)</td>
+  <td rowspan=3 class=xl72 width=253 style='border-top:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl74 width=149 style='height:14.25pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl70 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl74 width=149 style='height:14.25pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl70 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='mso-height-source:userset;height:14.25pt'>
+  <td rowspan=2 height=38 class=xl70 width=149 style='height:28.5pt;border-top:
+  none;width:112pt'>两正态</td>
+  <td class=xl70 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td rowspan=2 class=xl71 width=110 style='border-top:none;width:83pt'>F检验</td>
+  <td rowspan=2 height=38 width=241 style='border-bottom:.5pt solid black;
+  height:28.5pt;width:181pt' align=left valign=top><!--[if gte vml 1]><v:shape
+   id="_x0000_s1034" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:6pt;margin-top:1.5pt;width:42.75pt;height:25.5pt;z-index:10'
+   filled="t">
+   <v:imagedata src="image027.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:SizeWithCells/>
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><v:shape id="_x0000_s1044" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:5.25pt;margin-top:1.5pt;width:42.75pt;height:25.5pt;z-index:19'
+   filled="t">
+   <v:imagedata src="image027.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:10;margin-left:7px;margin-top:2px;width:58px;
+  height:34px'><img width=58 height=34 src=image028.png v:shapes="_x0000_s1034 _x0000_s1044"></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td rowspan=2 height=38 class=xl69 width=241 style='border-bottom:.5pt solid black;
+    height:28.5pt;border-top:none;width:181pt'>　</td>
+   </tr>
+  </table>
+  </span></td>
+  <td rowspan=2 class=xl69 width=128 style='border-bottom:.5pt solid black;
+  border-top:none;width:96pt'>F(m-1,n-1)</td>
+  <td rowspan=2 class=xl70 width=143 style='border-top:none;width:107pt'>vartest2(X1,X2,alpha,tail)</td>
+  <td rowspan=2 class=xl72 width=253 style='border-top:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='mso-height-source:userset;height:14.25pt'>
+  <td height=19 class=xl70 width=149 style='height:14.25pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl72 width=149 style='height:33.0pt;border-top:
+  none;width:112pt'>　</td>
+  <td class=xl70 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td rowspan=2 class=xl77 width=110 style='border-top:none;width:83pt'>　</td>
+  <td class=xl72 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td rowspan=2 class=xl72 width=143 style='border-top:none;width:107pt'>vartest3</td>
+  <td rowspan=2 class=xl72 width=253 style='border-top:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl72 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl72 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl72 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>三个以上正态</td>
+  <td class=xl72 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td class=xl77 width=110 style='border-top:none;border-left:none;width:83pt'>　</td>
+  <td class=xl72 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td class=xl72 width=143 style='border-top:none;border-left:none;width:107pt'>vartestn</td>
+  <td class=xl72 width=253 style='border-top:none;border-left:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl72 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl72 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td class=xl77 width=110 style='border-top:none;border-left:none;width:83pt'>　</td>
+  <td class=xl72 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td class=xl72 width=143 style='border-top:none;border-left:none;width:107pt'>　</td>
+  <td class=xl72 width=253 style='border-top:none;border-left:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=100 style='mso-height-source:userset;height:75.0pt'>
+  <td rowspan=11 height=479 class=xl82 width=109 style='border-bottom:.5pt solid black;
+  height:360.45pt;border-top:none;width:82pt'>分布</td>
+  <td rowspan=4 class=xl87 width=149 style='border-bottom:.5pt solid black;
+  border-top:none;width:112pt'>样本是否服从正态分布</td>
+  <td class=xl72 width=149 style='border-top:none;border-left:none;width:112pt'>样本服从正态分布</td>
+  <td class=xl71 width=110 style='border-top:none;border-left:none;width:83pt'>卡方拟合检验</td>
+  <td height=100 class=xl69 width=241 style='height:75.0pt;border-top:none;
+  border-left:none;width:181pt'><!--[if gte vml 1]><v:shape id="_x0000_s1046"
+   type="#_x0000_t75" alt="" style='position:absolute;margin-left:2.25pt;
+   margin-top:1.5pt;width:133.5pt;height:62.25pt;z-index:20' filled="t">
+   <v:imagedata src="image029.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=3 height=2></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=178 height=83 src=image030.png v:shapes="_x0000_s1046"></td>
+    <td width=60></td>
+   </tr>
+   <tr>
+    <td height=15></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:180.75pt;height:75.0pt'></span><![endif]--></td>
+  <td height=100 class=xl70 width=128 style='height:75.0pt;border-top:none;
+  border-left:none;width:96pt'><!--[if gte vml 1]><v:shape id="_x0000_s1040"
+   type="#_x0000_t75" alt="" style='position:absolute;margin-left:9pt;
+   margin-top:46.5pt;width:81.75pt;height:26.25pt;z-index:15' filled="t">
+   <v:imagedata src="image031.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><v:shape id="_x0000_s1041" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:6pt;margin-top:3pt;width:87.75pt;height:46.5pt;z-index:16'
+   filled="t">
+   <v:imagedata src="image032.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=8 height=4></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=117 height=93 src=image033.png v:shapes="_x0000_s1040 _x0000_s1041"></td>
+    <td width=3></td>
+   </tr>
+   <tr>
+    <td height=3></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:96.0pt;height:75.0pt'></span><![endif]--></td>
+  <td class=xl70 width=143 style='border-top:none;border-left:none;width:107pt'>[h,p,stats]=chi2gof(x,'name','value')</td>
+  <td class=xl70 width=253 style='border-top:none;border-left:none;width:190pt'>原理：分组，计算每组的频数<br>
+    <br>
+    </td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=82 style='mso-height-source:userset;height:62.1pt'>
+  <td height=82 class=xl72 width=149 style='height:62.1pt;border-top:none;
+  border-left:none;width:112pt'>样本服从正态分布</td>
+  <td class=xl77 width=110 style='border-top:none;border-left:none;width:83pt'>Jarque-Beran</td>
+  <td height=82 class=xl72 width=241 style='height:62.1pt;border-left:none;
+  width:181pt'><!--[if gte vml 1]><v:shape id="_x0000_s1047" type="#_x0000_t75"
+   alt="" style='position:absolute;margin-left:21pt;margin-top:13.5pt;width:105.75pt;
+   height:33pt;z-index:21' filled="t">
+   <v:imagedata src="image034.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=28 height=18></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=141 height=44 src=image035.png v:shapes="_x0000_s1047"></td>
+    <td width=72></td>
+   </tr>
+   <tr>
+    <td height=20></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:180.75pt;height:61.5pt'></span><![endif]--></td>
+  <td height=82 class=xl72 width=128 style='height:62.1pt;border-top:none;
+  border-left:none;width:96pt'><!--[if gte vml 1]><v:shape id="_x0000_s1048"
+   type="#_x0000_t75" alt="" style='position:absolute;margin-left:24pt;
+   margin-top:23.25pt;width:30.75pt;height:19.5pt;z-index:22' filled="t">
+   <v:imagedata src="image036.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=32 height=31></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=41 height=26 src=image037.png v:shapes="_x0000_s1048"></td>
+    <td width=55></td>
+   </tr>
+   <tr>
+    <td height=25></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:96.0pt;height:61.5pt'></span><![endif]--></td>
+  <td class=xl70 width=143 style='border-top:none;border-left:none;width:107pt'>[h,p,jbtest,critval]=jbtest(x,alpha,critval)</td>
+  <td class=xl70 width=253 style='border-top:none;border-left:none;width:190pt'>峰度和偏度</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=54 style='mso-height-source:userset;height:41.1pt'>
+  <td height=54 class=xl72 width=149 style='height:41.1pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl78 width=110 style='width:83pt'>Kolmogorov<br>
+    –Smirnov test</td>
+  <td height=54 class=xl72 width=241 style='height:41.1pt;border-top:none;
+  width:181pt'><!--[if gte vml 1]><v:shape id="_x0000_s1049" type="#_x0000_t75"
+   alt="" style='position:absolute;margin-left:14.25pt;margin-top:9pt;width:123.75pt;
+   height:20.25pt;z-index:23' filled="t">
+   <v:imagedata src="image038.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=19 height=12></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=165 height=27 src=image039.png v:shapes="_x0000_s1049"></td>
+    <td width=57></td>
+   </tr>
+   <tr>
+    <td height=15></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:180.75pt;height:40.5pt'></span><![endif]--></td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td class=xl70 width=143 style='border-top:none;border-left:none;width:107pt'>kstest(x,CDF,alpha,type)</td>
+  <td class=xl72 width=253 style='border-top:none;border-left:none;width:190pt'>CDF:可以是两列矩阵，也可以是概率分布对象</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=92 style='mso-height-source:userset;height:69.0pt'>
+  <td height=92 class=xl72 width=149 style='height:69.0pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl77 width=110 style='border-left:none;width:83pt'>Shapiro–Wilk
+  test</td>
+  <td height=92 class=xl72 width=241 style='height:69.0pt;border-top:none;
+  border-left:none;width:181pt'><!--[if gte vml 1]><v:shape id="_x0000_s1053"
+   type="#_x0000_t75" style='position:absolute;margin-left:4.5pt;margin-top:2.25pt;
+   width:90pt;height:66pt;z-index:26' filled="t" fillcolor="window [65]"
+   stroked="t" strokecolor="windowText [64]">
+   <v:fill color2="window [65]"/>
+   <v:imagedata src="image040.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:SizeWithCells/>
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=5 height=2></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=122 height=90 src=image041.png v:shapes="_x0000_s1053"></td>
+    <td width=114></td>
+   </tr>
+   <tr>
+    <td height=0></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:180.75pt;height:69.0pt'></span><![endif]--></td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td class=xl70 width=143 style='border-top:none;border-left:none;width:107pt'>　</td>
+  <td class=xl72 width=253 style='border-top:none;border-left:none;width:190pt'>样本量n&lt;2000，用sharpiro-wilk<br>
+    n&gt;2000，用kstest</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl70 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>两样本是否同分布</td>
+  <td class=xl72 width=149 style='border-top:none;border-left:none;width:112pt'>样本服从正态分布</td>
+  <td class=xl77 width=110 style='border-top:none;border-left:none;width:83pt'>　</td>
+  <td class=xl72 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl72 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td class=xl70 width=143 style='border-top:none;border-left:none;width:107pt'>kstest2(x1,x2)</td>
+  <td class=xl72 width=253 style='border-top:none;border-left:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='mso-height-source:userset;height:14.25pt'>
+  <td rowspan=2 height=41 class=xl72 width=149 style='height:30.75pt;
+  border-top:none;width:112pt'>　</td>
+  <td class=xl70 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td rowspan=2 class=xl71 width=110 style='border-top:none;width:83pt'>符号检验</td>
+  <td class=xl70 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl70 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td rowspan=2 class=xl70 width=143 style='border-top:none;width:107pt'>signtest</td>
+  <td rowspan=2 class=xl72 width=253 style='border-top:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl72 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl70 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl70 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl72 width=149 style='height:33.0pt;border-top:
+  none;width:112pt'>　</td>
+  <td class=xl72 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td rowspan=2 class=xl71 width=110 style='border-top:none;width:83pt'>秩和检验</td>
+  <td class=xl70 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl70 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td rowspan=2 class=xl70 width=143 style='border-top:none;width:107pt'>ranksum(x1,x2)</td>
+  <td rowspan=2 class=xl72 width=253 style='border-top:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl72 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl70 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl70 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl72 width=149 style='height:33.0pt;border-top:
+  none;width:112pt'>　</td>
+  <td class=xl72 width=149 style='border-top:none;border-left:none;width:112pt'>　</td>
+  <td rowspan=2 class=xl71 width=110 style='border-top:none;width:83pt'>中值检验</td>
+  <td class=xl70 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl70 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td rowspan=2 class=xl70 width=143 style='border-top:none;width:107pt'>signrank(x)</td>
+  <td rowspan=2 class=xl72 width=253 style='border-top:none;width:190pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl72 width=149 style='height:16.5pt;border-top:none;
+  border-left:none;width:112pt'>　</td>
+  <td class=xl70 width=241 style='border-top:none;border-left:none;width:181pt'>　</td>
+  <td class=xl70 width=128 style='border-top:none;border-left:none;width:96pt'>　</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td colspan=7 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td colspan=7 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=70 style='mso-height-source:userset;height:53.1pt'>
+  <td height=70 class=xl67 style='height:53.1pt'>相关系数</td>
+  <td>皮尔逊相关系数</td>
+  <td>ρ=0</td>
+  <td></td>
+  <td height=70 width=241 style='height:53.1pt;width:181pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_s1050" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:3pt;margin-top:5.25pt;width:105.75pt;height:37.5pt;z-index:24'
+   filled="t">
+   <v:imagedata src="image042.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=4 height=7></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><img width=141 height=50 src=image043.png v:shapes="_x0000_s1050"></td>
+    <td width=96></td>
+   </tr>
+   <tr>
+    <td height=13></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:180.75pt;height:52.5pt'></span><![endif]--></td>
+  <td width=128 style='width:96pt' align=left valign=top><!--[if gte vml 1]><v:shape
+   id="_x0000_s1052" type="#_x0000_t75" alt="" style='position:absolute;
+   margin-left:8.25pt;margin-top:30pt;width:71.25pt;height:19.5pt;z-index:25'
+   filled="t">
+   <v:imagedata src="image044.wmz" o:title=""/>
+   <x:ClientData ObjectType="Pict">
+    <x:CF>PictOld</x:CF>
+    <x:AutoPict/>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:25;margin-left:11px;margin-top:40px;width:95px;
+  height:26px'><img width=95 height=26 src=image045.png v:shapes="_x0000_s1052"></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td height=70 class=xl79 width=128 style='height:53.1pt;width:96pt'>拒绝域<br>
+        </td>
+   </tr>
+  </table>
+  </span></td>
+  <td colspan=8 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td>lillietest</td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl81><a href="http://www.guofei.site/" target="_parent">回到郭飞的博客<ruby><font
+  class="font19"><rt class=font19></rt></font></ruby></a></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl67 style='height:14.25pt'></td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl81><a href="http://www.guofei.site/StatisticsBlog/"
+  target="_parent">回到统计学目录<ruby><font class="font19"><rt class=font19></rt></font></ruby></a></td>
+  <td colspan=10 style='mso-ignore:colspan'></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=109 style='width:82pt'></td>
+  <td width=149 style='width:112pt'></td>
+  <td width=149 style='width:112pt'></td>
+  <td width=110 style='width:83pt'></td>
+  <td width=241 style='width:181pt'></td>
+  <td width=128 style='width:96pt'></td>
+  <td width=143 style='width:107pt'></td>
+  <td width=253 style='width:190pt'></td>
+  <td width=118 style='width:89pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=98 style='width:74pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>
