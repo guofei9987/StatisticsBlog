@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>scaler</title>
+<title>TF_mnist_dropout</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13113,32 +13113,43 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="scaler.html">大图</a>, <a href="origin_files/scaler.ipynb">下载</a></p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span><span class="p">,</span> <span class="n">FactorAnalysis</span><span class="p">,</span> <span class="n">FastICA</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">preprocessing</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">from</span> <span class="nn">tensorflow.examples.tutorials.mnist</span> <span class="k">import</span> <span class="n">input_data</span>
 
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">mnist</span><span class="o">=</span><span class="n">input_data</span><span class="o">.</span><span class="n">read_data_sets</span><span class="p">(</span><span class="s1">&#39;../../haha&#39;</span><span class="p">)</span>
+
+<span class="n">sess</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Extracting ../../haha\train-images-idx3-ubyte.gz
+Extracting ../../haha\train-labels-idx1-ubyte.gz
+Extracting ../../haha\t10k-images-idx3-ubyte.gz
+Extracting ../../haha\t10k-labels-idx1-ubyte.gz
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13148,109 +13159,15 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data&#39;</span><span class="p">,</span><span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;?&#39;</span><span class="p">,</span>
-               <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="c1">#,names=[&#39;mpg&#39;,&#39;cylinders&#39;,&#39;displacement&#39;,&#39;horsepower&#39;,&#39;weight&#39;,&#39;acceleration&#39;,&#39;model_year&#39;,&#39;origin&#39;,&#39;car_name&#39;])</span>
-<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,:</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">in_units</span><span class="o">=</span><span class="mi">784</span><span class="c1">#28*28</span>
+<span class="n">h1_units</span><span class="o">=</span><span class="mi">300</span>
+<span class="n">w1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">in_units</span><span class="p">,</span><span class="n">h1_units</span><span class="p">),</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">b1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">h1_units</span><span class="p">]))</span>
+<span class="n">w2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">h1_units</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
+<span class="n">b2</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">10</span><span class="p">]))</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-    </tr>
-    <tr>
-      <th>0</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1000025</th>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>1002945</th>
-      <td>5</td>
-      <td>4</td>
-      <td>4</td>
-      <td>5</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>1015425</th>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>1016277</th>
-      <td>6</td>
-      <td>8</td>
-      <td>8</td>
-      <td>1</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>1017023</th>
-      <td>4</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13260,247 +13177,61 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,[</span><span class="kc">None</span><span class="p">,</span><span class="n">in_units</span><span class="p">])</span>
+<span class="n">y_</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">keep_prob</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="c1">#训练时小于1，预测时等于1，所以还是用placeholder</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>699.000000</td>
-      <td>699.000000</td>
-      <td>699.000000</td>
-      <td>699.000000</td>
-      <td>699.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>4.417740</td>
-      <td>3.134478</td>
-      <td>3.207439</td>
-      <td>2.806867</td>
-      <td>3.216023</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>2.815741</td>
-      <td>3.051459</td>
-      <td>2.971913</td>
-      <td>2.855379</td>
-      <td>2.214300</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>2.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>2.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>4.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>2.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>6.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>4.000000</td>
-      <td>4.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>10.000000</td>
-      <td>10.000000</td>
-      <td>10.000000</td>
-      <td>10.000000</td>
-      <td>10.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#19968;&#12289;&#26631;&#20934;&#21270;&#65288;Z-Score&#65289;">&#19968;&#12289;&#26631;&#20934;&#21270;&#65288;Z-Score&#65289;<a class="anchor-link" href="#&#19968;&#12289;&#26631;&#20934;&#21270;&#65288;Z-Score&#65289;">&#182;</a></h2><p>公式为：(X-mean)/std  计算时对每个属性/每列分别进行。</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">preprocessing</span>
-<span class="n">standard_scaler</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">StandardScaler</span><span class="p">()</span>
-
-<span class="n">standard_scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="n">standard_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hidden1</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w1</span><span class="p">)</span><span class="o">+</span><span class="n">b1</span><span class="p">)</span>
+<span class="n">hidden1_drop</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">hidden1</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">)</span><span class="c1"># 注意！</span>
+<span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">hidden1_drop</span><span class="p">,</span><span class="n">w2</span><span class="p">)</span><span class="o">+</span><span class="n">b2</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.20693572, -0.69999505, -0.74329904, -0.63324716, -0.54956136],
-       [ 0.20693572,  0.28384518,  0.2668747 ,  0.76862067,  1.71010564],
-       [-0.50386559, -0.69999505, -0.74329904, -0.63324716, -0.54956136],
-       ..., 
-       [ 0.20693572,  2.25152563,  2.28722218,  0.06768675,  1.71010564],
-       [-0.14846494,  1.59563215,  0.94032386,  0.41815371, -0.09762796],
-       [-0.14846494,  1.59563215,  1.61377302,  0.76862067,  0.35430544]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="0-1&#26631;&#20934;&#21270;">0-1&#26631;&#20934;&#21270;<a class="anchor-link" href="#0-1&#26631;&#20934;&#21270;">&#182;</a></h2><p>使用这种方法的目的包括：</p>
-<p>1、对于方差非常小的属性可以增强其稳定性。</p>
-<p>2、维持稀疏矩阵中为0的条目。</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">preprocessing</span>
-<span class="n">min_max_scaler</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">MinMaxScaler</span><span class="p">()</span>
-
-<span class="n">min_max_scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="n">min_max_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cross_entropy</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="o">-</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">y_</span><span class="o">*</span><span class="n">tf</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="n">reduction_indices</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">train_step</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">AdagradOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.44444444,  0.        ,  0.        ,  0.        ,  0.11111111],
-       [ 0.44444444,  0.33333333,  0.33333333,  0.44444444,  0.66666667],
-       [ 0.22222222,  0.        ,  0.        ,  0.        ,  0.11111111],
-       ..., 
-       [ 0.44444444,  1.        ,  1.        ,  0.22222222,  0.66666667],
-       [ 0.33333333,  0.77777778,  0.55555556,  0.33333333,  0.22222222],
-       [ 0.33333333,  0.77777778,  0.77777778,  0.44444444,  0.33333333]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#19977;&#12289;&#27491;&#21017;&#21270;&#65288;Normalization&#65289;">&#19977;&#12289;&#27491;&#21017;&#21270;&#65288;Normalization&#65289;<a class="anchor-link" href="#&#19977;&#12289;&#27491;&#21017;&#21270;&#65288;Normalization&#65289;">&#182;</a></h2><p>每个样本变成单位范数</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">preprocessing</span>
-<span class="n">normalizer</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">)</span>
-
-<span class="n">normalizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="n">normalizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
+<span class="n">STEPS</span><span class="o">=</span><span class="mi">5000</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">STEPS</span><span class="p">):</span>
+    <span class="n">batch_xs</span><span class="p">,</span><span class="n">batch_ys</span><span class="o">=</span><span class="n">mnist</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">next_batch</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">batch_ys1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">batch_ys</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">10</span><span class="p">))</span><span class="c1">#数据格式恶心了</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">batch_ys</span><span class="p">):</span>
+        <span class="n">batch_ys1</span><span class="p">[</span><span class="n">index</span><span class="p">,</span><span class="n">value</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">train_step</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">batch_xs</span><span class="p">,</span><span class="n">y_</span><span class="p">:</span><span class="n">batch_ys1</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">:</span><span class="mf">0.75232</span><span class="p">})</span><span class="c1">#keep_prob</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">500</span>==0:
+        <span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">batch_xs</span><span class="p">,</span><span class="n">y_</span><span class="p">:</span><span class="n">batch_ys1</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">:</span><span class="mf">0.75232</span><span class="p">}))</span>
+    
 </pre></div>
 
     </div>
@@ -13513,21 +13244,65 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.88388348,  0.1767767 ,  0.1767767 ,  0.1767767 ,  0.35355339],
-       [ 0.43685203,  0.34948162,  0.34948162,  0.43685203,  0.61159284],
-       [ 0.75      ,  0.25      ,  0.25      ,  0.25      ,  0.5       ],
-       ..., 
-       [ 0.29721915,  0.5944383 ,  0.5944383 ,  0.17833149,  0.41610681],
-       [ 0.33686077,  0.67372154,  0.50529115,  0.33686077,  0.25264558],
-       [ 0.29408585,  0.5881717 ,  0.5881717 ,  0.36760731,  0.29408585]])</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2.47829
+0.156253
+0.0564876
+0.0177163
+0.0281413
+0.0114876
+0.015493
+0.0384636
+0.0264609
+0.0134964
+</pre>
+</div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_test_predict</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">mnist</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">images</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+<span class="kn">import</span> <span class="nn">sklearn.metrics</span> <span class="k">as</span> <span class="nn">metrics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">mnist</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">labels</span><span class="p">,</span><span class="n">y_test_predict</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>test
+ [[ 974    1    2    0    0    0    1    1    1    0]
+ [   0 1126    5    0    0    1    2    0    1    0]
+ [   4    0 1019    1    1    0    0    5    2    0]
+ [   0    0    9  994    0    1    0    2    3    1]
+ [   1    1    8    1  956    0    2    3    2    8]
+ [   2    0    0   14    0  862    4    2    7    1]
+ [   8    3    1    1    2    2  938    0    3    0]
+ [   2    4   14    1    1    0    0 1000    2    4]
+ [   4    1    4    1    1    0    1    2  958    2]
+ [   4    4    1    5    7    1    0    7    3  977]]
+</pre>
+</div>
 </div>
 
 </div>
