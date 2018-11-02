@@ -13115,45 +13115,30 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyecharts</span> <span class="k">import</span> <span class="n">Bar3D</span>
-
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">bar3d</span> <span class="o">=</span> <span class="n">Bar3D</span><span class="p">(</span><span class="s2">&quot;3D 柱状图示例&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
 <span class="n">x_axis</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;12a&quot;</span><span class="p">,</span> <span class="s2">&quot;1a&quot;</span><span class="p">,</span> <span class="s2">&quot;2a&quot;</span><span class="p">,</span> <span class="s2">&quot;3a&quot;</span><span class="p">,</span> <span class="s2">&quot;4a&quot;</span><span class="p">,</span> <span class="s2">&quot;5a&quot;</span><span class="p">,</span> <span class="s2">&quot;6a&quot;</span><span class="p">,</span> <span class="s2">&quot;7a&quot;</span><span class="p">,</span> <span class="s2">&quot;8a&quot;</span><span class="p">,</span> <span class="s2">&quot;9a&quot;</span><span class="p">,</span> <span class="s2">&quot;10a&quot;</span><span class="p">,</span> <span class="s2">&quot;11a&quot;</span><span class="p">,</span>
           <span class="s2">&quot;12p&quot;</span><span class="p">,</span> <span class="s2">&quot;1p&quot;</span><span class="p">,</span> <span class="s2">&quot;2p&quot;</span><span class="p">,</span> <span class="s2">&quot;3p&quot;</span><span class="p">,</span> <span class="s2">&quot;4p&quot;</span><span class="p">,</span> <span class="s2">&quot;5p&quot;</span><span class="p">,</span> <span class="s2">&quot;6p&quot;</span><span class="p">,</span> <span class="s2">&quot;7p&quot;</span><span class="p">,</span> <span class="s2">&quot;8p&quot;</span><span class="p">,</span> <span class="s2">&quot;9p&quot;</span><span class="p">,</span> <span class="s2">&quot;10p&quot;</span><span class="p">,</span> <span class="s2">&quot;11p&quot;</span><span class="p">]</span>
 <span class="n">y_axis</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Saturday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Sunday&quot;</span><span class="p">]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-    <span class="p">]</span>
+
+<span class="n">data</span><span class="o">=</span><span class="p">[[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="p">)]</span>
 <span class="n">range_color</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#313695&#39;</span><span class="p">,</span> <span class="s1">&#39;#4575b4&#39;</span><span class="p">,</span> <span class="s1">&#39;#74add1&#39;</span><span class="p">,</span> <span class="s1">&#39;#abd9e9&#39;</span><span class="p">,</span> <span class="s1">&#39;#e0f3f8&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffffbf&#39;</span><span class="p">,</span>
                <span class="s1">&#39;#fee090&#39;</span><span class="p">,</span> <span class="s1">&#39;#fdae61&#39;</span><span class="p">,</span> <span class="s1">&#39;#f46d43&#39;</span><span class="p">,</span> <span class="s1">&#39;#d73027&#39;</span><span class="p">,</span> <span class="s1">&#39;#a50026&#39;</span><span class="p">]</span>
 <span class="n">bar3d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">x_axis</span><span class="p">,</span> <span class="n">y_axis</span><span class="p">,</span> <span class="p">[[</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">],</span> <span class="n">is_visualmap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -13171,36 +13156,36 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[1]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
     require.config({
-         paths:{
-           'echarts': '/nbextensions/echarts/echarts.min', 'echartsgl': '/nbextensions/echarts/echarts-gl.min'
-         }
+        paths: {
+            'echarts': '/nbextensions/echarts/echarts.min', 'echartsgl': '/nbextensions/echarts/echarts-gl.min'
+        }
     });
 </script>
-<div id="aafe8893554d48d28150562ad8f9b1cb" style="width:1200px; height:600px;"></div>
+    <div id="fa51b47893cd49799bac998b3409a3b2" style="width:1200px;height:600px;"></div>
+
 
 <script>
-    require([ 'echarts', 'echartsgl' ],function(ec){
-	var myChart = ec.init(document.getElementById('aafe8893554d48d28150562ad8f9b1cb'));
-var option =  {
+    require(['echarts', 'echartsgl'], function(echarts) {
+        
+var myChart_fa51b47893cd49799bac998b3409a3b2 = echarts.init(document.getElementById('fa51b47893cd49799bac998b3409a3b2'), 'light', {renderer: 'canvas'});
+
+var option_fa51b47893cd49799bac998b3409a3b2 = {
     "title": [
         {
             "text": "3D \u67f1\u72b6\u56fe\u793a\u4f8b",
-            "subtext": "",
             "left": "auto",
             "top": "auto",
             "textStyle": {
-                "color": "#000",
                 "fontSize": 18
             },
             "subtextStyle": {
-                "color": "#aaa",
                 "fontSize": 12
             }
         }
@@ -13213,43 +13198,45 @@ var option =  {
         "feature": {
             "saveAsImage": {
                 "show": true,
-                "title": "\u4e0b\u8f7d\u56fe\u7247"
+                "title": "save as image"
             },
             "restore": {
-                "show": true
+                "show": true,
+                "title": "restore"
             },
             "dataView": {
-                "show": true
+                "show": true,
+                "title": "data view"
             }
         }
     },
-    "series_id": 3557123,
+    "series_id": 3496155,
     "tooltip": {
         "trigger": "item",
         "triggerOn": "mousemove|click",
         "axisPointer": {
             "type": "line"
         },
-        "formatter": null,
         "textStyle": {
-            "color": "#fff",
             "fontSize": 14
-        }
+        },
+        "backgroundColor": "rgba(50,50,50,0.7)",
+        "borderColor": "#333",
+        "borderWidth": 0
     },
     "series": [
         {
             "type": "bar3D",
-            "name": "",
             "data": [
                 [
                     0,
                     0,
-                    5
+                    0
                 ],
                 [
                     1,
                     0,
-                    1
+                    0
                 ],
                 [
                     2,
@@ -13259,17 +13246,17 @@ var option =  {
                 [
                     3,
                     0,
-                    0
+                    3
                 ],
                 [
                     4,
                     0,
-                    0
+                    2
                 ],
                 [
                     5,
                     0,
-                    0
+                    1
                 ],
                 [
                     6,
@@ -13279,7 +13266,7 @@ var option =  {
                 [
                     7,
                     0,
-                    0
+                    5
                 ],
                 [
                     8,
@@ -13289,7 +13276,7 @@ var option =  {
                 [
                     9,
                     0,
-                    0
+                    4
                 ],
                 [
                     10,
@@ -13299,77 +13286,77 @@ var option =  {
                 [
                     11,
                     0,
-                    2
+                    1
                 ],
                 [
                     12,
                     0,
-                    4
+                    6
                 ],
                 [
                     13,
                     0,
-                    1
+                    2
                 ],
                 [
                     14,
                     0,
-                    1
+                    8
                 ],
                 [
                     15,
                     0,
-                    3
+                    12
                 ],
                 [
                     16,
                     0,
-                    4
+                    5
                 ],
                 [
                     17,
                     0,
-                    6
+                    9
                 ],
                 [
                     18,
                     0,
-                    4
+                    17
                 ],
                 [
                     19,
                     0,
-                    4
+                    7
                 ],
                 [
                     20,
                     0,
-                    3
+                    13
                 ],
                 [
                     21,
                     0,
-                    3
+                    0
                 ],
                 [
                     22,
                     0,
-                    2
+                    18
                 ],
                 [
                     23,
                     0,
-                    5
+                    6
                 ],
                 [
                     0,
                     1,
-                    7
+                    1
                 ],
                 [
                     1,
                     1,
-                    0
+                    2
                 ],
                 [
                     2,
@@ -13379,7 +13366,7 @@ var option =  {
                 [
                     3,
                     1,
-                    0
+                    1
                 ],
                 [
                     4,
@@ -13394,77 +13381,77 @@ var option =  {
                 [
                     6,
                     1,
-                    0
+                    2
                 ],
                 [
                     7,
                     1,
-                    0
+                    6
                 ],
                 [
                     8,
                     1,
-                    0
+                    8
                 ],
                 [
                     9,
                     1,
-                    0
+                    2
                 ],
                 [
                     10,
                     1,
-                    5
+                    0
                 ],
                 [
                     11,
-                    1,
-                    2
-                ],
-                [
-                    12,
-                    1,
-                    2
-                ],
-                [
-                    13,
-                    1,
-                    6
-                ],
-                [
-                    14,
-                    1,
-                    9
-                ],
-                [
-                    15,
                     1,
                     11
                 ],
                 [
-                    16,
-                    1,
-                    6
-                ],
-                [
-                    17,
-                    1,
-                    7
-                ],
-                [
-                    18,
+                    12,
                     1,
                     8
                 ],
                 [
+                    13,
+                    1,
+                    7
+                ],
+                [
+                    14,
+                    1,
+                    5
+                ],
+                [
+                    15,
+                    1,
+                    13
+                ],
+                [
+                    16,
+                    1,
+                    2
+                ],
+                [
+                    17,
+                    1,
+                    6
+                ],
+                [
+                    18,
+                    1,
+                    16
+                ],
+                [
                     19,
                     1,
-                    12
+                    11
                 ],
                 [
                     20,
                     1,
-                    5
+                    1
                 ],
                 [
                     21,
@@ -13474,12 +13461,12 @@ var option =  {
                 [
                     22,
                     1,
-                    7
+                    9
                 ],
                 [
                     23,
                     1,
-                    2
+                    18
                 ],
                 [
                     0,
@@ -13489,122 +13476,122 @@ var option =  {
                 [
                     1,
                     2,
-                    1
+                    3
                 ],
                 [
                     2,
                     2,
-                    0
+                    1
                 ],
                 [
                     3,
                     2,
-                    0
+                    3
                 ],
                 [
                     4,
                     2,
-                    0
+                    5
                 ],
                 [
                     5,
                     2,
-                    0
+                    3
                 ],
                 [
                     6,
                     2,
-                    0
+                    8
                 ],
                 [
                     7,
                     2,
-                    0
+                    4
                 ],
                 [
                     8,
                     2,
-                    0
+                    7
                 ],
                 [
                     9,
                     2,
-                    0
+                    8
                 ],
                 [
                     10,
                     2,
-                    3
+                    1
                 ],
                 [
                     11,
                     2,
-                    2
+                    6
                 ],
                 [
                     12,
                     2,
-                    1
+                    6
                 ],
                 [
                     13,
                     2,
-                    9
+                    3
                 ],
                 [
                     14,
                     2,
-                    8
+                    12
                 ],
                 [
                     15,
                     2,
-                    10
+                    0
                 ],
                 [
                     16,
                     2,
-                    6
+                    12
                 ],
                 [
                     17,
                     2,
-                    5
+                    8
                 ],
                 [
                     18,
                     2,
-                    5
+                    14
                 ],
                 [
                     19,
                     2,
-                    5
+                    6
                 ],
                 [
                     20,
                     2,
-                    7
+                    11
                 ],
                 [
                     21,
                     2,
-                    4
+                    6
                 ],
                 [
                     22,
                     2,
-                    2
+                    23
                 ],
                 [
                     23,
                     2,
-                    4
+                    24
                 ],
                 [
                     0,
                     3,
-                    7
+                    2
                 ],
                 [
                     1,
@@ -13614,17 +13601,17 @@ var option =  {
                 [
                     2,
                     3,
-                    0
+                    5
                 ],
                 [
                     3,
                     3,
-                    0
+                    6
                 ],
                 [
                     4,
                     3,
-                    0
+                    5
                 ],
                 [
                     5,
@@ -13634,67 +13621,67 @@ var option =  {
                 [
                     6,
                     3,
-                    0
+                    8
                 ],
                 [
                     7,
                     3,
-                    0
+                    5
                 ],
                 [
                     8,
                     3,
-                    1
+                    7
                 ],
                 [
                     9,
                     3,
-                    0
+                    2
                 ],
                 [
                     10,
                     3,
-                    5
+                    10
                 ],
                 [
                     11,
                     3,
-                    4
+                    10
                 ],
                 [
                     12,
                     3,
-                    7
+                    0
                 ],
                 [
                     13,
                     3,
-                    14
+                    1
                 ],
                 [
                     14,
+                    3,
+                    17
+                ],
+                [
+                    15,
                     3,
                     13
                 ],
                 [
-                    15,
-                    3,
-                    12
-                ],
-                [
                     16,
                     3,
-                    9
+                    6
                 ],
                 [
                     17,
                     3,
-                    5
+                    20
                 ],
                 [
                     18,
                     3,
-                    5
+                    1
                 ],
                 [
                     19,
@@ -13704,27 +13691,27 @@ var option =  {
                 [
                     20,
                     3,
-                    6
+                    5
                 ],
                 [
                     21,
                     3,
-                    4
+                    3
                 ],
                 [
                     22,
                     3,
-                    4
+                    6
                 ],
                 [
                     23,
                     3,
-                    1
+                    5
                 ],
                 [
                     0,
                     4,
-                    1
+                    3
                 ],
                 [
                     1,
@@ -13734,7 +13721,7 @@ var option =  {
                 [
                     2,
                     4,
-                    0
+                    2
                 ],
                 [
                     3,
@@ -13743,88 +13730,88 @@ var option =  {
                 ],
                 [
                     4,
-                    4,
-                    0
-                ],
-                [
-                    5,
-                    4,
-                    1
-                ],
-                [
-                    6,
-                    4,
-                    0
-                ],
-                [
-                    7,
-                    4,
-                    0
-                ],
-                [
-                    8,
-                    4,
-                    0
-                ],
-                [
-                    9,
-                    4,
-                    2
-                ],
-                [
-                    10,
-                    4,
-                    4
-                ],
-                [
-                    11,
-                    4,
-                    4
-                ],
-                [
-                    12,
-                    4,
-                    2
-                ],
-                [
-                    13,
-                    4,
-                    4
-                ],
-                [
-                    14,
-                    4,
-                    4
-                ],
-                [
-                    15,
-                    4,
-                    14
-                ],
-                [
-                    16,
-                    4,
-                    12
-                ],
-                [
-                    17,
-                    4,
-                    1
-                ],
-                [
-                    18,
                     4,
                     8
                 ],
                 [
-                    19,
+                    5,
                     4,
                     5
                 ],
                 [
-                    20,
+                    6,
+                    4,
+                    5
+                ],
+                [
+                    7,
+                    4,
+                    10
+                ],
+                [
+                    8,
                     4,
                     3
+                ],
+                [
+                    9,
+                    4,
+                    13
+                ],
+                [
+                    10,
+                    4,
+                    8
+                ],
+                [
+                    11,
+                    4,
+                    12
+                ],
+                [
+                    12,
+                    4,
+                    9
+                ],
+                [
+                    13,
+                    4,
+                    7
+                ],
+                [
+                    14,
+                    4,
+                    3
+                ],
+                [
+                    15,
+                    4,
+                    10
+                ],
+                [
+                    16,
+                    4,
+                    12
+                ],
+                [
+                    17,
+                    4,
+                    9
+                ],
+                [
+                    18,
+                    4,
+                    9
+                ],
+                [
+                    19,
+                    4,
+                    21
+                ],
+                [
+                    20,
+                    4,
+                    7
                 ],
                 [
                     21,
@@ -13834,42 +13821,42 @@ var option =  {
                 [
                     22,
                     4,
-                    3
+                    25
                 ],
                 [
                     23,
                     4,
-                    0
+                    22
                 ],
                 [
                     0,
                     5,
-                    2
+                    4
                 ],
                 [
                     1,
                     5,
-                    1
+                    3
                 ],
                 [
                     2,
                     5,
-                    0
+                    6
                 ],
                 [
                     3,
                     5,
-                    3
+                    4
                 ],
                 [
                     4,
                     5,
-                    0
+                    8
                 ],
                 [
                     5,
                     5,
-                    0
+                    9
                 ],
                 [
                     6,
@@ -13879,17 +13866,17 @@ var option =  {
                 [
                     7,
                     5,
-                    0
+                    5
                 ],
                 [
                     8,
                     5,
-                    2
+                    6
                 ],
                 [
                     9,
                     5,
-                    0
+                    8
                 ],
                 [
                     10,
@@ -13899,92 +13886,92 @@ var option =  {
                 [
                     11,
                     5,
-                    1
+                    14
                 ],
                 [
                     12,
                     5,
-                    5
+                    3
                 ],
                 [
                     13,
                     5,
-                    10
+                    17
                 ],
                 [
                     14,
-                    5,
-                    5
-                ],
-                [
-                    15,
-                    5,
-                    7
-                ],
-                [
-                    16,
                     5,
                     11
                 ],
                 [
-                    17,
-                    5,
-                    6
-                ],
-                [
-                    18,
-                    5,
-                    0
-                ],
-                [
-                    19,
-                    5,
-                    5
-                ],
-                [
-                    20,
-                    5,
-                    3
-                ],
-                [
-                    21,
-                    5,
-                    4
-                ],
-                [
-                    22,
+                    15,
                     5,
                     2
                 ],
                 [
+                    16,
+                    5,
+                    6
+                ],
+                [
+                    17,
+                    5,
+                    2
+                ],
+                [
+                    18,
+                    5,
+                    21
+                ],
+                [
+                    19,
+                    5,
+                    3
+                ],
+                [
+                    20,
+                    5,
+                    6
+                ],
+                [
+                    21,
+                    5,
+                    15
+                ],
+                [
+                    22,
+                    5,
+                    17
+                ],
+                [
                     23,
                     5,
-                    0
+                    18
                 ],
                 [
                     0,
                     6,
-                    1
+                    2
                 ],
                 [
                     1,
                     6,
-                    0
+                    6
                 ],
                 [
                     2,
                     6,
-                    0
+                    7
                 ],
                 [
                     3,
                     6,
-                    0
+                    6
                 ],
                 [
                     4,
                     6,
-                    0
+                    6
                 ],
                 [
                     5,
@@ -13994,92 +13981,92 @@ var option =  {
                 [
                     6,
                     6,
-                    0
+                    7
                 ],
                 [
                     7,
                     6,
-                    0
+                    13
                 ],
                 [
                     8,
                     6,
-                    0
+                    7
                 ],
                 [
                     9,
                     6,
-                    0
+                    11
                 ],
                 [
                     10,
                     6,
-                    1
+                    5
                 ],
                 [
                     11,
                     6,
-                    0
+                    10
                 ],
                 [
                     12,
                     6,
-                    2
+                    7
                 ],
                 [
                     13,
                     6,
-                    1
+                    0
                 ],
                 [
                     14,
                     6,
-                    3
+                    7
                 ],
                 [
                     15,
                     6,
-                    4
+                    3
                 ],
                 [
                     16,
                     6,
-                    0
+                    12
                 ],
                 [
                     17,
                     6,
-                    0
+                    14
                 ],
                 [
                     18,
                     6,
-                    0
+                    11
                 ],
                 [
                     19,
                     6,
-                    0
+                    16
                 ],
                 [
                     20,
                     6,
-                    1
+                    6
                 ],
                 [
                     21,
                     6,
-                    2
+                    26
                 ],
                 [
                     22,
                     6,
-                    2
+                    28
                 ],
                 [
                     23,
                     6,
-                    6
+                    22
                 ]
             ],
             "label": {
@@ -14087,16 +14074,12 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
@@ -14118,21 +14101,17 @@ var option =  {
             "top": "top",
             "orient": "horizontal",
             "textStyle": {
-                "fontSize": 12,
-                "color": "#333"
+                "fontSize": 12
             }
         }
     ],
-    "backgroundColor": "#fff",
+    "animation": true,
     "xAxis3D": {
-        "name": "",
         "nameGap": 20,
         "nameTextStyle": {
             "fontSize": 16
         },
         "type": "category",
-        "min": null,
-        "max": null,
         "axisLabel": {
             "margin": 8,
             "interval": "auto"
@@ -14165,14 +14144,11 @@ var option =  {
         ]
     },
     "yAxis3D": {
-        "name": "",
         "nameGap": 20,
         "nameTextStyle": {
             "fontSize": 16
         },
         "type": "category",
-        "min": null,
-        "max": null,
         "axisLabel": {
             "margin": 8,
             "interval": "auto"
@@ -14188,14 +14164,11 @@ var option =  {
         ]
     },
     "zAxis3D": {
-        "name": "",
         "nameGap": 20,
         "nameTextStyle": {
             "fontSize": 16
         },
         "type": "value",
-        "min": null,
-        "max": null,
         "axisLabel": {
             "margin": 8
         }
@@ -14245,9 +14218,7 @@ var option =  {
             "high",
             "low"
         ],
-        "textStyle": {
-            "color": null
-        },
+        "textStyle": {},
         "inRange": {
             "color": [
                 "#313695",
@@ -14265,14 +14236,13 @@ var option =  {
         },
         "calculable": true,
         "splitNumber": 5,
-        "dimension": null,
         "orient": "vertical",
         "left": "left",
         "top": "bottom",
         "showLabel": true
     }
 };
-myChart.setOption(option);
+myChart_fa51b47893cd49799bac998b3409a3b2.setOption(option_fa51b47893cd49799bac998b3409a3b2);
 
     });
 </script>
@@ -14287,26 +14257,17 @@ myChart.setOption(option);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyecharts</span> <span class="k">import</span> <span class="n">Boxplot</span>
 
 <span class="n">boxplot</span> <span class="o">=</span> <span class="n">Boxplot</span><span class="p">(</span><span class="s2">&quot;箱形图&quot;</span><span class="p">)</span>
 <span class="n">x_axis</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;expr1&#39;</span><span class="p">,</span> <span class="s1">&#39;expr2&#39;</span><span class="p">,</span> <span class="s1">&#39;expr3&#39;</span><span class="p">,</span> <span class="s1">&#39;expr4&#39;</span><span class="p">,</span> <span class="s1">&#39;expr5&#39;</span><span class="p">]</span>
-<span class="n">y_axis</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="mi">850</span><span class="p">,</span> <span class="mi">740</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">1070</span><span class="p">,</span> <span class="mi">930</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span> <span class="mi">950</span><span class="p">,</span> <span class="mi">980</span><span class="p">,</span> <span class="mi">980</span><span class="p">,</span> <span class="mi">880</span><span class="p">,</span>
-    <span class="mi">1000</span><span class="p">,</span> <span class="mi">980</span><span class="p">,</span> <span class="mi">930</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mi">760</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">960</span><span class="p">,</span> <span class="mi">960</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">960</span><span class="p">,</span> <span class="mi">940</span><span class="p">,</span> <span class="mi">960</span><span class="p">,</span> <span class="mi">940</span><span class="p">,</span> <span class="mi">880</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span> <span class="mi">880</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">840</span><span class="p">,</span>
-    <span class="mi">830</span><span class="p">,</span> <span class="mi">790</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">880</span><span class="p">,</span> <span class="mi">880</span><span class="p">,</span> <span class="mi">830</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">790</span><span class="p">,</span> <span class="mi">760</span><span class="p">,</span> <span class="mi">800</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">880</span><span class="p">,</span> <span class="mi">880</span><span class="p">,</span> <span class="mi">880</span><span class="p">,</span> <span class="mi">860</span><span class="p">,</span> <span class="mi">720</span><span class="p">,</span> <span class="mi">720</span><span class="p">,</span> <span class="mi">620</span><span class="p">,</span> <span class="mi">860</span><span class="p">,</span> <span class="mi">970</span><span class="p">,</span> <span class="mi">950</span><span class="p">,</span>
-    <span class="mi">880</span><span class="p">,</span> <span class="mi">910</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span> <span class="mi">870</span><span class="p">,</span> <span class="mi">840</span><span class="p">,</span> <span class="mi">840</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span> <span class="mi">840</span><span class="p">,</span> <span class="mi">840</span><span class="p">,</span> <span class="mi">840</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">890</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">820</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">770</span><span class="p">,</span> <span class="mi">760</span><span class="p">,</span> <span class="mi">740</span><span class="p">,</span> <span class="mi">750</span><span class="p">,</span> <span class="mi">760</span><span class="p">,</span>
-    <span class="mi">910</span><span class="p">,</span> <span class="mi">920</span><span class="p">,</span> <span class="mi">890</span><span class="p">,</span> <span class="mi">860</span><span class="p">,</span> <span class="mi">880</span><span class="p">,</span> <span class="mi">720</span><span class="p">,</span> <span class="mi">840</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span> <span class="mi">780</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">890</span><span class="p">,</span> <span class="mi">840</span><span class="p">,</span> <span class="mi">780</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">760</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">790</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">820</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span>
-    <span class="mi">870</span><span class="p">,</span> <span class="mi">870</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">740</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">940</span><span class="p">,</span> <span class="mi">950</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">810</span><span class="p">,</span> <span class="mi">870</span><span class="p">]</span>
-<span class="p">]</span>
+<span class="n">yaxis</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
 <span class="n">_yaxis</span> <span class="o">=</span> <span class="n">boxplot</span><span class="o">.</span><span class="n">prepare_data</span><span class="p">(</span><span class="n">y_axis</span><span class="p">)</span>       <span class="c1"># 转换数据</span>
+
 <span class="n">boxplot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;boxplot&quot;</span><span class="p">,</span> <span class="n">x_axis</span><span class="p">,</span> <span class="n">_yaxis</span><span class="p">)</span>
 <span class="n">boxplot</span>
 </pre></div>
@@ -14321,36 +14282,36 @@ myChart.setOption(option);
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
     require.config({
-         paths:{
-           'echarts': '/nbextensions/echarts/echarts.min'
-         }
+        paths: {
+            'echarts': '/nbextensions/echarts/echarts.min'
+        }
     });
 </script>
-<div id="64b58453768a432cac666702557cc93f" style="width:800px; height:400px;"></div>
+    <div id="aa3ee890bf6849fca5198a79526016b2" style="width:800px;height:400px;"></div>
+
 
 <script>
-    require([ 'echarts' ],function(ec){
-	var myChart = ec.init(document.getElementById('64b58453768a432cac666702557cc93f'));
-var option =  {
+    require(['echarts'], function(echarts) {
+        
+var myChart_aa3ee890bf6849fca5198a79526016b2 = echarts.init(document.getElementById('aa3ee890bf6849fca5198a79526016b2'), 'light', {renderer: 'canvas'});
+
+var option_aa3ee890bf6849fca5198a79526016b2 = {
     "title": [
         {
             "text": "\u7bb1\u5f62\u56fe",
-            "subtext": "",
             "left": "auto",
             "top": "auto",
             "textStyle": {
-                "color": "#000",
                 "fontSize": 18
             },
             "subtextStyle": {
-                "color": "#aaa",
                 "fontSize": 12
             }
         }
@@ -14363,28 +14324,31 @@ var option =  {
         "feature": {
             "saveAsImage": {
                 "show": true,
-                "title": "\u4e0b\u8f7d\u56fe\u7247"
+                "title": "save as image"
             },
             "restore": {
-                "show": true
+                "show": true,
+                "title": "restore"
             },
             "dataView": {
-                "show": true
+                "show": true,
+                "title": "data view"
             }
         }
     },
-    "series_id": 8243770,
+    "series_id": 3260567,
     "tooltip": {
         "trigger": "item",
         "triggerOn": "mousemove|click",
         "axisPointer": {
             "type": "line"
         },
-        "formatter": null,
         "textStyle": {
-            "color": "#fff",
             "fontSize": 14
-        }
+        },
+        "backgroundColor": "rgba(50,50,50,0.7)",
+        "borderColor": "#333",
+        "borderWidth": 0
     },
     "series": [
         {
@@ -14392,39 +14356,11 @@ var option =  {
             "name": "boxplot",
             "data": [
                 [
-                    650,
-                    850.0,
-                    940.0,
-                    980.0,
-                    1070
-                ],
-                [
-                    760,
-                    800.0,
-                    845.0,
-                    895.0,
-                    960
-                ],
-                [
-                    620,
-                    840.0,
-                    855.0,
-                    880.0,
-                    970
-                ],
-                [
-                    720,
-                    762.5,
-                    815.0,
-                    875.0,
-                    920
-                ],
-                [
-                    740,
-                    802.5,
-                    810.0,
-                    870.0,
-                    950
+                    "T",
+                    "a",
+                    "e",
+                    "u",
+                    "y"
                 ]
             ],
             "label": {
@@ -14432,16 +14368,12 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
@@ -14452,7 +14384,7 @@ var option =  {
             "markLine": {
                 "data": []
             },
-            "seriesId": 8243770
+            "seriesId": 3260567
         }
     ],
     "legend": [
@@ -14466,68 +14398,81 @@ var option =  {
             "top": "top",
             "orient": "horizontal",
             "textStyle": {
-                "fontSize": 12,
-                "color": "#333"
+                "fontSize": 12
             }
         }
     ],
-    "backgroundColor": "#fff",
+    "animation": true,
     "xAxis": [
         {
-            "name": "",
             "show": true,
             "nameLocation": "middle",
             "nameGap": 25,
             "nameTextStyle": {
                 "fontSize": 14
             },
-            "axisLabel": {
-                "interval": "auto",
-                "rotate": 0,
-                "margin": 8
-            },
             "axisTick": {
                 "alignWithLabel": false
             },
             "inverse": false,
-            "position": null,
             "boundaryGap": true,
-            "min": null,
-            "max": null,
+            "type": "category",
+            "splitLine": {
+                "show": false
+            },
+            "axisLine": {
+                "lineStyle": {
+                    "width": 1
+                }
+            },
+            "axisLabel": {
+                "interval": "auto",
+                "rotate": 0,
+                "margin": 8,
+                "textStyle": {
+                    "fontSize": 12
+                }
+            },
             "data": [
                 "expr1",
                 "expr2",
                 "expr3",
                 "expr4",
                 "expr5"
-            ],
-            "type": "category"
+            ]
         }
     ],
     "yAxis": [
         {
-            "name": "",
             "show": true,
             "nameLocation": "middle",
             "nameGap": 25,
             "nameTextStyle": {
                 "fontSize": 14
             },
-            "axisLabel": {
-                "formatter": "{value} ",
-                "rotate": 0,
-                "interval": "auto",
-                "margin": 8
-            },
             "axisTick": {
                 "alignWithLabel": false
             },
             "inverse": false,
-            "position": null,
             "boundaryGap": true,
-            "min": null,
-            "max": null,
-            "type": "value"
+            "type": "value",
+            "splitLine": {
+                "show": true
+            },
+            "axisLine": {
+                "lineStyle": {
+                    "width": 1
+                }
+            },
+            "axisLabel": {
+                "interval": "auto",
+                "formatter": "{value} ",
+                "rotate": 0,
+                "margin": 8,
+                "textStyle": {
+                    "fontSize": 12
+                }
+            }
         }
     ],
     "color": [
@@ -14558,7 +14503,7 @@ var option =  {
         "#f6f5ec"
     ]
 };
-myChart.setOption(option);
+myChart_aa3ee890bf6849fca5198a79526016b2.setOption(option_aa3ee890bf6849fca5198a79526016b2);
 
     });
 </script>
@@ -14573,7 +14518,7 @@ myChart.setOption(option);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyecharts</span> <span class="k">import</span> <span class="n">EffectScatter</span>
@@ -14595,36 +14540,36 @@ myChart.setOption(option);
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
     require.config({
-         paths:{
-           'echarts': '/nbextensions/echarts/echarts.min'
-         }
+        paths: {
+            'echarts': '/nbextensions/echarts/echarts.min'
+        }
     });
 </script>
-<div id="c9db4bef86a5402d917372ff169a62e7" style="width:800px; height:400px;"></div>
+    <div id="0941348512f648a691a54e5c6700248c" style="width:800px;height:400px;"></div>
+
 
 <script>
-    require([ 'echarts' ],function(ec){
-	var myChart = ec.init(document.getElementById('c9db4bef86a5402d917372ff169a62e7'));
-var option =  {
+    require(['echarts'], function(echarts) {
+        
+var myChart_0941348512f648a691a54e5c6700248c = echarts.init(document.getElementById('0941348512f648a691a54e5c6700248c'), 'light', {renderer: 'canvas'});
+
+var option_0941348512f648a691a54e5c6700248c = {
     "title": [
         {
             "text": "\u52a8\u6001\u6563\u70b9\u56fe\u793a\u4f8b",
-            "subtext": "",
             "left": "auto",
             "top": "auto",
             "textStyle": {
-                "color": "#000",
                 "fontSize": 18
             },
             "subtextStyle": {
-                "color": "#aaa",
                 "fontSize": 12
             }
         }
@@ -14637,28 +14582,31 @@ var option =  {
         "feature": {
             "saveAsImage": {
                 "show": true,
-                "title": "\u4e0b\u8f7d\u56fe\u7247"
+                "title": "save as image"
             },
             "restore": {
-                "show": true
+                "show": true,
+                "title": "restore"
             },
             "dataView": {
-                "show": true
+                "show": true,
+                "title": "data view"
             }
         }
     },
-    "series_id": 2813335,
+    "series_id": 4091712,
     "tooltip": {
         "trigger": "item",
         "triggerOn": "mousemove|click",
         "axisPointer": {
             "type": "line"
         },
-        "formatter": null,
         "textStyle": {
-            "color": "#fff",
             "fontSize": 14
-        }
+        },
+        "backgroundColor": "rgba(50,50,50,0.7)",
+        "borderColor": "#333",
+        "borderWidth": 0
     },
     "series": [
         {
@@ -14703,21 +14651,17 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
             },
-            "seriesId": 2813335
+            "seriesId": 4091712
         }
     ],
     "legend": [
@@ -14731,62 +14675,74 @@ var option =  {
             "top": "top",
             "orient": "horizontal",
             "textStyle": {
-                "fontSize": 12,
-                "color": "#333"
+                "fontSize": 12
             }
         }
     ],
-    "backgroundColor": "#fff",
+    "animation": true,
     "xAxis": [
         {
-            "name": "",
             "show": true,
             "nameLocation": "middle",
             "nameGap": 25,
             "nameTextStyle": {
                 "fontSize": 14
             },
-            "axisLabel": {
-                "interval": "auto",
-                "rotate": 0,
-                "margin": 8
-            },
             "axisTick": {
                 "alignWithLabel": false
             },
             "inverse": false,
-            "position": null,
             "boundaryGap": true,
-            "min": null,
-            "max": null,
-            "data": null,
-            "type": "value"
+            "type": "value",
+            "splitLine": {
+                "show": true
+            },
+            "axisLine": {
+                "lineStyle": {
+                    "width": 1
+                }
+            },
+            "axisLabel": {
+                "interval": "auto",
+                "rotate": 0,
+                "margin": 8,
+                "textStyle": {
+                    "fontSize": 12
+                }
+            }
         }
     ],
     "yAxis": [
         {
-            "name": "",
             "show": true,
             "nameLocation": "middle",
             "nameGap": 25,
             "nameTextStyle": {
                 "fontSize": 14
             },
-            "axisLabel": {
-                "formatter": "{value} ",
-                "rotate": 0,
-                "interval": "auto",
-                "margin": 8
-            },
             "axisTick": {
                 "alignWithLabel": false
             },
             "inverse": false,
-            "position": null,
             "boundaryGap": true,
-            "min": null,
-            "max": null,
-            "type": "value"
+            "type": "value",
+            "splitLine": {
+                "show": true
+            },
+            "axisLine": {
+                "lineStyle": {
+                    "width": 1
+                }
+            },
+            "axisLabel": {
+                "interval": "auto",
+                "formatter": "{value} ",
+                "rotate": 0,
+                "margin": 8,
+                "textStyle": {
+                    "fontSize": 12
+                }
+            }
         }
     ],
     "color": [
@@ -14817,7 +14773,7 @@ var option =  {
         "#f6f5ec"
     ]
 };
-myChart.setOption(option);
+myChart_0941348512f648a691a54e5c6700248c.setOption(option_0941348512f648a691a54e5c6700248c);
 
     });
 </script>
@@ -14832,7 +14788,7 @@ myChart.setOption(option);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">es</span> <span class="o">=</span> <span class="n">EffectScatter</span><span class="p">(</span><span class="s2">&quot;动态散点图各种图形示例&quot;</span><span class="p">)</span>
@@ -14855,36 +14811,36 @@ myChart.setOption(option);
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
     require.config({
-         paths:{
-           'echarts': '/nbextensions/echarts/echarts.min'
-         }
+        paths: {
+            'echarts': '/nbextensions/echarts/echarts.min'
+        }
     });
 </script>
-<div id="48b71e2353dc4463b1eda8e7310e9855" style="width:800px; height:400px;"></div>
+    <div id="2c3dde76a1ac41cd9bfd630a19782b61" style="width:800px;height:400px;"></div>
+
 
 <script>
-    require([ 'echarts' ],function(ec){
-	var myChart = ec.init(document.getElementById('48b71e2353dc4463b1eda8e7310e9855'));
-var option =  {
+    require(['echarts'], function(echarts) {
+        
+var myChart_2c3dde76a1ac41cd9bfd630a19782b61 = echarts.init(document.getElementById('2c3dde76a1ac41cd9bfd630a19782b61'), 'light', {renderer: 'canvas'});
+
+var option_2c3dde76a1ac41cd9bfd630a19782b61 = {
     "title": [
         {
             "text": "\u52a8\u6001\u6563\u70b9\u56fe\u5404\u79cd\u56fe\u5f62\u793a\u4f8b",
-            "subtext": "",
             "left": "auto",
             "top": "auto",
             "textStyle": {
-                "color": "#000",
                 "fontSize": 18
             },
             "subtextStyle": {
-                "color": "#aaa",
                 "fontSize": 12
             }
         }
@@ -14897,33 +14853,35 @@ var option =  {
         "feature": {
             "saveAsImage": {
                 "show": true,
-                "title": "\u4e0b\u8f7d\u56fe\u7247"
+                "title": "save as image"
             },
             "restore": {
-                "show": true
+                "show": true,
+                "title": "restore"
             },
             "dataView": {
-                "show": true
+                "show": true,
+                "title": "data view"
             }
         }
     },
-    "series_id": 2896388,
+    "series_id": 1732489,
     "tooltip": {
         "trigger": "item",
         "triggerOn": "mousemove|click",
         "axisPointer": {
             "type": "line"
         },
-        "formatter": null,
         "textStyle": {
-            "color": "#fff",
             "fontSize": 14
-        }
+        },
+        "backgroundColor": "rgba(50,50,50,0.7)",
+        "borderColor": "#333",
+        "borderWidth": 0
     },
     "series": [
         {
             "type": "effectScatter",
-            "name": "",
             "showEffectOn": "render",
             "rippleEffect": {
                 "brushType": "stroke",
@@ -14943,25 +14901,20 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
             },
-            "seriesId": 2896388
+            "seriesId": 1732489
         },
         {
             "type": "effectScatter",
-            "name": "",
             "showEffectOn": "render",
             "rippleEffect": {
                 "brushType": "stroke",
@@ -14981,25 +14934,20 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
             },
-            "seriesId": 2896388
+            "seriesId": 1732489
         },
         {
             "type": "effectScatter",
-            "name": "",
             "showEffectOn": "render",
             "rippleEffect": {
                 "brushType": "stroke",
@@ -15019,25 +14967,20 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
             },
-            "seriesId": 2896388
+            "seriesId": 1732489
         },
         {
             "type": "effectScatter",
-            "name": "",
             "showEffectOn": "render",
             "rippleEffect": {
                 "brushType": "fill",
@@ -15057,25 +15000,20 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
             },
-            "seriesId": 2896388
+            "seriesId": 1732489
         },
         {
             "type": "effectScatter",
-            "name": "",
             "showEffectOn": "render",
             "rippleEffect": {
                 "brushType": "stroke",
@@ -15095,25 +15033,20 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
             },
-            "seriesId": 2896388
+            "seriesId": 1732489
         },
         {
             "type": "effectScatter",
-            "name": "",
             "showEffectOn": "render",
             "rippleEffect": {
                 "brushType": "stroke",
@@ -15133,21 +15066,17 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
             },
-            "seriesId": 2896388
+            "seriesId": 1732489
         }
     ],
     "legend": [
@@ -15166,62 +15095,74 @@ var option =  {
             "top": "top",
             "orient": "horizontal",
             "textStyle": {
-                "fontSize": 12,
-                "color": "#333"
+                "fontSize": 12
             }
         }
     ],
-    "backgroundColor": "#fff",
+    "animation": true,
     "xAxis": [
         {
-            "name": "",
             "show": true,
             "nameLocation": "middle",
             "nameGap": 25,
             "nameTextStyle": {
                 "fontSize": 14
             },
-            "axisLabel": {
-                "interval": "auto",
-                "rotate": 0,
-                "margin": 8
-            },
             "axisTick": {
                 "alignWithLabel": false
             },
             "inverse": false,
-            "position": null,
             "boundaryGap": true,
-            "min": null,
-            "max": null,
-            "data": null,
-            "type": "value"
+            "type": "value",
+            "splitLine": {
+                "show": true
+            },
+            "axisLine": {
+                "lineStyle": {
+                    "width": 1
+                }
+            },
+            "axisLabel": {
+                "interval": "auto",
+                "rotate": 0,
+                "margin": 8,
+                "textStyle": {
+                    "fontSize": 12
+                }
+            }
         }
     ],
     "yAxis": [
         {
-            "name": "",
             "show": true,
             "nameLocation": "middle",
             "nameGap": 25,
             "nameTextStyle": {
                 "fontSize": 14
             },
-            "axisLabel": {
-                "formatter": "{value} ",
-                "rotate": 0,
-                "interval": "auto",
-                "margin": 8
-            },
             "axisTick": {
                 "alignWithLabel": false
             },
             "inverse": false,
-            "position": null,
             "boundaryGap": true,
-            "min": null,
-            "max": null,
-            "type": "value"
+            "type": "value",
+            "splitLine": {
+                "show": true
+            },
+            "axisLine": {
+                "lineStyle": {
+                    "width": 1
+                }
+            },
+            "axisLabel": {
+                "interval": "auto",
+                "formatter": "{value} ",
+                "rotate": 0,
+                "margin": 8,
+                "textStyle": {
+                    "fontSize": 12
+                }
+            }
         }
     ],
     "color": [
@@ -15252,7 +15193,7 @@ var option =  {
         "#f6f5ec"
     ]
 };
-myChart.setOption(option);
+myChart_2c3dde76a1ac41cd9bfd630a19782b61.setOption(option_2c3dde76a1ac41cd9bfd630a19782b61);
 
     });
 </script>
@@ -15267,7 +15208,7 @@ myChart.setOption(option);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyecharts</span> <span class="k">import</span> <span class="n">Gauge</span>
@@ -15287,36 +15228,36 @@ myChart.setOption(option);
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
     require.config({
-         paths:{
-           'echarts': '/nbextensions/echarts/echarts.min'
-         }
+        paths: {
+            'echarts': '/nbextensions/echarts/echarts.min'
+        }
     });
 </script>
-<div id="d55159705b0640d1876af141f7a7485a" style="width:800px; height:400px;"></div>
+    <div id="ae9f8ef78c304cb785994bea2fc16e4f" style="width:800px;height:400px;"></div>
+
 
 <script>
-    require([ 'echarts' ],function(ec){
-	var myChart = ec.init(document.getElementById('d55159705b0640d1876af141f7a7485a'));
-var option =  {
+    require(['echarts'], function(echarts) {
+        
+var myChart_ae9f8ef78c304cb785994bea2fc16e4f = echarts.init(document.getElementById('ae9f8ef78c304cb785994bea2fc16e4f'), 'light', {renderer: 'canvas'});
+
+var option_ae9f8ef78c304cb785994bea2fc16e4f = {
     "title": [
         {
             "text": "\u4eea\u8868\u76d8\u793a\u4f8b",
-            "subtext": "",
             "left": "auto",
             "top": "auto",
             "textStyle": {
-                "color": "#000",
                 "fontSize": 18
             },
             "subtextStyle": {
-                "color": "#aaa",
                 "fontSize": 12
             }
         }
@@ -15329,17 +15270,19 @@ var option =  {
         "feature": {
             "saveAsImage": {
                 "show": true,
-                "title": "\u4e0b\u8f7d\u56fe\u7247"
+                "title": "save as image"
             },
             "restore": {
-                "show": true
+                "show": true,
+                "title": "restore"
             },
             "dataView": {
-                "show": true
+                "show": true,
+                "title": "data view"
             }
         }
     },
-    "series_id": 911398,
+    "series_id": 3657610,
     "tooltip": {
         "trigger": "item",
         "triggerOn": "mousemove|click",
@@ -15348,9 +15291,11 @@ var option =  {
         },
         "formatter": "{a} <br/>{b} : {c}%",
         "textStyle": {
-            "color": "#fff",
             "fontSize": 14
-        }
+        },
+        "backgroundColor": "rgba(50,50,50,0.7)",
+        "borderColor": "#333",
+        "borderWidth": 0
     },
     "series": [
         {
@@ -15382,12 +15327,11 @@ var option =  {
             "top": "top",
             "orient": "horizontal",
             "textStyle": {
-                "fontSize": 12,
-                "color": "#333"
+                "fontSize": 12
             }
         }
     ],
-    "backgroundColor": "#fff",
+    "animation": true,
     "color": [
         "#c23531",
         "#2f4554",
@@ -15416,7 +15360,7 @@ var option =  {
         "#f6f5ec"
     ]
 };
-myChart.setOption(option);
+myChart_ae9f8ef78c304cb785994bea2fc16e4f.setOption(option_ae9f8ef78c304cb785994bea2fc16e4f);
 
     });
 </script>
@@ -15431,7 +15375,7 @@ myChart.setOption(option);
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyecharts</span> <span class="k">import</span> <span class="n">Geo</span>
@@ -15488,24 +15432,27 @@ myChart.setOption(option);
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
     require.config({
-         paths:{
-           'echarts': '/nbextensions/echarts/echarts.min', 'china': '/nbextensions/echarts/china'
-         }
+        paths: {
+            'echarts': '/nbextensions/echarts/echarts.min'
+        }
     });
 </script>
-<div id="d168de0935cb43b18d1028cbd2820f53" style="width:1200px; height:600px;"></div>
+    <div id="e04ee52a2f3f49b3adefc4f4739d3866" style="width:1200px;height:600px;"></div>
+
 
 <script>
-    require([ 'echarts', 'china' ],function(ec){
-	var myChart = ec.init(document.getElementById('d168de0935cb43b18d1028cbd2820f53'));
-var option =  {
+    require(['echarts', 'china'], function(echarts) {
+        
+var myChart_e04ee52a2f3f49b3adefc4f4739d3866 = echarts.init(document.getElementById('e04ee52a2f3f49b3adefc4f4739d3866'), 'light', {renderer: 'canvas'});
+
+var option_e04ee52a2f3f49b3adefc4f4739d3866 = {
     "title": [
         {
             "text": "\u5168\u56fd\u4e3b\u8981\u57ce\u5e02\u7a7a\u6c14\u8d28\u91cf",
@@ -15517,7 +15464,6 @@ var option =  {
                 "fontSize": 18
             },
             "subtextStyle": {
-                "color": "#aaa",
                 "fontSize": 12
             }
         }
@@ -15530,17 +15476,19 @@ var option =  {
         "feature": {
             "saveAsImage": {
                 "show": true,
-                "title": "\u4e0b\u8f7d\u56fe\u7247"
+                "title": "save as image"
             },
             "restore": {
-                "show": true
+                "show": true,
+                "title": "restore"
             },
             "dataView": {
-                "show": true
+                "show": true,
+                "title": "data view"
             }
         }
     },
-    "series_id": 1270131,
+    "series_id": 2885757,
     "tooltip": {
         "trigger": "item",
         "triggerOn": "mousemove|click",
@@ -15549,14 +15497,15 @@ var option =  {
         },
         "formatter": "{b}: {c}",
         "textStyle": {
-            "color": "#fff",
             "fontSize": 14
-        }
+        },
+        "backgroundColor": "rgba(50,50,50,0.7)",
+        "borderColor": "#333",
+        "borderWidth": 0
     },
     "series": [
         {
             "type": "scatter",
-            "name": "\u5927\u5e86",
             "coordinateSystem": "geo",
             "symbol": "circle",
             "symbolSize": 15,
@@ -15716,8 +15665,8 @@ var option =  {
                 {
                     "name": "\u4e0a\u6d77",
                     "value": [
-                        121.48,
-                        31.22,
+                        121.473701,
+                        31.230416,
                         25
                     ]
                 },
@@ -16340,8 +16289,8 @@ var option =  {
                 {
                     "name": "\u5409\u6797",
                     "value": [
-                        126.57,
-                        43.87,
+                        125.32599,
+                        43.896536,
                         56
                     ]
                 },
@@ -16516,8 +16465,8 @@ var option =  {
                 {
                     "name": "\u91cd\u5e86",
                     "value": [
-                        106.54,
-                        29.59,
+                        106.551556,
+                        29.563009,
                         66
                     ]
                 },
@@ -16620,8 +16569,8 @@ var option =  {
                 {
                     "name": "\u5317\u4eac",
                     "value": [
-                        116.46,
-                        39.92,
+                        116.407526,
+                        39.90403,
                         79
                     ]
                 },
@@ -16812,8 +16761,8 @@ var option =  {
                 {
                     "name": "\u5929\u6d25",
                     "value": [
-                        117.2,
-                        39.13,
+                        117.200983,
+                        39.084158,
                         105
                     ]
                 },
@@ -17087,16 +17036,12 @@ var option =  {
                     "show": false,
                     "position": "top",
                     "textStyle": {
-                        "color": "#000",
                         "fontSize": 12
-                    },
-                    "formatter": null
+                    }
                 },
                 "emphasis": {
                     "show": true,
-                    "position": null,
                     "textStyle": {
-                        "color": "#fff",
                         "fontSize": 12
                     }
                 }
@@ -17106,7 +17051,7 @@ var option =  {
     "legend": [
         {
             "data": [
-                "\u5927\u5e86"
+                ""
             ],
             "selectedMode": "multiple",
             "show": true,
@@ -17114,12 +17059,12 @@ var option =  {
             "top": "top",
             "orient": "horizontal",
             "textStyle": {
-                "fontSize": 12,
-                "color": "#333"
+                "fontSize": 12
             }
         }
     ],
     "backgroundColor": "#404a59",
+    "animation": true,
     "geo": {
         "map": "china",
         "roam": true,
@@ -17188,14 +17133,335 @@ var option =  {
         },
         "calculable": true,
         "splitNumber": 5,
-        "dimension": null,
         "orient": "vertical",
         "left": "left",
         "top": "bottom",
         "showLabel": true
     }
 };
-myChart.setOption(option);
+myChart_e04ee52a2f3f49b3adefc4f4739d3866.setOption(option_e04ee52a2f3f49b3adefc4f4739d3866);
+
+    });
+</script>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyecharts</span> <span class="k">import</span> <span class="n">Graph</span>
+
+<span class="n">nodes</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;节点&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="s1">&#39;symbolSize&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">60</span><span class="p">),</span><span class="s1">&#39;draggable&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="mi">123</span><span class="p">}</span> 
+       <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span>
+<span class="n">links</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nodes</span><span class="p">):</span>
+    <span class="n">node1</span><span class="p">,</span><span class="n">node2</span><span class="o">=</span><span class="n">nodes</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">links</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="n">node1</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="n">node2</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span>
+                  <span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;label&#39;</span><span class="p">:{</span><span class="s1">&#39;show&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s1">&#39;formatter&#39;</span><span class="p">:</span><span class="s1">&#39;abc&#39;</span><span class="p">}})</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">(</span><span class="s2">&quot;关系图-力引导布局示例&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">links</span><span class="p">,</span> <span class="n">graph_repulsion</span><span class="o">=</span><span class="mi">2500</span><span class="p">,</span><span class="n">is_roam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">is_label_show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">label_pos</span><span class="o">=</span><span class="s1">&#39;inside&#39;</span><span class="p">)</span>
+<span class="n">graph</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<script>
+    require.config({
+        paths: {
+            'echarts': '/nbextensions/echarts/echarts.min'
+        }
+    });
+</script>
+    <div id="a21595530edf4677a5d6184576708841" style="width:800px;height:600px;"></div>
+
+
+<script>
+    require(['echarts'], function(echarts) {
+        
+var myChart_a21595530edf4677a5d6184576708841 = echarts.init(document.getElementById('a21595530edf4677a5d6184576708841'), 'light', {renderer: 'canvas'});
+
+var option_a21595530edf4677a5d6184576708841 = {
+    "title": [
+        {
+            "text": "\u5173\u7cfb\u56fe-\u529b\u5f15\u5bfc\u5e03\u5c40\u793a\u4f8b",
+            "left": "auto",
+            "top": "auto",
+            "textStyle": {
+                "fontSize": 18
+            },
+            "subtextStyle": {
+                "fontSize": 12
+            }
+        }
+    ],
+    "toolbox": {
+        "show": true,
+        "orient": "vertical",
+        "left": "95%",
+        "top": "center",
+        "feature": {
+            "saveAsImage": {
+                "show": true,
+                "title": "save as image"
+            },
+            "restore": {
+                "show": true,
+                "title": "restore"
+            },
+            "dataView": {
+                "show": true,
+                "title": "data view"
+            }
+        }
+    },
+    "series_id": 3289551,
+    "tooltip": {
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "backgroundColor": "rgba(50,50,50,0.7)",
+        "borderColor": "#333",
+        "borderWidth": 0
+    },
+    "series": [
+        {
+            "type": "graph",
+            "layout": "force",
+            "symbol": "circle",
+            "circular": {
+                "rotateLabel": false
+            },
+            "force": {
+                "repulsion": 2500,
+                "edgeLength": 50,
+                "gravity": 0.2
+            },
+            "label": {
+                "normal": {
+                    "show": true,
+                    "position": "inside",
+                    "textStyle": {
+                        "fontSize": 12
+                    }
+                },
+                "emphasis": {
+                    "show": true,
+                    "textStyle": {
+                        "fontSize": 12
+                    }
+                }
+            },
+            "lineStyle": {
+                "normal": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid",
+                    "color": "#aaa"
+                }
+            },
+            "roam": false,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "\u8282\u70b90",
+                    "symbolSize": 33,
+                    "draggable": true,
+                    "value": 123
+                },
+                {
+                    "name": "\u8282\u70b91",
+                    "symbolSize": 14,
+                    "draggable": true,
+                    "value": 123
+                },
+                {
+                    "name": "\u8282\u70b92",
+                    "symbolSize": 19,
+                    "draggable": true,
+                    "value": 123
+                },
+                {
+                    "name": "\u8282\u70b93",
+                    "symbolSize": 39,
+                    "draggable": true,
+                    "value": 123
+                },
+                {
+                    "name": "\u8282\u70b94",
+                    "symbolSize": 3,
+                    "draggable": true,
+                    "value": 123
+                },
+                {
+                    "name": "\u8282\u70b95",
+                    "symbolSize": 6,
+                    "draggable": true,
+                    "value": 123
+                },
+                {
+                    "name": "\u8282\u70b96",
+                    "symbolSize": 5,
+                    "draggable": true,
+                    "value": 123
+                },
+                {
+                    "name": "\u8282\u70b97",
+                    "symbolSize": 19,
+                    "draggable": true,
+                    "value": 123
+                }
+            ],
+            "edgeSymbol": [
+                null,
+                null
+            ],
+            "edgeSymbolSize": 10,
+            "links": [
+                {
+                    "source": "\u8282\u70b97",
+                    "target": "\u8282\u70b90",
+                    "value": 100,
+                    "label": {
+                        "show": true,
+                        "formatter": "abc"
+                    }
+                },
+                {
+                    "source": "\u8282\u70b90",
+                    "target": "\u8282\u70b91",
+                    "value": 100,
+                    "label": {
+                        "show": true,
+                        "formatter": "abc"
+                    }
+                },
+                {
+                    "source": "\u8282\u70b91",
+                    "target": "\u8282\u70b92",
+                    "value": 100,
+                    "label": {
+                        "show": true,
+                        "formatter": "abc"
+                    }
+                },
+                {
+                    "source": "\u8282\u70b92",
+                    "target": "\u8282\u70b93",
+                    "value": 100,
+                    "label": {
+                        "show": true,
+                        "formatter": "abc"
+                    }
+                },
+                {
+                    "source": "\u8282\u70b93",
+                    "target": "\u8282\u70b94",
+                    "value": 100,
+                    "label": {
+                        "show": true,
+                        "formatter": "abc"
+                    }
+                },
+                {
+                    "source": "\u8282\u70b94",
+                    "target": "\u8282\u70b95",
+                    "value": 100,
+                    "label": {
+                        "show": true,
+                        "formatter": "abc"
+                    }
+                },
+                {
+                    "source": "\u8282\u70b95",
+                    "target": "\u8282\u70b96",
+                    "value": 100,
+                    "label": {
+                        "show": true,
+                        "formatter": "abc"
+                    }
+                },
+                {
+                    "source": "\u8282\u70b96",
+                    "target": "\u8282\u70b97",
+                    "value": 100,
+                    "label": {
+                        "show": true,
+                        "formatter": "abc"
+                    }
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selectedMode": "multiple",
+            "show": true,
+            "left": "center",
+            "top": "top",
+            "orient": "horizontal",
+            "textStyle": {
+                "fontSize": 12
+            }
+        }
+    ],
+    "animation": true,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597",
+        "#f6f5ec"
+    ]
+};
+myChart_a21595530edf4677a5d6184576708841.setOption(option_a21595530edf4677a5d6184576708841);
 
     });
 </script>
