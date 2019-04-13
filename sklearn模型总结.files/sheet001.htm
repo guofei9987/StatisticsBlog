@@ -1,0 +1,896 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../sklearn模型总结.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-char-type:none;
+	display:none;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(0);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../sklearn模型总结.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link="#0563C1" vlink="#954F72">
+
+<table border=0 cellpadding=0 cellspacing=0 width=3035 style='border-collapse:
+ collapse;table-layout:fixed;width:2278pt'>
+ <col width=114 style='mso-width-source:userset;mso-width-alt:3648;width:86pt'>
+ <col width=180 style='mso-width-source:userset;mso-width-alt:5760;width:135pt'>
+ <col width=403 style='mso-width-source:userset;mso-width-alt:12896;width:302pt'>
+ <col width=52 style='mso-width-source:userset;mso-width-alt:1664;width:39pt'>
+ <col width=91 style='mso-width-source:userset;mso-width-alt:2912;width:68pt'>
+ <col width=66 style='mso-width-source:userset;mso-width-alt:2112;width:50pt'>
+ <col width=102 style='mso-width-source:userset;mso-width-alt:3264;width:77pt'>
+ <col width=41 style='mso-width-source:userset;mso-width-alt:1312;width:31pt'>
+ <col width=53 style='mso-width-source:userset;mso-width-alt:1696;width:40pt'>
+ <col width=35 style='mso-width-source:userset;mso-width-alt:1120;width:26pt'>
+ <col width=510 style='mso-width-source:userset;mso-width-alt:16320;width:383pt'>
+ <col width=656 style='mso-width-source:userset;mso-width-alt:20992;width:492pt'>
+ <col width=72 style='width:54pt'>
+ <col width=216 style='mso-width-source:userset;mso-width-alt:6912;width:162pt'>
+ <col width=444 style='mso-width-source:userset;mso-width-alt:14208;width:333pt'>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl66 width=114 style='height:14.25pt;width:86pt'>种类</td>
+  <td class=xl66 width=180 style='border-left:none;width:135pt'>模型</td>
+  <td class=xl66 width=403 style='border-left:none;width:302pt'>参数</td>
+  <td class=xl66 width=52 style='border-left:none;width:39pt'>predict</td>
+  <td class=xl66 width=91 style='border-left:none;width:68pt'>predict_prob</td>
+  <td class=xl66 width=66 style='border-left:none;width:50pt'>partial_fit</td>
+  <td class=xl66 width=102 style='border-left:none;width:77pt'>sample_weight</td>
+  <td class=xl66 width=41 style='border-left:none;width:31pt'>score</td>
+  <td class=xl66 width=53 style='border-left:none;width:40pt'>n_jobs</td>
+  <td class=xl66 width=35 style='border-left:none;width:26pt'>评价</td>
+  <td class=xl66 width=510 style='border-left:none;width:383pt'>方法/字段</td>
+  <td class=xl66 width=656 style='border-left:none;width:492pt'>官网</td>
+  <td width=72 style='width:54pt'></td>
+  <td width=216 style='width:162pt'></td>
+  <td width=444 style='width:333pt'></td>
+ </tr>
+ <tr height=38 style='height:28.5pt'>
+  <td rowspan=5 height=361 class=xl69 style='height:270.75pt;border-top:none'>linear_model</td>
+  <td class=xl66 style='border-top:none;border-left:none'>LinearRegression</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>fit_intercept
+  : boolean, optional, default True<br>
+    normalize : boolean, optional, default False</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>coef_<br>
+    intercept_<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=57 style='height:42.75pt'>
+  <td height=57 class=xl66 style='height:42.75pt;border-top:none;border-left:
+  none'>Ridge</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>alpha<br>
+    fit_intercept : boolean<br>
+    normalize : boolean, optional, default False</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>coef_<br>
+    intercept_<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=76 style='height:57.0pt'>
+  <td height=76 class=xl66 style='height:57.0pt;border-top:none;border-left:
+  none'>Lasso</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>alpha<br>
+    fit_intercept : boolean<br>
+    normalize : boolean, optional, default False<br>
+    positive : bool, optional，是否强制系数为正</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>coef_<br>
+    intercept_<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=76 style='height:57.0pt'>
+  <td height=76 class=xl66 style='height:57.0pt;border-top:none;border-left:
+  none'>ElasticNet</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>alpha
+  : float, optional<br>
+    l1_ratio : float<br>
+    fit_intercept : bool<br>
+    normalize : boolean, optional, default False</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=114 style='height:85.5pt'>
+  <td height=114 class=xl66 style='height:85.5pt;border-top:none;border-left:
+  none'>LogisticRegression</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>penalty
+  : str, ‘l1’ or ‘l2’, default: ‘l2’<br>
+    dual : bool, default: False，如果是True，求对偶问题<br>
+    C : float, default: 1.0，正则化系数的倒数<br>
+    multi_class : str, {‘ovr’, ‘multinomial’}<br>
+    <span style='mso-spacerun:yes'>    </span>'ovr':one-vs-rest<br>
+    <span style='mso-spacerun:yes'>    </span>‘multinomial’:直接用多分类策略</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=190 style='height:142.5pt'>
+  <td rowspan=2 height=380 class=xl69 style='height:285.0pt;border-top:none'>tree</td>
+  <td class=xl66 style='border-top:none;border-left:none'>DecisionTreeClassifier</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>criterion
+  : string, optional (default=”gini”)<br>
+    splitter : string, optional (default=”best”)<br>
+    max_depth : int or None, optional (default=None)<br>
+    min_samples_split : int, float, optional (default=2)<br>
+    min_samples_leaf : int, float, optional (default=1)<br>
+    min_weight_fraction_leaf : float, optional (default=0.)<br>
+    max_features : int, float, string or None, optional (default=None)<br>
+    max_leaf_nodes : int or None, optional (default=None)<br>
+    min_impurity_decrease : float, optional (default=0.)</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'><font
+  class="font7">classes_<br>
+    n_classes_ </font><font class="font7"><br>
+    </font><font class="font8">clf.feature_importances_#变量重要性指标，各个属性的gini系数归一化后的值<br>
+   
+  #例如，print(pd.DataFrame(list(zip(data.columns,clf.feature_importances_))))<br>
+    </font><font class="font9">max_features_<br>
+    n_features_</font><font class="font8"><br>
+    </font></td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=190 style='height:142.5pt'>
+  <td height=190 class=xl66 style='height:142.5pt;border-top:none;border-left:
+  none'>DecisionTreeRegressor</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>criterion
+  : string, optional (default=”mse”)<br>
+    splitter : string, optional (default=”best”)'random'<br>
+    max_depth : int or None, optional (default=None)<br>
+    min_samples_split : int, float, optional (default=2)<br>
+    max_features : int, float, string or None, optional (default=None)<br>
+    min_weight_fraction_leaf : float, optional (default=0.)<br>
+    min_samples_leaf : int, float, optional (default=1)<br>
+    max_leaf_nodes : int or None, optional (default=None)<br>
+    min_impurity_decrease : float, optional (default=0.)</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'><font
+  class="font8">feature_importances_ ：also known as the Gini importance<br>
+    </font><font class="font9">max_features_<br>
+    n_features_<br>
+    n_outputs_</font></td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html</a></td>
+  <td colspan=2 style='mso-ignore:colspan'>似乎Y可以是多维的？</td>
+  <td></td>
+ </tr>
+ <tr height=76 style='height:57.0pt'>
+  <td rowspan=3 height=285 class=xl69 style='height:213.75pt;border-top:none'>naive_bayes</td>
+  <td class=xl66 style='border-top:none;border-left:none'>GaussianNB</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>priors
+  : array-like, shape (n_classes,)</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>class_prior_<br>
+    class_count_<br>
+    theta_#mean of each feature per class<br>
+    sigma_#variance of each feature per class</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=95 style='height:71.25pt'>
+  <td height=95 class=xl66 style='height:71.25pt;border-top:none;border-left:
+  none'>MultinomialNB</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>alpha
+  : float, optional (default=1.0)<br>
+    <span style='mso-spacerun:yes'>    </span>Additive (Laplace/Lidstone)
+  smoothing parameter (0 for no smoothing)<br>
+    fit_prior : (default=True)# 表示从样本计算先验分布，class_prior : (default=None)#先验分布</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>class_prior_<br>
+    class_count_<br>
+    theta_#mean of each feature per class<br>
+    sigma_#variance of each feature per class</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=114 style='height:85.5pt'>
+  <td height=114 class=xl66 style='height:85.5pt;border-top:none;border-left:
+  none'>BernoulliNB</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'><font
+  class="font7"><span style='mso-spacerun:yes'> </span>alpha : float, optional
+  (default=1.0)<br>
+    </font><font class="font8">binarize : float or None, optional
+  (default=0.0)<br>
+    <span style='mso-spacerun:yes'>    </span>如果是None，默认Feature已经二元化了<br>
+    <span style='mso-spacerun:yes'>    </span>如果是float，以float对Feature二元化</font><font
+  class="font7"><br>
+    fit_prior : boolean, optional (default=True)<br>
+    class_prior : (default=None)#先验分布</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>intercept_<br>
+    coef_ <br>
+    class_count_<br>
+    feature_count_</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=228 style='height:171.0pt'>
+  <td rowspan=2 height=456 class=xl69 style='height:342.0pt;border-top:none'>neighbors</td>
+  <td class=xl66 style='border-top:none;border-left:none'>KNeighborsClassifier</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'><font
+  class="font7">n_neighbors : int, optional (default = 5)<br>
+    </font><font class="font8">weights : str or callable, optional (default =
+  ‘uniform’)<br>
+    <span style='mso-spacerun:yes'>    </span>‘uniform’ : uniform weights. All
+  points in each neighborhood are weighted equally.<br>
+    <span style='mso-spacerun:yes'>    </span>‘distance’ : closer neighbors of
+  a query point will have a greater influence than neighbors which are further
+  away.<br>
+    <span style='mso-spacerun:yes'>    </span>[callable] : accepts an array of
+  distances,<span style='mso-spacerun:yes'>  </span>returns an array of the
+  same shape containing the weights.</font><font class="font7"><br>
+    algorithm : {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, optional<br>
+    leaf_size : int, optional (default = 30)<br>
+    </font><font class="font8">p : integer, optional (default = 2)： Minkowski
+  metric的阶数<br>
+    metric : string or callable, default ‘minkowski’</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=228 style='height:171.0pt'>
+  <td height=228 class=xl66 style='height:171.0pt;border-top:none;border-left:
+  none'>KneighborsRegressor</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'><font
+  class="font7">n_neighbors : int, optional (default = 5)<br>
+    </font><font class="font8">weights : str or callable, optional (default =
+  ‘uniform’)<br>
+    <span style='mso-spacerun:yes'>    </span>‘uniform’ : uniform weights. All
+  points in each neighborhood are weighted equally.<br>
+    <span style='mso-spacerun:yes'>    </span>‘distance’ : closer neighbors of
+  a query point will have a greater influence than neighbors which are further
+  away.<br>
+    <span style='mso-spacerun:yes'>    </span>[callable] : accepts an array of
+  distances,<span style='mso-spacerun:yes'>  </span>returns an array of the
+  same shape containing the weights.</font><font class="font7"><br>
+    algorithm : {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, optional<br>
+    leaf_size : int, optional (default = 30)<br>
+    </font><font class="font8">p : integer, optional (default = 2)： Minkowski
+  metric的阶数<br>
+    metric : string or callable, default ‘minkowski’</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=171 style='height:128.25pt'>
+  <td rowspan=4 height=665 class=xl69 style='height:498.75pt;border-top:none'>svm</td>
+  <td class=xl66 style='border-top:none;border-left:none'>LinearSVC</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>penalty
+  : string, ‘l1’ or ‘l2’ (default=’l2’)<br>
+    loss :<span style='mso-spacerun:yes'>  </span>‘hinge’ or
+  ‘squared_hinge’<br>
+    C : float, optional (default=1.0) Penalty parameter<br>
+    dual(default=True)：True表示使用对偶求解<br>
+    multi_class : string, ‘ovr’ or ‘crammer_singer’ (default=’ovr’)<br>
+    fit_intercept : boolean, optional
+  (default=True)，计算截距，也就是决策函数中的常数项，为False时适用于已经中心化的数据<br>
+    verbose</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>coef_：各特征的权重<br>
+    intercept_</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=152 style='height:114.0pt'>
+  <td height=152 class=xl66 style='height:114.0pt;border-top:none;border-left:
+  none'>LinearSVR</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>C
+  : float, optional (default=1.0)：Penalty parameter<br>
+    loss: ‘epsilon_insensitive’ or ‘squared_epsilon_insensitive’<br>
+    epsilon : float, optional (default=0.1)loss中的参数，与y的大小也是有关系的，不确定的话，set
+  epsilon=0<br>
+    dual : bool, (default=True)，是否使用对偶，Prefer dual=False when n_samples &gt;
+  n_features.<br>
+    fit_intercept : boolean, optional (default=True)<br>
+    </td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>coef_：各特征的权重<br>
+    intercept_</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=171 style='height:128.25pt'>
+  <td height=171 class=xl66 style='height:128.25pt;border-top:none;border-left:
+  none'>SVC</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>C
+  : float, optional (default=1.0)：Penalty parameter<br>
+    kernel : ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’ or a
+  callable<br>
+    degree：‘poly’<br>
+    gamma：‘rbf’, ‘poly’ and ‘sigmoid’，默认是1/n_features<br>
+    coef0：‘poly’ and ‘sigmoid’<br>
+    <font class="font8">probability：是否计算概率<br>
+    </font><font class="font14">decision_function_shape : ‘ovo’, ‘ovr’<br>
+    <span style='mso-spacerun:yes'>    </span>one-vs-rest, one-vs-one</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl67 width=91 style='border-top:none;border-left:none;width:68pt'>需要<br>
+    probability=True</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>decision_function(X)
+  #Distance of the samples X to the separating hyperplane.点到超平面的距离<br>
+    model.support_vectors_# get support vectors<br>
+    model.support_# get indices of support vectors<br>
+    model.n_support_# get number of support vectors for each class<br>
+    model.decision_function_shape='ovo'<br>
+    dec = model.decision_function([[0.6,1]])</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=171 style='height:128.25pt'>
+  <td height=171 class=xl66 style='height:128.25pt;border-top:none;border-left:
+  none'>SVR</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'><font
+  class="font7">C : float, optional (default=1.0)<br>
+    epsilon : float, optional (default=0.1)，计算loss时的参数，</font><font
+  class="font8">如果不知道，就设为0（实际验证过，非常重要！！！）</font><font class="font7"><br>
+    kernel : ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’ or a
+  callable<br>
+    degree：‘poly’<br>
+    gamma：‘rbf’, ‘poly’ and ‘sigmoid’，默认是1/n_features<br>
+    coef0：‘poly’ and ‘sigmoid’<br>
+    shrinking : shrinking heuristic</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>support_<br>
+    support_vectors_ <br>
+    </td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl66 style='height:14.25pt;border-top:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=475 style='height:356.25pt'>
+  <td rowspan=2 height=950 class=xl69 style='height:712.5pt;border-top:none'>neural_network</td>
+  <td class=xl66 style='border-top:none;border-left:none'>MLPClassifier</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'><font
+  class="font7">hidden_layer_sizes: default (100,)<br>
+    activation : {‘identity’, ‘logistic’, ‘tanh’, ‘relu’}, default ‘relu’<br>
+    <span style='mso-spacerun:yes'>    </span>‘identity’,<span
+  style='mso-spacerun:yes'>  </span>f(x) = x<br>
+    <span style='mso-spacerun:yes'>    </span>‘logistic’,<span
+  style='mso-spacerun:yes'>  </span>f(x) = 1 / (1 + exp(-x)).<br>
+    <span style='mso-spacerun:yes'>    </span>‘tanh’, f(x) = tanh(x).<br>
+    <span style='mso-spacerun:yes'>    </span>‘relu’, f(x) = max(0, x)<br>
+    solver : {‘lbfgs’, ‘sgd’, ‘adam’}, default ‘adam’<br>
+    <span style='mso-spacerun:yes'>    </span>‘lbfgs’ 一种 quasi-Newton
+  methods.<br>
+    <span style='mso-spacerun:yes'>    </span>‘sgd’<span
+  style='mso-spacerun:yes'>  </span>stochastic gradient descent.<br>
+    <span style='mso-spacerun:yes'>    </span>‘adam’ a stochastic
+  gradient-based optimizer <br>
+    alpha: default 0.0001, L2 penalty <br>
+    batch_size : int, optional, default ‘auto’<br>
+    learning_rate : {‘constant’, ‘invscaling’, ‘adaptive’},</font><font
+  class="font8">只在solver='sgd'时有用</font><font class="font7"><br>
+    momentum : float, default 0.9，</font><font class="font8">只在solver='sgd'时有用</font><font
+  class="font7"><br>
+    learning_rate_init : double, optional, default 0.001<br>
+    power_t : double, optional, default 0.5<br>
+    shuffle : bool, optional, default True，</font><font class="font8">只在solver=’sgd’
+  or ‘adam’时有用</font><font class="font7"><br>
+    warm_start : bool, optional, default False<br>
+    </font><font class="font8">early_stopping : bool, default
+  False，如果为True，设定10%验证集，只在solver=’sgd’ or ‘adam’时有用</font><font class="font7"><br>
+    </font><font class="font7">validation_fraction : float, optional, default
+  0.1，划分validation，只在early_stopping=True时有用</font><font class="font7"><br>
+    </font><font class="font7">beta_1，beta_2，epsilon，只在solver=’adam’时有用</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>softmax</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>loss_</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>clf.classes_#每个类的标签<br>
+    clf.n_iter_<br>
+    clf.n_outputs_<br>
+    clf.n_layers_<br>
+    #[coef.shape for coef in clf.coefs_]<br>
+    clf.out_activation_#输出层的函数类型<br>
+    clf.loss_#The current loss computed with the loss function.<br>
+    <br>
+    clf.coefs_#n_layers-1层各自的权重参数<br>
+    clf.intercepts_#n_layers-1层各自的截距</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=475 style='height:356.25pt'>
+  <td height=475 class=xl66 style='height:356.25pt;border-top:none;border-left:
+  none'>MLPRegressor</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'><font
+  class="font7">hidden_layer_sizes: default (100,)<br>
+    activation : {‘identity’, ‘logistic’, ‘tanh’, ‘relu’}, default ‘relu’<br>
+    <span style='mso-spacerun:yes'>    </span>‘identity’,<span
+  style='mso-spacerun:yes'>  </span>f(x) = x<br>
+    <span style='mso-spacerun:yes'>    </span>‘logistic’,<span
+  style='mso-spacerun:yes'>  </span>f(x) = 1 / (1 + exp(-x)).<br>
+    <span style='mso-spacerun:yes'>    </span>‘tanh’, f(x) = tanh(x).<br>
+    <span style='mso-spacerun:yes'>    </span>‘relu’, f(x) = max(0, x)<br>
+    solver : {‘lbfgs’, ‘sgd’, ‘adam’}, default ‘adam’<br>
+    <span style='mso-spacerun:yes'>    </span>‘lbfgs’ 一种 quasi-Newton
+  methods.<br>
+    <span style='mso-spacerun:yes'>    </span>‘sgd’<span
+  style='mso-spacerun:yes'>  </span>stochastic gradient descent.<br>
+    <span style='mso-spacerun:yes'>    </span>‘adam’ a stochastic
+  gradient-based optimizer <br>
+    alpha: default 0.0001, L2 penalty <br>
+    batch_size : int, optional, default ‘auto’<br>
+    learning_rate : {‘constant’, ‘invscaling’, ‘adaptive’},</font><font
+  class="font8">只在solver='sgd'时有用</font><font class="font7"><br>
+    momentum : float, default 0.9，</font><font class="font8">只在solver='sgd'时有用</font><font
+  class="font7"><br>
+    learning_rate_init : double, optional, default 0.001<br>
+    power_t : double, optional, default 0.5<br>
+    shuffle : bool, optional, default True，</font><font class="font8">只在solver=’sgd’
+  or ‘adam’时有用</font><font class="font7"><br>
+    warm_start : bool, optional, default False<br>
+    </font><font class="font8">early_stopping : bool, default
+  False，如果为True，设定10%验证集，只在solver=’sgd’ or ‘adam’时有用</font><font class="font7"><br>
+    </font><font class="font7">validation_fraction : float, optional, default
+  0.1，划分validation，只在early_stopping=True时有用</font><font class="font7"><br>
+    </font><font class="font7">beta_1，beta_2，epsilon，只在solver=’adam’时有用</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>clf.loss_<br>
+    clf.coefs_#n_layers-1层各自的权重参数<br>
+    clf.intercepts_#n_layers-1层各自的截距</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=228 style='height:171.0pt'>
+  <td rowspan=6 height=1425 class=xl69 style='height:1068.75pt;border-top:none'>ensemble</td>
+  <td class=xl66 style='border-top:none;border-left:none'>AdaBoostClassifier</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'><span
+  style='mso-spacerun:yes'> </span><br>
+    base_estimator : object, (default=DecisionTreeClassifier)<br>
+    n_estimators : integer, optional (default=50)<br>
+    learning_rate : float, optional (default=1.)<br>
+    algorithm : {‘SAMME’, ‘SAMME.R’},(default=’SAMME.R’)<br>
+    <span style='mso-spacerun:yes'>    </span>‘SAMME.R’
+  收敛快、误差小，但base_estimator必须有概率<br>
+    </td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>estimators_#所有基分类器<br>
+    estimator_weights_# 每个基分类器的权重<br>
+    estimator_errors_ #每个基分类器的误差<br>
+    <font class="font8">feature_importances_<span style='mso-spacerun:yes'> 
+  </span>#变量重要性，能不能用取决于base_estimator有没有这功能<br>
+    <br>
+    <br>
+    decision_function(X)<br>
+    每一轮迭代结束后的：<br>
+    </font><font class="font9">staged_predict(X) Return staged predictions for
+  X.<br>
+    staged_predict_proba(X) Predict class probabilities for X.<br>
+    staged_score(X, y[, sample_weight]) Return staged scores for X, y.</font></td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=95 style='height:71.25pt'>
+  <td height=95 class=xl66 style='height:71.25pt;border-top:none;border-left:
+  none'>AdaBoostRegressor</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>base_estimator
+  : object<br>
+    n_estimators : integer, optional (default=50)<br>
+    learning_rate : float, optional (default=1.)<br>
+    loss : {‘linear’, ‘square’, ‘exponential’}, optional (default=’linear’)</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>staged_predict(X)
+  Return staged predictions for X.<br>
+    staged_score(X, y[, sample_weight]) Return staged scores for X, y.</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=399 style='height:299.25pt'>
+  <td height=399 class=xl67 width=180 style='height:299.25pt;border-top:none;
+  border-left:none;width:135pt'>GradientBoostingClassifier<br>
+    （GBDT）</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>loss
+  : {‘deviance’, ‘exponential’}, optional (default=’deviance’)<br>
+    <span style='mso-spacerun:yes'>    </span>‘deviance’对数损失函数L(Y,P(Y|X))=-log
+  P<br>
+    <span style='mso-spacerun:yes'>    </span>‘exponential’指数损失函数<br>
+    learning_rate : float, optional (default=0.1)<br>
+    n_estimators : int (default=100)<br>
+    max_depth : integer, optional (default=3)，<font class="font8">不要太深</font><font
+  class="font7"><br>
+    criterion : string, optional (default=”friedman_mse”)<br>
+    min_samples_split : int, float, optional (default=2)<br>
+    min_samples_leaf : int, float, optional (default=1)<br>
+    min_weight_fraction_leaf : float, optional (default=0.)<br>
+    subsample : float, optional (default=1.0)<br>
+    </font><font class="font11">max_features :</font><font class="font7"> int,
+  float, string or None, optional (default=None)<br>
+    <span style='mso-spacerun:yes'>    </span>If int, then consider
+  max_features features at each split.<br>
+    <span style='mso-spacerun:yes'>    </span>If float, then max_features is a
+  percentage <br>
+    <span style='mso-spacerun:yes'>    </span>If “auto”, then
+  max_features=sqrt(n_features).<br>
+    <span style='mso-spacerun:yes'>    </span>If “sqrt”, then
+  max_features=sqrt(n_features).<br>
+    <span style='mso-spacerun:yes'>    </span>If “log2”, then
+  max_features=log2(n_features).<br>
+    <span style='mso-spacerun:yes'>    </span>If None, then
+  max_features=n_features.<br>
+    max_leaf_nodes : int or None, optional (default=None)<br>
+    </font><font class="font8">warm_start : bool, default: False</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>feature_importances_
+  <br>
+    oob_improvement_ 每增加一棵树，测试集损失函数的减少量<br>
+    train_score_<span style='mso-spacerun:yes'>  </span>每增加一棵树，训练集损失函数的减少量</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=247 style='height:185.25pt'>
+  <td height=247 class=xl67 width=180 style='height:185.25pt;border-top:none;
+  border-left:none;width:135pt'>GradientBoostingRegressor<br>
+    (GBRT)</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>loss
+  : {‘ls’, ‘lad’, ‘huber’, ‘quantile’}, optional (default=’ls’)<br>
+    learning_rate : float, optional (default=0.1)<br>
+    n_estimators : int (default=100)<br>
+    max_depth : integer, optional (default=3)<br>
+    criterion : string, optional (default=”friedman_mse”)<br>
+    min_samples_split : int, float, optional (default=2)<br>
+    min_samples_leaf : int, float, optional (default=1)<br>
+    min_weight_fraction_leaf : float, optional (default=0.)<br>
+    <font class="font13">max_features :</font><font class="font0"> 同上<br>
+    max_leaf_nodes : int or None, optional (default=None)<br>
+    alpha : float (default=0.9),仅用于loss='huber' or loss='quantile'<br>
+    </font><font class="font8">warm_start : bool, default: False</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>feature_importances_
+  <br>
+    oob_improvement_ 每增加一棵树，测试集损失函数的减少量<br>
+    train_score_<span style='mso-spacerun:yes'>  </span>每增加一棵树，训练集损失函数的减少量</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=228 style='height:171.0pt'>
+  <td height=228 class=xl66 style='height:171.0pt;border-top:none;border-left:
+  none'>RandomForestClassifier</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>n_estimators
+  <br>
+    criterion : string, optional (default=”gini”)<br>
+    max_features ：同上<br>
+    max_depth <br>
+    min_samples_split <br>
+    min_samples_leaf <br>
+    min_weight_fraction_leaf <br>
+    max_leaf_nodes <br>
+    bootstrap : (default=True)是否对sample 进行bootstrap<br>
+    oob_score : bool (default=False)，out-of-bag，也就是测试集<br>
+    warm_start : bool, optional (default=False)</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=228 style='height:171.0pt'>
+  <td height=228 class=xl66 style='height:171.0pt;border-top:none;border-left:
+  none'>RandomForestRegressor</td>
+  <td class=xl67 width=403 style='border-top:none;border-left:none;width:302pt'>n_estimators
+  : integer, optional (default=10)<br>
+    criterion : string, optional (default=”mse”)<br>
+    max_features ：同上<br>
+    max_depth <br>
+    min_samples_split <br>
+    min_samples_leaf <br>
+    min_weight_fraction_leaf <br>
+    max_leaf_nodes <br>
+    bootstrap : (default=True)是否对sample 进行bootstrap<br>
+    oob_score : bool (default=False)，out-of-bag，也就是测试集<br>
+    warm_start : bool, optional (default=False)</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=510 style='border-top:none;border-left:none;width:383pt'>estimators_<br>
+    feature_importances_ <br>
+    oob_score_<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html</a></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=38 style='height:28.5pt;mso-xlrowspan:2'>
+  <td height=38 colspan=15 style='height:28.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 colspan=13 style='height:14.25pt;mso-ignore:colspan'></td>
+  <td>【交叉验证】介绍</td>
+  <td class=xl65><a
+  href="http://www.guofei.site/2017/10/03/crossvalidation.html" target="_parent">http://www.guofei.site/2017/10/03/crossvalidation.html</a></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 colspan=13 style='height:14.25pt;mso-ignore:colspan'></td>
+  <td>【模型评价】Python实现</td>
+  <td class=xl65><a
+  href="http://www.guofei.site/2017/11/23/ModelEvaluation1.html"
+  target="_parent">http://www.guofei.site/2017/11/23/ModelEvaluation1.html</a></td>
+ </tr>
+ <tr height=228 style='height:171.0pt;mso-xlrowspan:12'>
+  <td height=228 colspan=15 style='height:171.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>gmm</td>
+  <td>可以出概率值</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=38 style='height:28.5pt;mso-xlrowspan:2'>
+  <td height=38 colspan=15 style='height:28.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 colspan=7 style='height:14.25pt;mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'>ICA与GMM的关系</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=114 style='width:86pt'></td>
+  <td width=180 style='width:135pt'></td>
+  <td width=403 style='width:302pt'></td>
+  <td width=52 style='width:39pt'></td>
+  <td width=91 style='width:68pt'></td>
+  <td width=66 style='width:50pt'></td>
+  <td width=102 style='width:77pt'></td>
+  <td width=41 style='width:31pt'></td>
+  <td width=53 style='width:40pt'></td>
+  <td width=35 style='width:26pt'></td>
+  <td width=510 style='width:383pt'></td>
+  <td width=656 style='width:492pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=216 style='width:162pt'></td>
+  <td width=444 style='width:333pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>

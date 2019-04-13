@@ -1,0 +1,279 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../sklearn模型总结.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-char-type:none;
+	display:none;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(1);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../sklearn模型总结.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link="#0563C1" vlink="#954F72">
+
+<table border=0 cellpadding=0 cellspacing=0 width=2222 style='border-collapse:
+ collapse;table-layout:fixed;width:1667pt'>
+ <col width=111 style='mso-width-source:userset;mso-width-alt:3552;width:83pt'>
+ <col width=75 style='mso-width-source:userset;mso-width-alt:2400;width:56pt'>
+ <col width=461 style='mso-width-source:userset;mso-width-alt:14752;width:346pt'>
+ <col width=24 style='mso-width-source:userset;mso-width-alt:768;width:18pt'>
+ <col width=67 style='mso-width-source:userset;mso-width-alt:2144;width:50pt'>
+ <col width=70 style='mso-width-source:userset;mso-width-alt:2240;width:53pt'>
+ <col width=89 style='mso-width-source:userset;mso-width-alt:2848;width:67pt'>
+ <col width=123 style='mso-width-source:userset;mso-width-alt:3936;width:92pt'>
+ <col width=50 style='mso-width-source:userset;mso-width-alt:1600;width:38pt'>
+ <col width=501 style='mso-width-source:userset;mso-width-alt:16032;width:376pt'>
+ <col width=651 style='mso-width-source:userset;mso-width-alt:20832;width:488pt'>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl66 width=111 style='height:14.25pt;width:83pt'>种类</td>
+  <td class=xl66 width=75 style='border-left:none;width:56pt'>模型</td>
+  <td class=xl66 width=461 style='border-left:none;width:346pt'>参数</td>
+  <td class=xl66 width=24 style='border-left:none;width:18pt'>fit</td>
+  <td class=xl66 width=67 style='border-left:none;width:50pt'>partial_fit</td>
+  <td class=xl66 width=70 style='border-left:none;width:53pt'>transfrom</td>
+  <td class=xl66 width=89 style='border-left:none;width:67pt'>fit_transfrom</td>
+  <td class=xl66 width=123 style='border-left:none;width:92pt'>inverse_transfrom</td>
+  <td class=xl66 width=50 style='border-left:none;width:38pt'>n_jobs</td>
+  <td class=xl66 width=501 style='border-left:none;width:376pt'>方法/字段</td>
+  <td class=xl66 width=651 style='border-left:none;width:488pt'>官网</td>
+ </tr>
+ <tr height=209 style='height:156.75pt'>
+  <td rowspan=2 height=342 class=xl69 style='height:256.5pt;border-top:none'>decomposition<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl66 style='border-top:none;border-left:none'>PCA</td>
+  <td class=xl67 width=461 style='border-top:none;border-left:none;width:346pt'>n_components
+  : int, float, None or string<br>
+    whiten : bool, optional (default False)<br>
+    <span style='mso-spacerun:yes'>    </span>可以保证输出值的方差为1<br>
+    svd_solver : {‘auto’, ‘full’, ‘arpack’, ‘randomized’}</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl67 width=67 style='border-top:none;border-left:none;width:50pt'>书上说有<br>
+    但实际无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl67 width=501 style='border-top:none;border-left:none;width:376pt'><font
+  class="font7">get_covariance() Compute data covariance with the generative
+  model.<br>
+    get_params([deep]) Get parameters for this estimator.<br>
+    get_precision() Compute data precision matrix with the generative
+  model.<br>
+    </font><font class="font8">inverse_transform(X) Transform data back to its
+  original space.逆操作升维</font><font class="font7"><br>
+    score(X[, y]) Return the average log-likelihood of all samples.<br>
+    score_samples(X) Return the log-likelihood of each sample.<br>
+    set_params(**params) Set the parameters of this estimator.<br>
+    <br>
+    components_<br>
+    explained_variance_<br>
+    explained_variance_ratio_</font></td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html</a></td>
+ </tr>
+ <tr height=133 style='height:99.75pt'>
+  <td height=133 class=xl66 style='height:99.75pt;border-top:none;border-left:
+  none'>KernelPCA</td>
+  <td class=xl67 width=461 style='border-top:none;border-left:none;width:346pt'>n_components
+  : int, default=None<br>
+    kernel : “linear” | “poly” | “rbf” | “sigmoid” | “cosine” |
+  “precomputed”<br>
+    gamma : float, default=1/n_features,针对rbf, poly and sigmoid<br>
+    degree : int, default=3 . Degree针对 poly <br>
+    coef0 : float, default=1. poly and sigmoid中的自由项<br>
+    kernel_params ：自定义Kernel中的参数<br>
+    alpha : int, default=1.0</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html</a></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl66 style='height:14.25pt;border-top:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+ </tr>
+ <tr height=152 style='height:114.0pt'>
+  <td rowspan=3 height=323 class=xl69 style='height:242.25pt;border-top:none'>manifold</td>
+  <td class=xl66 style='border-top:none;border-left:none'>MDS</td>
+  <td class=xl67 width=461 style='border-top:none;border-left:none;width:346pt'><font
+  class="font7">n_components : int, optional, default: 2，要压缩到多少维<br>
+    </font><font class="font8">metric : boolean, optional, default: True，<br>
+    <span style='mso-spacerun:yes'>   
+  </span>True用metric度量(适合连续数据)，False用nometric度量（适合分类变量）</font><font
+  class="font7"><br>
+    n_init : int, optional, default: 4，重复运行几次<br>
+    </font><font class="font8">dissimilarity : ‘euclidean’(default) |
+  ‘precomputed’, optional<br>
+    <span style='mso-spacerun:yes'>    </span>‘euclidean’输入的是原始数据<br>
+    <span style='mso-spacerun:yes'>    </span>‘precomputed’输入的是距离矩阵</font></td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=501 style='border-top:none;border-left:none;width:376pt'><font
+  class="font7">stress_#压力值，可以用来计算应当降为多少维<br>
+    </font><font class="font8">embedding_#mds没有transform，这个是降维后的数据</font><font
+  class="font7"><br>
+    stress_#压力矩阵，可以理解为误差</font></td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html</a></td>
+ </tr>
+ <tr height=95 style='height:71.25pt'>
+  <td height=95 class=xl66 style='height:71.25pt;border-top:none;border-left:
+  none'>Isomap</td>
+  <td class=xl67 width=461 style='border-top:none;border-left:none;width:346pt'>n_neighbors
+  : integer：number of neighbors <br>
+    n_components : 要压缩到多少维<br>
+    eigen_solver : [‘auto’|’arpack’|’dense’]<br>
+    path_method : string [‘auto’|’FW’|’D’]<br>
+    neighbors_algorithm : string [‘auto’|’brute’|’kd_tree’|’ball_tree’]</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=501 style='border-top:none;border-left:none;width:376pt'>embedding_<br>
+    kernel_pca_</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html</a></td>
+ </tr>
+ <tr height=76 style='height:57.0pt'>
+  <td height=76 class=xl66 style='height:57.0pt;border-top:none;border-left:
+  none'>LLE</td>
+  <td class=xl67 width=461 style='border-top:none;border-left:none;width:346pt'>n_neighbors
+  : integer<br>
+    n_components : integer<br>
+    reg : float正则化系数<br>
+    eigen_solver : string, {‘auto’, ‘arpack’, ‘dense’}</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=501 style='border-top:none;border-left:none;width:376pt'>embedding_vectors_<br>
+    reconstruction_error_#误差</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html</a></td>
+ </tr>
+ <tr height=171 style='height:128.25pt'>
+  <td height=171 class=xl66 style='height:128.25pt;border-top:none'>neural_network</td>
+  <td class=xl66 style='border-top:none;border-left:none'>BernoulliRB<span
+  style='display:none'>M</span></td>
+  <td class=xl67 width=461 style='border-top:none;border-left:none;width:346pt'>n_components
+  : int, 要压缩到多少维<br>
+    learning_rate<br>
+    batch_size : int, optional<br>
+    n_iter : int, optional<br>
+    verbose : int, optional. The verbosity level. The default, zero, means
+  silent mode.<br>
+    random_state</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>有</td>
+  <td class=xl66 style='border-top:none;border-left:none'>无</td>
+  <td class=xl66 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 width=501 style='border-top:none;border-left:none;width:376pt'>intercept_hidden_
+  : array-like, shape (n_components,)<br>
+    Biases of the hidden units.<br>
+    <br>
+    intercept_visible_ : array-like, shape (n_features,)<br>
+    Biases of the visible units.<br>
+    <br>
+    components_ : array-like, shape (n_components, n_features)<br>
+    Weight matrix, where n_features in the number of visible units and
+  n_components is the number of hidden units.</td>
+  <td class=xl68 style='border-top:none;border-left:none'><a
+  href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html"
+  target="_parent">https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html</a></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=111 style='width:83pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=461 style='width:346pt'></td>
+  <td width=24 style='width:18pt'></td>
+  <td width=67 style='width:50pt'></td>
+  <td width=70 style='width:53pt'></td>
+  <td width=89 style='width:67pt'></td>
+  <td width=123 style='width:92pt'></td>
+  <td width=50 style='width:38pt'></td>
+  <td width=501 style='width:376pt'></td>
+  <td width=651 style='width:488pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>
