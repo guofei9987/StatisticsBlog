@@ -1,0 +1,212 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../sklearn_聚类.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-char-type:none;
+	display:none;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(0);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../sklearn_聚类.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link="#0563C1" vlink="#954F72" class=xl66>
+
+<table border=0 cellpadding=0 cellspacing=0 width=1965 style='border-collapse:
+ collapse;table-layout:fixed;width:1475pt'>
+ <col class=xl66 width=57 style='mso-width-source:userset;mso-width-alt:1824;
+ width:43pt'>
+ <col class=xl66 width=172 style='mso-width-source:userset;mso-width-alt:5504;
+ width:129pt'>
+ <col class=xl66 width=492 style='mso-width-source:userset;mso-width-alt:15744;
+ width:369pt'>
+ <col class=xl66 width=566 style='mso-width-source:userset;mso-width-alt:18112;
+ width:425pt'>
+ <col class=xl66 width=39 style='mso-width-source:userset;mso-width-alt:1248;
+ width:29pt'>
+ <col class=xl66 width=50 style='mso-width-source:userset;mso-width-alt:1600;
+ width:38pt'>
+ <col class=xl66 width=589 style='mso-width-source:userset;mso-width-alt:18848;
+ width:442pt'>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl68 width=57 style='height:14.25pt;width:43pt'>种类</td>
+  <td class=xl68 width=172 style='border-left:none;width:129pt'>模型</td>
+  <td class=xl68 width=492 style='border-left:none;width:369pt'>参数</td>
+  <td class=xl68 width=566 style='border-left:none;width:425pt'>fit</td>
+  <td class=xl68 width=39 style='border-left:none;width:29pt'>字段</td>
+  <td class=xl68 width=50 style='border-left:none;width:38pt'>n_jobs</td>
+  <td class=xl68 width=589 style='border-left:none;width:442pt'>官网</td>
+ </tr>
+ <tr height=114 style='height:85.5pt'>
+  <td rowspan=4 height=342 class=xl70 style='height:256.5pt;border-top:none'>cluster</td>
+  <td class=xl68 style='border-top:none;border-left:none'>Kmeans</td>
+  <td class=xl69 width=492 style='border-top:none;border-left:none;width:369pt'>n_clusters<br>
+    init : {‘k-means++’, ‘random’ or an ndarray}选取初始点的方法<br>
+    n_init : int, default: 10重新运行的次数<br>
+    verbose : int, default 0打印日志</td>
+  <td class=xl69 width=566 style='border-top:none;border-left:none;width:425pt'>fit(X[,
+  y]) Compute k-means clustering.<br>
+    fit_predict(X[, y]) Compute cluster centers and predict cluster index for
+  each sample.<br>
+    fit_transform(X[, y]) Compute clustering and transform X to
+  cluster-distance space.<br>
+    predict(X) Predict the closest cluster each sample in X belongs to.<br>
+    score(X[, y]) Opposite of the value of X on the K-means objective.<br>
+    transform(X) Transform X to a cluster-distance space.</td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'>有</td>
+  <td class=xl67 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html</a></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl68 style='height:14.25pt;border-top:none;border-left:
+  none'>MiniBatchKMeans</td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.cluster.MiniBatchKMeans.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.cluster.MiniBatchKMeans.html</a></td>
+ </tr>
+ <tr height=95 style='height:71.25pt'>
+  <td height=95 class=xl68 style='height:71.25pt;border-top:none;border-left:
+  none'>AgglomerativeClustering</td>
+  <td class=xl69 width=492 style='border-top:none;border-left:none;width:369pt'>n_clusters
+  : int, default=2<br>
+    affinity : string or callable, :<span style='mso-spacerun:yes'> 
+  </span>“euclidean”(default), “l1”, “l2”, “manhattan”, “cosine”, or
+  ‘precomputed’. <br>
+    <span style='mso-spacerun:yes'>    </span>If linkage is “ward”, only
+  “euclidean” is accepted.<br>
+    linkage : {“ward”, “complete”, “average”}</td>
+  <td class=xl69 width=566 style='border-top:none;border-left:none;width:425pt'>fit(X[,
+  y]) Fit the hierarchical clustering on the data<br>
+    fit_predict(X[, y]) Performs clustering on X and returns cluster labels.</td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 style='border-top:none;border-left:none'><u style='visibility:
+  hidden;mso-ignore:visibility'>　</u></td>
+ </tr>
+ <tr height=114 style='height:85.5pt'>
+  <td height=114 class=xl68 style='height:85.5pt;border-top:none;border-left:
+  none'>DBSCAN</td>
+  <td class=xl69 width=492 style='border-top:none;border-left:none;width:369pt'><font
+  class="font8">eps : float, optional<br>
+    min_samples : int, optional<br>
+    </font><font class="font9">metric : string, or callable</font><font
+  class="font8"><br>
+    metric_params : dict, optional<br>
+    algorithm : {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, optional<br>
+    </font><font class="font9">p : float, optional：The power of the Minkowski</font></td>
+  <td class=xl69 width=566 style='border-top:none;border-left:none;width:425pt'>fit(X[,
+  y, sample_weight]) Perform DBSCAN clustering from features or distance
+  matrix.<br>
+    fit_predict(X[, y, sample_weight]) Performs clustering on X and returns
+  cluster labels.</td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'>有</td>
+  <td class=xl67 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html</a></td>
+ </tr>
+ <tr height=171 style='height:128.25pt'>
+  <td height=171 class=xl68 style='height:128.25pt;border-top:none'>mixture</td>
+  <td class=xl68 style='border-top:none;border-left:none'>GaussianMixture</td>
+  <td class=xl69 width=492 style='border-top:none;border-left:none;width:369pt'><font
+  class="font8">n_components : int, defaults to 1.<br>
+    covariance_type : {‘full’, ‘tied’, ‘diag’, ‘spherical’},指定协方差类型<br>
+    <span style='mso-spacerun:yes'>    </span>'full' (each component has its
+  own general covariance matrix),<br>
+    <span style='mso-spacerun:yes'>    </span>'tied' (all components share the
+  same general covariance matrix),<br>
+    <span style='mso-spacerun:yes'>    </span>'diag' (each component has its
+  own diagonal covariance matrix),<br>
+    <span style='mso-spacerun:yes'>    </span>'spherical' (each component has
+  its own single variance).<br>
+    n_init : int, defaults to 1.模型重新运行的次数<br>
+    init_params : {‘kmeans’, ‘random’}, defaults to ‘kmeans’.<br>
+    </font><font class="font9">warmstart</font></td>
+  <td class=xl69 width=566 style='border-top:none;border-left:none;width:425pt'><font
+  class="font8">aic(X) Akaike information criterion for the current model on
+  the input X.<br>
+    bic(X) Bayesian information criterion for the current model on the input
+  X.<br>
+    fit(X[, y]) Estimate model parameters with the EM algorithm.<br>
+    predict(X) Predict the labels for the data samples in X using trained
+  model.<br>
+    </font><font class="font9">predict_proba(X) Predict posterior probability
+  of each component given the data.</font><font class="font8"><br>
+    sample([n_samples]) Generate random samples from the fitted Gaussian
+  distribution.<br>
+    score(X[, y]) Compute the per-sample average log-likelihood of the given
+  data X.<br>
+    score_samples(X) Compute the weighted log probabilities for each sample.</font></td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl68 style='border-top:none;border-left:none'>　</td>
+  <td class=xl67 style='border-top:none;border-left:none'><a
+  href="http://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html"
+  target="_parent">http://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html</a></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=57 style='width:43pt'></td>
+  <td width=172 style='width:129pt'></td>
+  <td width=492 style='width:369pt'></td>
+  <td width=566 style='width:425pt'></td>
+  <td width=39 style='width:29pt'></td>
+  <td width=50 style='width:38pt'></td>
+  <td width=589 style='width:442pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>
